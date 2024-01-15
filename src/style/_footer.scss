@@ -1,0 +1,37 @@
+$color-deep: #535353;
+$color-pink: #ff9b99;
+$color-orange: #FFEDC9;
+
+footer{
+    background-color: $color-orange;
+    min-height:20vw ;
+    div{
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-box {
+            text-align: center;
+            margin: 10px;
+            h3 {
+                padding: 20px 0;
+                @include footer_title;
+                color: #AE814D;
+            }
+            a {
+                @include p;
+                color: #9C8563;
+                margin: 10px 0;
+            }
+            
+            
+        }
+    }
+}

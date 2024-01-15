@@ -1,0 +1,143 @@
+@import './media.scss';
+@import './fontSize.scss';
+
+#select-bg {
+    width: 100%;
+    min-height: calc(100vh - 20vw);
+    background-size: cover;
+    background-image: url(../images/select-sample-bg1.svg);
+    background-repeat: no-repeat;
+
+    @include mobile{
+        min-height: 100vh;
+    }
+
+    .select-div {
+        display: flex;
+
+        .select-frame {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 10vw 13vw;
+            margin: 6vw auto;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.00) 10%, #FFDAD9 94.47%);
+
+            @include mobile {
+                align-items: center;
+                margin: 6vh auto;
+                padding: 3vh;
+            }
+
+            .select-stars {
+                position: absolute;
+                width: 1.8vw;
+                height: auto;
+                margin: 1vw;
+                left: 30%;
+
+                @include mobile {
+                    width: 3vh;
+                    height: auto;
+                    margin: 1vw;
+                    left: 10%;
+                }
+            }
+
+            .select-num1 {
+                width: 4vw;
+                height: auto;
+                margin: 1vw 0 2vw 0;
+
+                @include mobile {
+                    width: 10vh;
+                    height: auto;
+                    margin: 1vw 0 2vw 0;
+                }
+
+            }
+
+            .que {
+                padding: 0 1vw;
+
+                @include mobile {
+                    padding: 0;
+                }
+
+                p {
+                    @include h2;
+                    letter-spacing: 2px;
+
+                    @include mobile {
+                        padding: 2vh 0;
+                        line-height: 150%;
+                    }
+                }
+            }
+
+            .que-btn-div {
+                display: flex;
+                margin: 0 auto;
+
+                @include mobile {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 50vh;
+                }
+
+                .que-btn {
+                    position: relative;
+                    @include h4;
+                    font-family: 'Noto Serif TC', serif;
+                    letter-spacing: 1px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 2vw .5vw;
+                    display: block;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        left: 10%;
+                        bottom: 25%;
+                        background-color: #000;
+                    }
+
+                    &:hover {
+                        color: #FF9B99;
+                        transition: .35s;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 80%;
+                            height: 2px;
+                            left: 10%;
+                            bottom: 25%;
+                            background-color: #FF9B99;
+                            transition: .45s;
+
+                            @include mobile {
+                                width: 90%;
+                                left: 5%;
+                                bottom: 5%;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+            .Q-page {
+                margin: 4vw auto 0;
+            }
+        }
+    }
+}

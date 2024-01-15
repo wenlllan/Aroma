@@ -1,0 +1,84 @@
+@import './media.scss';
+
+
+
+@mixin h2{
+    font-size: 1.8125rem;/*h2 29px*/
+    @include mac{
+        font-size: 1.25rem;/*20px*/
+    }
+    @include pad{
+        font-size: 1rem;/*16px*/
+    }
+    @include mobile {
+        font-size: 1.25rem;/*20px*/
+      }
+}
+
+
+
+@mixin h3{
+    font-size: 1.5rem;/*h3 24px*/
+    @include mac{
+        font-size: 1rem;/*16px*/
+    }
+    @include pad{
+        font-size: .8rem;/*12.8px*/
+    }
+    @include mobile {
+        font-size: 1rem;/*16px*/
+      }
+}
+
+@mixin h4{
+    font-size: 1.25rem;/*20px*/
+    @include mac{
+        font-size: 1rem;/*16px*/
+    }
+    @include pad{
+        font-size: .8rem;/*12.8px*/
+    }
+    @include mobile {
+        font-size: 1rem;/*16px*/
+      }
+}
+
+
+@mixin p{
+    font-size: 1rem;/*16px*/
+    @include mac{
+        font-size: .9rem;/*14px*/
+    }
+    @include pad{
+        font-size: .8rem;/*12.8px*/
+    }
+    @include mobile {
+        font-size: 1rem;/*16px*/
+      }
+}
+
+@mixin footer_title{
+    font-size: 1.2rem;/*19.2px*/
+    @include mac{
+        font-size: 1rem;/*16px*/
+    }
+    @include pad{
+        font-size: .8rem;/*12.8px*/
+    }
+}
+
+@mixin dec_Eng{
+    font-family: 'Beth Ellen', cursive;
+    font-size: 4rem;/*ENG 64px*/
+
+    @include mac{
+        font-size: 3rem;
+    }
+    @include pad{
+        font-size: 2rem;
+    }
+    @include pad{
+        font-size: 4rem;/*ENG 64px*/
+    }
+
+}

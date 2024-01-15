@@ -1,0 +1,240 @@
+@import './media.scss';
+@import './fontSize.scss';
+
+#select-bg {
+    width: 100%;
+    min-height: calc(100vh - 20vw);
+    background-size: cover;
+    background-image: url(../../public/images/select-sample-bg1.svg);
+    background-repeat: no-repeat;
+
+    @include mobile {
+        min-height: 100vh;
+    }
+
+    .select-div {
+        display: flex;
+
+        .select-frame {
+            width: 36vw;
+            height: 36vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 5vw 5vw;
+            margin: 6vw auto;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0.00) 10%, #FFDAD9 94.47%);
+
+            @include mobile {
+                width: auto;
+                height: auto;
+                align-items: center;
+                margin: 6vh auto;
+                padding: 3vh;
+            }
+
+            .select-q {
+                display: flex;
+                flex-direction: row;
+
+                @include mobile{
+                    width: 36vh;
+                    height: auto;
+                    justify-content: flex-end;
+                }
+            }
+
+            .select-stars {
+                position: absolute;
+                width: 1.8vw;
+                height: auto;
+                margin: 1vw;
+                left: 30%;
+
+                @include mobile {
+                    width: 3vh;
+                    height: auto;
+                    margin: 1vw;
+                    left: 10%;
+                }
+
+            }
+
+            .sec2 {
+                position: initial;
+                width: 2vw;
+                height: 2vw;
+
+                @include mobile{
+                    width: 5vh;
+                    height: 5vh;
+                    margin-top: 5vh;
+                }
+            }
+
+            .select-num1 {
+                width: 5vw;
+                height: auto;
+                margin: 1vw 0 2vw 0;
+
+                @include mobile {
+                    width: 10vh;
+                    height: auto;
+                    margin: 1vw 0 2vw 0;
+                }
+
+            }
+
+            .que {
+                margin: 0 auto;
+
+
+
+                @include mobile {
+                    margin: 0;
+                }
+
+                p {
+                    @include h2;
+                    letter-spacing: 2px;
+
+                    @include mobile {
+                        padding: 2vh 0;
+                        line-height: 150%;
+                    }
+                }
+            }
+            .q-sec{
+                margin: 0;
+            }
+
+            .que-btn-div {
+                display: flex;
+                margin: 0 auto;
+
+                @include mobile {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 50vh;
+                }
+
+                .que-btn {
+                    position: relative;
+                    @include h4;
+                    font-family: 'Noto Serif TC', serif;
+                    letter-spacing: 1px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 2vw 1.4vw;
+                    display: block;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        left: 10%;
+                        bottom: 25%;
+                        background-color: #000;
+                    }
+
+                    &:hover {
+                        color: #FF9B99;
+                        transition: .35s;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 80%;
+                            height: 2px;
+                            left: 10%;
+                            bottom: 25%;
+                            background-color: #FF9B99;
+                            transition: .45s;
+
+                            @include mobile {
+                                width: 90%;
+                                left: 5%;
+                                bottom: 5%;
+                            }
+
+                        }
+
+
+                    }
+
+
+
+                }
+
+                .sec-b {
+                    padding: .5vw 1vw;
+
+                    &::after{
+                        width: 0;
+                        left: 25%;
+                        bottom: 5%;
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 50%;
+                            left: 25%;
+                            bottom: 5%;
+                        }
+                    }
+                }
+            }
+
+
+            .sec-q {
+                width: 14vw;
+                height: 10vw;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin: 0 0 2vw 8vw;
+
+                @include mobile{
+                    width: 24vh;
+                    height: 24vh;
+                    flex-direction: row;
+                    margin: 0;
+                }
+            }
+
+            .Q-page {
+                display: flex;
+                margin: 4vw auto 0;
+
+                a{
+                    color: #000;
+                    padding: 0 1vw;
+
+                    &:hover{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+
+        .sec {
+            align-items: flex-start;
+            background: linear-gradient(178deg, rgba(255, 255, 255, 0.40) 10%, #FFF 55%, #D8EFFF 100%);
+            
+            @include mobile{
+                width: auto;
+                height: 85vh;
+                align-items: flex-start;
+                margin: 6vh auto;
+                padding: 5vh 6vh;
+                justify-content: space-between;
+
+            }
+        }
+    }
+}
