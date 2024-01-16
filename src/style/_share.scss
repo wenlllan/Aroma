@@ -1,0 +1,470 @@
+@import "./media.scss";
+@import "./fontSize";
+
+$color-deep: #535353;
+$color-pink: #ff9b99;
+$color-orange: #ffedc9;
+$color-gray: #d9d9d9;
+
+
+
+
+main {
+  h3 {
+    @include h3;
+    //color: $color-deep;
+  }
+  
+  p {
+    @include p;
+  }
+  min-height: calc(100vh - 20vw);
+
+  #share {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      color: $color-deep;
+
+      padding-bottom: 1rem;
+      padding-top: 10vw;
+    }
+
+    .list-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .list-item-bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+
+        height: 30vw;
+        background-image: url("../images/bg-share.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 3vw 18vw 5vw 18vw;
+        padding: 2vw;
+
+        @include pad {
+          min-width: 20vw;
+          width: 80%;
+          height: 36vw;
+        }
+
+        @include mobile {
+          width: 100%;
+          height: 50vh;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+        }
+
+        .comment1 {
+          display: flex;
+          flex-direction: column;
+          padding: 12px;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 5px;
+          width: 40%;
+
+          @include mobile {
+            width: 80%;
+          }
+
+          p {
+            padding-top: 6px;
+            line-height: 1rem;
+            @include p;
+
+            @include mobile {
+              font-size: .8rem;
+              line-height: 150%;
+            }
+          }
+        }
+
+        .comment2 {
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          padding: 6px;
+          margin-bottom: 1px;
+
+          @include mobile {
+            width: 100%;
+          }
+
+          p {
+            color: #fff;
+            line-height: 1rem;
+            @include p;
+
+            @include mobile {
+              font-size: .8rem;
+              line-height: 150%;
+            }
+          }
+        }
+      }
+    }
+
+    .slider {
+      width: 100%;
+      overflow: hidden;
+
+      display: flex;
+
+      .slides1 {
+        display: flex;
+        flex-direction: row;
+
+        animation: scroll 28s linear infinite; // 滾動動畫
+
+        .slide {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          // min-width: 300px;
+          margin: 2vw;
+          padding: 2vw;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+          @include mobile {
+            width: 75vw;
+          }
+
+          .p1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 1.6rem;
+
+            @include mobile {
+              line-height: 1rem;
+              padding: 5px;
+            }
+
+            div {
+              @include mobile {
+                display: flex;
+                margin: 0 0 1vh 0;
+              }
+
+              figure {
+                height: 4vw;
+                width: 4vw;
+
+                @include pad {
+                  min-width: 30px;
+                  min-height: 30px;
+                }
+
+                img {
+                  object-fit: cover;
+                  height: 100%;
+                }
+              }
+
+              h4 {
+                padding-top: 10px;
+                @include h4;
+
+                @include mobile {
+                  margin-left: 1vh;
+                }
+              }
+
+              p {
+                font-size: .8rem;
+              }
+            }
+
+
+          }
+
+          .p2 {
+            padding: 0 2vh;
+            height: auto;
+            width: 20vw;
+
+            @include pad{
+              width: 28vw;
+            }
+
+            @include mobile {
+              padding: 5px;
+              width: 60%;
+            }
+
+            p {
+
+              @include p;
+              color: $color-deep;
+              text-align: justify;
+              line-height: 1.6rem;
+
+              @include mobile {
+                font-size: .8rem;
+                line-height: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .slides2 {
+        display: flex;
+        flex-direction: row;
+        animation: scroll 26s linear infinite; // 滾動動畫
+
+        .slide {
+          // flex: 0 0 100%;
+          // 每張slide寬度100%
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          // min-width: 300px;
+          margin: 2vw;
+          padding: 2vw;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+          @include mobile {
+            width: 75vw;
+          }
+
+
+          .p1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 1.6rem;
+
+            @include mobile {
+              line-height: 1rem;
+              padding: 5px;
+            }
+
+            div {
+
+              @include mobile {
+                display: flex;
+                margin: 0 0 1vh 0;
+              }
+
+              figure {
+                height: 4vw;
+                width: 4vw;
+
+                @include pad {
+                  min-width: 30px;
+                  min-height: 30px;
+                }
+
+                img {
+                  object-fit: cover;
+                  height: 100%;
+                }
+              }
+
+              h4 {
+                padding-top: 10px;
+                @include h4;
+
+                @include mobile {
+                  margin-left: 1vh;
+                }
+              }
+
+              p {
+                font-size: .8rem;
+              }
+            }
+
+
+          }
+
+          .p2 {
+            padding: 0 2vh;
+            height: auto;
+            width: 20vw;
+
+            @include pad{
+              width: 28vw;
+              // 新增RWD-pad
+            }
+
+            @include mobile {
+              padding: 5px;
+              width: 60%;
+            }
+
+            p {
+              @include p;
+              color: $color-deep;
+              text-align: justify;
+              line-height: 1.6rem;
+
+              @include mobile {
+                font-size: .8rem;
+                line-height: 1.2rem;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-50%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .form-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin:  6vw 2vw;
+
+      .title{
+        padding-top: 0;
+      }
+      .form-memo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        
+        .sign{
+          margin-top: 1.5vw;
+  
+          label {
+            @include p;
+          }
+          input{
+            font-size: 0.8rem;
+            border: 0;
+            border-bottom: 1px solid #535353;
+          }
+          
+        }
+        .select-box{
+          margin-top: 1.5vw;
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+          
+          label {
+            @include p;
+          }
+          #regularSelect {
+            height: 1.6rem;
+            width: 14vw;
+            min-width: 144px;
+          }
+        }
+        .rate-box {
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+          margin-top: 1.5vw;
+          label {
+            margin-right: 0.5vw;
+            @include p;
+          }
+  
+          .rate {
+            float: left;
+            // height: 46px;
+          }
+    
+          .rate:not(:checked)>input {
+            position: absolute;
+            top: -9999px;
+          }
+    
+          .rate:not(:checked)>label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+          }
+    
+          .rate:not(:checked)>label:before {
+            content: '★ ';
+          }
+    
+          .rate>input:checked~label {
+            color: #ffc700;
+          }
+    
+          .rate:not(:checked)>label:hover,
+          .rate:not(:checked)>label:hover~label {
+            color: #deb217;
+          }
+    
+          .rate>input:checked+label:hover,
+          .rate>input:checked+label:hover~label,
+          .rate>input:checked~label:hover,
+          .rate>input:checked~label:hover~label,
+          .rate>label:hover~input:checked~label {
+            color: #c59b08;
+          }
+        }
+  
+        .form-control {
+          height: 40vh;
+          width: 50vw;
+          margin: 1vw 0;
+  
+          // border: 0.1px solid #535353;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+  
+        
+      }
+      #submit {
+        margin: 0.5rem;
+        padding: 1vh;
+        height: auto;
+        width: 120px;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+        background-color: $color-gray;
+        color: $color-deep;
+        font-family: "Noto Serif TC";
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          background-color: $color-pink;
+          color: #ffff;
+        }
+      }
+    }
+    
+  }
+}
