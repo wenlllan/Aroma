@@ -2,9 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom"
 
 const Shopping2nd = () => {
+  // const sthRef = useRef(null);//null / undefined / 0 / -0 / "" / [] / {} => false
+  // const [error, setError] = useState(null);
+  // const navigate = useNavigate();
+  // useEffect(()=>{
+  //   const scrollIt = ()=>{};
+  //   window.addEventListener("scroll", scrollIt);
+
+  //   return ()=>{
+  //     window.removeEventListener("scroll", scrollIt);
+  //   }
+  // },[]);
+  // const handleSubmit = (e)=>{
+  //   console.log(sthRef.current.value);
+
+  //   // localStorage.setItem("phone",sthRef.current.value);
+  //   if (!sthRef.current.value){
+  //     // console.log("請填完整")
+  //     setError("請填完整");
+  //     console.log(error);
+  //   } else {
+  //     localStorage.setItem("",sthRef.current.value);
+  //     navigate("/shopping3rd");
+  //   }}
+  
     return (
         <div>
-            <body className="scrollBox">
+            <body  className="scrollBox">
                 <main>
                 <section id="shopping2nd">
         <div className="big-box">
@@ -87,7 +111,8 @@ const Shopping2nd = () => {
                     id="username"
                     title="請輸入姓名"
                     placeholder="請輸入姓名"
-                    autocomplete="on"
+                    autoComplete="on"
+                    // ref={sthRef}
                     required
                   />
                 </div>
@@ -99,8 +124,9 @@ const Shopping2nd = () => {
                     id="tel"
                     title="請輸入連絡電話"
                     placeholder="請輸入號碼"
-                    autocomplete="on"
+                    autoComplete="on"
                     required
+                    // ref={sthRef}
                   />
                 </div>
               </div>
@@ -153,10 +179,13 @@ const Shopping2nd = () => {
                 <Link to="./shopping.html"><button type="button">返回前頁</button></Link>
               </div>
               
-              <div className="btn" ref={sthRef} onClick={handleSubmit}>
+              <div className="btn">
                 <input type="submit" id="submit" value="確認結帳"/>
-                
+                <Link to="./shopping3rd.html"><button type="button">下一步</button></Link>
+                {/* 結帳 */}
               </div>
+              
+              {/* {error && <div>{error}</div> } */}
             </div>
           </form>
         </div>
@@ -167,10 +196,5 @@ const Shopping2nd = () => {
 
     )
 }
-const handleSubmit = (e)=>{
-  let sthValue = sthRef.current.value;
-  localStorage.setItem("key", sthValue);
-  navigate("./shopping3rd.html");
-}
-localStorage.clear()
+
 export default Shopping2nd;
