@@ -184,6 +184,12 @@ nav .nav-list .nav-list-item {
   padding: 0 3vw;
   position: relative;
   margin: 0;
+  /*0117*/
+}
+@media (max-width: 1024px) {
+  nav .nav-list .nav-list-item {
+    padding: 0 2vw;
+  }
 }
 @media (max-width: 576px) {
   nav .nav-list .nav-list-item {
@@ -4930,12 +4936,28 @@ main #news_article .list-box .pagenumber a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   border: 1px solid #000;
   border-radius: 20px;
   padding: 5vw 5vw;
   margin: 6vw auto;
   background: linear-gradient(140deg, rgba(255, 255, 255, 0) 10%, #FFDAD9 94.47%);
+}
+#select-bg .select-div .select-frame .select-frame-top {
+  width: auto;
+  height: 36vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+@media (max-width: 576px) {
+  #select-bg .select-div .select-frame .select-frame-top {
+    width: auto;
+    height: auto;
+    align-items: center;
+    margin: 6vh auto;
+    padding: 3vh;
+  }
 }
 @media (max-width: 576px) {
   #select-bg .select-div .select-frame {
@@ -4962,7 +4984,7 @@ main #news_article .list-box .pagenumber a:hover {
   width: 1.8vw;
   height: auto;
   margin: 1vw;
-  left: 30%;
+  left: 0;
 }
 @media (max-width: 576px) {
   #select-bg .select-div .select-frame .select-stars {
@@ -5141,6 +5163,7 @@ main #news_article .list-box .pagenumber a:hover {
 }
 #select-bg .select-div .sec {
   align-items: flex-start;
+  justify-content: flex-end;
   background: linear-gradient(178deg, rgba(255, 255, 255, 0.4) 10%, #FFF 55%, #D8EFFF 100%);
 }
 @media (max-width: 576px) {
