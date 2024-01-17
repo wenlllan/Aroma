@@ -5,16 +5,16 @@ $color-deep: #535353;
 $color-pink: #ff9b99;
 $color-orange: #ffedc9;
 
-h3 {
-  @include h3;
-  //color: $color-deep;
-}
 
-p {
-  @include p;
-}
 
 main {
+  h3 {
+    @include h3;
+  }
+  
+  p {
+    @include p;
+  }
   min-height: calc(100vh - 20vw);
 
   /*修*/
