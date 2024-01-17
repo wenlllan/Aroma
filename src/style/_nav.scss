@@ -36,7 +36,6 @@ nav {
     
 
     @include mobile {
-        //display: none;
         width: 70%;
         height: 100%;
         flex-direction: column;
@@ -82,6 +81,10 @@ nav {
             padding: 0 3vw;
             position: relative;
             margin: 0;
+
+            @include pad{
+                padding: 0 2vw;
+            } /*0117*/
 
             @include mobile {
                 padding: 5vw 3vw;
@@ -140,7 +143,6 @@ nav {
 
             .hide-prod {
                 position: absolute;
-                // z-index: -1;
                 width: 100px;
                 height: auto;
                 display: flex;

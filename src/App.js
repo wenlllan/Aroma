@@ -9,6 +9,7 @@ import Register from "./Register";
 import SelectSample from "./SelectSample";
 import News from "./News";
 import Share from "./Share";
+import SelectSampleSec from "./SelectSampleSec";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
+            <Route path="selectsamplesec" element={<SelectSampleSec />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
           </Route>
