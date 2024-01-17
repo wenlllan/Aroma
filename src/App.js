@@ -10,6 +10,8 @@ import SelectSample from "./SelectSample";
 import News from "./News";
 import Share from "./Share";
 import Shopping from "./Shopping";
+import Shopping2nd from "./Shopping2nd";
+import Shopping3rd from "./Shopping3rd";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping />}></Route>
+            <Route path="shopping2nd" element={<Shopping2nd />}></Route>
+            <Route path="shopping3rd" element={<Shopping3rd />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

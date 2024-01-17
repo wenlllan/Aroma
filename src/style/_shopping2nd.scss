@@ -1,0 +1,511 @@
+@import "./media.scss";
+@import "./fontSize.scss";
+
+$color-deep: #535353;
+$color-pink: #ff9b99;
+$color-orange: #ffedc9;
+$color-gray: #d9d9d9;
+$color-orange-deep: #ffd279;
+$color-lightpink: #ffdcdc;
+
+
+main {
+  h3 {
+    @include h3;
+  }
+  p {
+    @include p;
+  }
+
+  #shopping2nd {
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .big-box {
+      display: flex;
+      flex-direction: column;
+      /* 主軸：文章列表 */
+      margin: 1vw 0 0 0;
+
+      .top-steps {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+
+        margin-right: 8%;
+        padding-top: 6.5vw;
+
+        .steps {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          // width: 10rem;
+
+          padding: 2vw;
+
+          p {
+            @include p;
+
+            @include mobile {
+              font-size: 0.75rem;
+            }
+          }
+
+          h3 {
+            width: 3rem;
+            height: 3rem;
+            align-items: center;
+
+            // font-size: 1.5rem;
+            background-color: #d9d9d9;
+            border-radius: 50px;
+            @include h3;
+
+            @include mobile {
+              width: 2rem;
+              height: 2rem;
+              font-size: 0.75rem;
+            }
+          }
+
+          #s1 {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            //   background-color: $color-pink;
+            background-color: $color-lightpink;
+            color: white;
+
+            // 直線
+            &::after {
+              z-index: -1;
+              content: "";
+              position: absolute;
+
+              left: 3rem;
+              /* 直線空行 */
+              // width: 25vw;
+              width: 8.5rem;
+              height: 1.5px;
+              background-color: $color-pink;
+
+              @include pad {
+                width: 6rem;
+              }
+
+              @include mobile {
+                left: 2rem;
+                /* 直線空行 */
+                width: 5rem;
+              }
+            }
+          }
+
+          #s2 {
+            position: relative;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            //   background-color: $color-gray;
+            background-color: $color-pink;
+            color: white;
+
+            // 直線
+            &::after {
+              z-index: -1;
+              content: "";
+              position: absolute;
+
+              left: 3rem;
+              /* 直線空行 */
+              // width: 25vw;
+              width: 8.5rem;
+              height: 1.5px;
+              background-color: $color-gray;
+
+              @include pad {
+                width: 6rem;
+              }
+
+              @include mobile {
+                left: 2rem;
+                /* 直線空行 */
+                width: 5rem;
+              }
+            }
+          }
+
+          #s3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #d9d9d9;
+          }
+
+          p {
+            padding-top: 1vw;
+          }
+        }
+      }
+
+      .list-box {
+        .title {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+
+          font-weight: 600;
+          color: $color-deep;
+
+          padding: 2vw 0 2vw 0.5vw;
+          //   縮首排
+
+          @include mobile {
+            padding-top: 4vw;
+          }
+        }
+
+        .list {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          border-top: 1px solid $color-pink;
+          border-bottom: 1px solid $color-pink;
+          padding: 0.8vw 4vw 0.8vw 9vw;
+
+          p:nth-child(n + 2) {
+            @include mobile {
+              display: none;
+              // display: flex;
+              // flex-direction: column;
+              // justify-content: center;
+            }
+          }
+
+          // 商品項目表頭寬度
+          p {
+
+            // padding: 0 3.5vw;
+            // 同.item {p{
+            @include mobile {
+              font-size: 0.75rem;
+            }
+          }
+
+          .products {
+            width: 34%;
+
+            @include mobile {
+              width: 20%;
+            }
+          }
+
+          .price {
+            width: 18%;
+
+            @include mobile {
+              width: 12%;
+            }
+          }
+
+          .qty {
+            width: 14%;
+          }
+
+          .total {
+            width: 16%;
+          }
+        }
+
+        .list-item {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          height: auto;
+          width: auto;
+          margin: 1vw 0;
+          border-bottom: 1.5px groove $color-gray;
+
+          @include mobile {
+            height: 30vw;
+            line-height: 2.5rem;
+          }
+
+          figure {
+            height: 8vw;
+            width: auto;
+
+            min-width: 100px;
+            min-height: 80px;
+            padding-left: 0.5vw;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+            }
+          }
+
+          .item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // 對齊下緣
+
+            #shopping-cart {
+              display: flex;
+              align-items: center;
+
+              #quantity {
+                width: 30px;
+                text-align: center;
+                margin: 0 5px;
+                border: $color-gray;
+                font-family: "Noto Serif TC";
+              }
+
+              button {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 100%;
+                border: $color-gray;
+              }
+            }
+
+            p {
+              padding: 0 3.5vw;
+
+              @include mobile {
+                font-size: 0.75rem;
+              }
+            }
+
+            img {
+              width: 4vw;
+              max-width: 2rem;
+            }
+
+            @include mobile {
+              flex-wrap: wrap;
+              // justify-self: flex-end;
+              align-items: center;
+            }
+          }
+        }
+
+        .total {
+          ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 3vw;
+            padding: 1vw 0;
+          }
+
+          .next {
+            #submit {
+              color: #ffff;
+              padding: 1vh 1vh;
+              height: auto;
+              width: 100px;
+              cursor: pointer;
+              border-radius: 16px;
+              border: none;
+              background-color: $color-pink;
+
+              &:hover {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+              }
+            }
+          }
+        }
+      }
+
+      #contact_form {
+        .list-boxes {
+          min-height: 140px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          // margin: 1vw;
+
+          .title {
+            font-weight: 600;
+            color: $color-deep;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            padding: 2vw 0 2vw 0.5vw;
+            border-bottom: 1px solid $color-pink;
+            width: 100%;
+          }
+
+          .form-sign {
+            padding: 1.5vw 0 1.5vw 0.5vw;
+
+            .sign {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: baseline;
+
+              label {
+                margin: 1.5rem 0 0.3rem 0;
+                @include p;
+              }
+
+              input {
+                font-size: 0.8rem;
+                border: 0;
+                border-bottom: 1px solid #535353;
+
+                // 不要在這裡設padding，會很奇怪
+              }
+            }
+          }
+
+          .notice-box {
+            padding: 1.5vw 0 1.5vw 0.5vw;
+
+            p {
+              color: $color-deep;
+              font-size: 0.8rem;
+            }
+          }
+
+          .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5vw 0 1vw 0.5vw;
+
+            .form-check {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #ffff;
+              padding: 1vh 1vh;
+              border-radius: 16px;
+              border: none;
+              background-color: $color-pink;
+              margin: 0 0.5vw;
+
+              @include pad {
+                // width: 20vw;
+              }
+
+              @include mobile {
+                height: 50px;
+                width: 220px;
+                margin: 0.3vw;
+              }
+
+              &:hover {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                background-color: $color-pink;
+                color: #ffff;
+              }
+
+              input {
+                cursor: pointer;
+                appearance: none;
+
+                border-radius: 50%;
+                width: 14px;
+                height: 14px;
+
+                border: 2px solid #ffff;
+                transition: 0.2s all linear;
+                margin-right: 5px;
+              }
+
+              // 在label上面加寬度
+              .form-check-label {
+                display: flex;
+                align-items: center;
+                //   min-height: 50px;
+                height: 5vw;
+                width: 15vw;
+                cursor: pointer;
+
+                @include mobile {
+                  width: auto;
+                }
+              }
+
+              input:checked {
+                border: 3px solid #ffff;
+                background-color: $color-orange-deep;
+              }
+
+              @include mobile {
+                justify-content: flex-start;
+              }
+            }
+
+            #regularSelect {
+              height: 1.6rem;
+            }
+
+            @include mobile {
+              flex-direction: column;
+            }
+          }
+        }
+
+        .next-box {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 0.8vw 0;
+
+          height: auto;
+          min-height: 140px;
+
+          .btn {
+            button,
+            #submit {
+              margin: 0.5rem;
+              padding: 1vh;
+              height: auto;
+              width: 120px;
+              cursor: pointer;
+              border-radius: 8px;
+              border: none;
+              background-color: $color-gray;
+              color: $color-deep;
+              font-family: "Noto Serif TC";
+
+              &:hover {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                background-color: $color-pink;
+                color: #ffff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

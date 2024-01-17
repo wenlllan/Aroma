@@ -55,7 +55,7 @@ const Shopping = () => {
                   <h4>$2,880</h4>
                 </ul>
                 <div className="next">
-                  <Link to="./shopping2nd.html"
+                  <Link to="/shopping2nd"
                     ><input type="submit" id="submit" value="下一步 &rarr;"
                   /></Link>
                 </div>
