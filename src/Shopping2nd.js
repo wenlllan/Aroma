@@ -176,12 +176,12 @@ const Shopping2nd = () => {
             </div>
             <div className="next-box">
               <div className="btn">
-                <Link to="./shopping.html"><button type="button">返回前頁</button></Link>
+                <Link to="/shopping"><button type="button">返回前頁</button></Link>
               </div>
               
               <div className="btn">
                 <input type="submit" id="submit" value="確認結帳"/>
-                <Link to="./shopping3rd.html"><button type="button">下一步</button></Link>
+                <Link to="/shopping3rd"><button type="button">下一步</button></Link>
                 {/* 結帳 */}
               </div>
               

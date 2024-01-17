@@ -34,7 +34,7 @@ const News = () => {
                                             謝謝您一直以來的支持，期待在活動現場與您相見！
                                         </p>
                                     </div>
-                                    <div className="p3"><Link to="#">繼續閱讀...</Link></div>
+                                    <div className="p3"><Link to="/NewsArticle">繼續閱讀...</Link></div>
                                 </div>
                             </article>
                             <article className="list-item">
@@ -62,7 +62,7 @@ const News = () => {
                                             謝謝您一直以來的支持，期待在活動現場與您相見！
                                         </p>
                                     </div>
-                                    <div className="p3"><Link to="#">繼續閱讀...</Link></div>
+                                    <div className="p3"><Link to="/NewsArticle">繼續閱讀...</Link></div>
                                 </div>
                             </article>
                             <article className="list-item">
@@ -90,7 +90,7 @@ const News = () => {
                                             謝謝您一直以來的支持，期待在活動現場與您相見！
                                         </p>
                                     </div>
-                                    <div className="p3"><Link to="#">繼續閱讀...</Link></div>
+                                    <div className="p3"><Link to="/NewsArticle">繼續閱讀...</Link></div>
                                 </div>
                             </article>
                             <article className="list-item">
@@ -118,7 +118,7 @@ const News = () => {
                                             謝謝您一直以來的支持，期待在活動現場與您相見！
                                         </p>
                                     </div>
-                                    <div className="p3"><Link to="#">繼續閱讀...</Link></div>
+                                    <div className="p3"><Link to="/NewsArticle">繼續閱讀...</Link></div>
                                 </div>
                             </article>
                             <div className="pagenumber">
