@@ -7,6 +7,7 @@
     background-size: cover;
     background-image: url(../../public/images/select-sample-bg1.svg);
     background-repeat: no-repeat;
+    
 
     @include mobile {
         min-height: 100vh;
@@ -249,3 +250,8 @@
         }
     }
 }
+.sec-bg{
+    background-image: url(../../public/images/select-bg2.png);
+    background-repeat: no-repeat;
+}
+
