@@ -13,6 +13,7 @@ import Shopping from "./Shopping";
 import Shopping2nd from "./Shopping2nd";
 import Shopping3rd from "./Shopping3rd";
 import NewsArticle from "./NewsArticle";
+import Shops from "./Shops";
 import SelectSampleSec from "./SelectSampleSec";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
@@ -35,6 +36,7 @@ function App() {
             <Route path="shopping2nd" element={<Shopping2nd />}></Route>
             <Route path="shopping3rd" element={<Shopping3rd />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
+            <Route path="shops" element={<Shops />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
