@@ -357,6 +357,7 @@ main {
         
         .sign{
           margin-top: 1.5vw;
+          margin-left: 0.5vw;
   
           label {
             @include p;
@@ -365,11 +366,13 @@ main {
             font-size: 0.8rem;
             border: 0;
             border-bottom: 1px solid #535353;
+            font-family: "Noto Serif TC";/*0118*/
           }
           
         }
         .select-box{
           margin-top: 1.5vw;
+          margin-left: 0.5vw;
           display: flex;
           // justify-content: center;
           align-items: center;
@@ -381,6 +384,7 @@ main {
             height: 1.6rem;
             width: 14vw;
             min-width: 144px;
+            font-family: "Noto Serif TC";
           }
         }
         .rate-box {
@@ -388,6 +392,7 @@ main {
           // justify-content: center;
           align-items: center;
           margin-top: 1.5vw;
+          margin-left: 0.5vw;
           label {
             margin-right: 0.5vw;
             @include p;
@@ -409,7 +414,7 @@ main {
             overflow: hidden;
             white-space: nowrap;
             cursor: pointer;
-            font-size: 30px;
+            font-size: 20px;/*0118*/
             color: #ccc;
           }
     
@@ -418,12 +423,12 @@ main {
           }
     
           .rate>input:checked~label {
-            color: #ffc700;
+            color: #FFB117;
           }
     
           .rate:not(:checked)>label:hover,
           .rate:not(:checked)>label:hover~label {
-            color: #deb217;
+            color: #FFB117;
           }
     
           .rate>input:checked+label:hover,
@@ -431,7 +436,7 @@ main {
           .rate>input:checked~label:hover,
           .rate>input:checked~label:hover~label,
           .rate>label:hover~input:checked~label {
-            color: #c59b08;
+            color:  #FFB117;
           }
         }
   
@@ -441,7 +446,12 @@ main {
           margin: 1vw 0;
   
           // border: 0.1px solid #535353;
-          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          //box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+          font-family: "Noto Serif TC";
+          padding: 0.5vw 0.5vw;
+          letter-spacing: 1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;/*0118*/
         }
   
         

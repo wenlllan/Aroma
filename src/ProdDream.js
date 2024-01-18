@@ -255,7 +255,7 @@ const ProdDream = () => {
                         <p class="find-ENG">Perfume sample</p>
                     </div>
                     <div class="prod-find-btn">
-                        <Link to="/prod">
+                        <Link to="/selectsample">
                             <p>索取試用</p>
                         </Link>
                     </div>
