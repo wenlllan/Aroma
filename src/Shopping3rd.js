@@ -1,12 +1,50 @@
-import React from "react";
+import React, { useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
 
 const Shopping3rd = () => {
+    const [modalVisible, setModalVisible] = useState(false);
+  
+    const showDialog = () => {
+      setModalVisible(true);
+    };
+    const hideDialog = () => {
+      setModalVisible(false);
+    };
+  
+    const handleOkButtonClick = () => {
+      // 隱藏dialog和modal的邏輯
+      hideDialog();
+    };
+    
+    useEffect(() => {
+      // 在modalVisible改變時執行的效果
+      if (modalVisible) {
+        console.log("Modal is visible");
+      } else {
+        console.log("Modal is hidden");
+      }
+    }, [modalVisible]);
+    
   return (
     <div>
       <body className="scrollBox">
         <main>
-          <div className="modal"></div>
+          {/* <div className="modal"></div> */}
+          {modalVisible && (
+            <div className="modal">
+              <div className="dialog">
+                <div className="content">
+                  <div>訂單已完成</div>
+                </div>
+                <div className="okBtn" onClick={handleOkButtonClick}>
+                  <img
+                              src="./icon/icon _check small_.svg"
+                              alt="check"
+                            />
+                </div>
+              </div>
+            </div>
+          )};
           <section id="shopping3rd">
             <div className="big-box">
               <div className="top-steps">
@@ -58,12 +96,12 @@ const Shopping3rd = () => {
                       <h4>$2,880</h4>
                     </ul>
                     <ul>
-                      <h3>運費：</h3>
-                      <h3>$60</h3>
+                      <h4>運費：</h4>
+                      <h4>$60</h4>
                     </ul>
                     <ul>
-                      <h3>總金額：</h3>
-                      <h3>$2,940</h3>
+                      <h4>總金額：</h4>
+                      <h4>$2,940</h4>
                     </ul>
                   </div>
                 </div>
@@ -72,9 +110,19 @@ const Shopping3rd = () => {
                     <Link to="/shopping2nd">
                       <button type="button">返回前頁</button>
                     </Link>
-                    <button className="showDialogBtn">確認結帳</button>
+                    <button className="showDialogBtn" onClick={showDialog}>
+                      確認結帳
+                    </button>
+                    {/* modal */}
                     <div>
-                      <div className="dialog">
+                      {/* <button className="showDialogBtn" onClick={showDialog}>
+                            Show Dialog
+                        </button> */}
+                    </div>
+                    {/* modal */}
+
+                    <div>
+                      {/* <div className="dialog">
                         <div className="content">
                           <div>訂單已完成</div>
                         </div>
@@ -86,7 +134,7 @@ const Shopping3rd = () => {
                             />
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,178 @@
+@import "./media.scss";
+@import "./fontSize.scss";
+
+h3 {
+  @include h3;
+  //color: $color-deep;
+}
+
+p {
+  @include p;
+  //color: $color-deep;
+}
+
+main {
+
+  min-height: calc(100vh - 20vw);
+
+  #shops {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      color: $color-deep;
+      margin-bottom: 10px;
+      padding-top: 10vw;
+
+    }
+
+    .underLineStyle {
+      font-family: "Noto Serif TC";
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      width: 40vw;
+      height: 42px;
+    }
+
+    .submit {
+      font-family: "Noto Serif TC";
+      outline: none;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      margin: 1px;
+      cursor: pointer;
+    }
+
+    .list-box {
+      display: flex;
+      flex-direction: column;
+      padding: 2vw 0 0 0;
+
+      .list-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        height: auto;
+        width: auto;
+        margin: 3vw 0;
+
+        @include mobile {
+          flex-direction: column;
+        }
+
+        figure {
+          height: 16vw;
+          width: auto;
+
+          img {
+            object-fit: cover;
+            height: 100%;
+          }
+
+          @include mobile {
+            height: auto;
+            width: 80%;
+          }
+        }
+
+        .sites {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 16vw;
+          padding: 0 80px;
+
+          @include pad {
+            padding: 0 40px;
+          }
+
+          @include mobile {
+            padding: 0 20px;
+            height: 30vw;
+            width: auto;
+          }
+
+          .shop-name {
+            padding: 10px;
+          }
+
+          .info {
+            display: flex;
+            align-items: flex-end;
+
+            /* padding: 5px; */
+            // width: fit-content;
+            .left {
+              display: flex;
+              flex-direction: column;
+              padding: 0 50px 0 0;
+
+              @include pad {
+                padding: 0 30px 0 0;
+              }
+
+              @include mobile {
+                padding: 0 10px 0 0;
+              }
+
+              div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .nono {
+                  display: block;
+                  height: auto;
+                  width: 1.5rem;
+                }
+              }
+            }
+
+            .right {
+              display: flex;
+              flex-direction: column;
+
+              div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+            }
+
+            img {
+              height: auto;
+              width: 14px;
+            }
+
+            p {
+              text-align: justify;
+              line-height: 1.6rem;
+              padding: 0 0 0 10px;
+              
+              @include mobile{
+                font-size: .8rem;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .shops-img {
+      height: auto;
+      width: 100%
+    }
+  }
+}
