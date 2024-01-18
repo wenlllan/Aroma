@@ -12,12 +12,12 @@ $color-gray: #d9d9d9;
 main {
   h3 {
     @include h3;
-    //color: $color-deep;
   }
-  
+
   p {
     @include p;
   }
+
   min-height: calc(100vh - 20vw);
 
   #share {
@@ -29,7 +29,6 @@ main {
     .title {
       font-weight: 600;
       color: $color-deep;
-
       padding-bottom: 1rem;
       padding-top: 10vw;
     }
@@ -45,7 +44,6 @@ main {
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
-
         height: 30vw;
         background-image: url("../images/bg-share.png");
         background-repeat: no-repeat;
@@ -81,9 +79,10 @@ main {
           }
 
           p {
+            @include p;
             padding-top: 6px;
             line-height: 1rem;
-            @include p;
+
 
             @include mobile {
               font-size: .8rem;
@@ -120,13 +119,11 @@ main {
     .slider {
       width: 100%;
       overflow: hidden;
-
       display: flex;
 
       .slides1 {
         display: flex;
         flex-direction: row;
-
         animation: scroll 28s linear infinite; // 滾動動畫
 
         .slide {
@@ -196,7 +193,7 @@ main {
             height: auto;
             width: 20vw;
 
-            @include pad{
+            @include pad {
               width: 28vw;
             }
 
@@ -227,9 +224,6 @@ main {
         animation: scroll 26s linear infinite; // 滾動動畫
 
         .slide {
-          // flex: 0 0 100%;
-          // 每張slide寬度100%
-
           display: flex;
           flex-direction: row;
           justify-content: center;
@@ -298,7 +292,7 @@ main {
             height: auto;
             width: 20vw;
 
-            @include pad{
+            @include pad {
               width: 28vw;
               // 新增RWD-pad
             }
@@ -339,47 +333,48 @@ main {
       }
     }
 
-    .form-box{
+    .form-box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin:  6vw 2vw;
+      margin: 6vw 2vw;
 
-      .title{
+      .title {
         padding-top: 0;
       }
+
       .form-memo {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
-        
-        .sign{
-          margin-top: 1.5vw;
-          margin-left: 0.5vw;
-  
+
+        .sign {
+          margin: 1vw 0 0 .5vw;
+
           label {
             @include p;
           }
-          input{
+
+          input {
             font-size: 0.8rem;
             border: 0;
             border-bottom: 1px solid #535353;
-            font-family: "Noto Serif TC";/*0118*/
+            font-family: "Noto Serif TC";
+            /*0118*/
           }
-          
+
         }
-        .select-box{
-          margin-top: 1.5vw;
-          margin-left: 0.5vw;
+
+        .select-box {
+          margin: 1vw 0 0 .5vw;
           display: flex;
-          // justify-content: center;
           align-items: center;
-          
+
           label {
             @include p;
           }
+
           #regularSelect {
             height: 1.6rem;
             width: 14vw;
@@ -387,75 +382,71 @@ main {
             font-family: "Noto Serif TC";
           }
         }
+
         .rate-box {
           display: flex;
-          // justify-content: center;
           align-items: center;
-          margin-top: 1.5vw;
-          margin-left: 0.5vw;
+          margin: 1vw 0 1vw .5vw;
+
           label {
             margin-right: 0.5vw;
             @include p;
           }
-  
+
           .rate {
             float: left;
-            // height: 46px;
+
           }
-    
+
           .rate:not(:checked)>input {
             position: absolute;
             top: -9999px;
           }
-    
+
           .rate:not(:checked)>label {
             float: right;
             width: 1em;
             overflow: hidden;
             white-space: nowrap;
             cursor: pointer;
-            font-size: 20px;/*0118*/
+            font-size: 20px;
+            /*0118*/
             color: #ccc;
           }
-    
+
           .rate:not(:checked)>label:before {
             content: '★ ';
           }
-    
+
           .rate>input:checked~label {
             color: #FFB117;
           }
-    
+
           .rate:not(:checked)>label:hover,
           .rate:not(:checked)>label:hover~label {
             color: #FFB117;
           }
-    
+
           .rate>input:checked+label:hover,
           .rate>input:checked+label:hover~label,
           .rate>input:checked~label:hover,
           .rate>input:checked~label:hover~label,
           .rate>label:hover~input:checked~label {
-            color:  #FFB117;
+            color: #FFB117;
           }
         }
-  
+
         .form-control {
           height: 40vh;
           width: 50vw;
           margin: 1vw 0;
-  
-          // border: 0.1px solid #535353;
-          //box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-
           font-family: "Noto Serif TC";
           padding: 0.5vw 0.5vw;
           letter-spacing: 1px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;/*0118*/
+          /*0118*/
         }
-  
-        
       }
+
       #submit {
         margin: 0.5rem;
         padding: 1vh;
@@ -475,6 +466,6 @@ main {
         }
       }
     }
-    
+
   }
 }

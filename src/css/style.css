@@ -3065,9 +3065,9 @@ main #share .list-box .list-item-bg .comment1 {
   }
 }
 main #share .list-box .list-item-bg .comment1 p {
+  font-size: 1rem; /*16px*/
   padding-top: 6px;
   line-height: 1rem;
-  font-size: 1rem; /*16px*/
 }
 @media (max-width: 1440px) {
   main #share .list-box .list-item-bg .comment1 p {
@@ -3400,8 +3400,7 @@ main #share .form-box .form-memo {
   justify-content: center;
 }
 main #share .form-box .form-memo .sign {
-  margin-top: 1.5vw;
-  margin-left: 0.5vw;
+  margin: 1vw 0 0 0.5vw;
 }
 main #share .form-box .form-memo .sign label {
   font-size: 1rem; /*16px*/
@@ -3425,11 +3424,11 @@ main #share .form-box .form-memo .sign input {
   font-size: 0.8rem;
   border: 0;
   border-bottom: 1px solid #535353;
-  font-family: "Noto Serif TC"; /*0118*/
+  font-family: "Noto Serif TC";
+  /*0118*/
 }
 main #share .form-box .form-memo .select-box {
-  margin-top: 1.5vw;
-  margin-left: 0.5vw;
+  margin: 1vw 0 0 0.5vw;
   display: flex;
   align-items: center;
 }
@@ -3460,8 +3459,7 @@ main #share .form-box .form-memo .select-box #regularSelect {
 main #share .form-box .form-memo .rate-box {
   display: flex;
   align-items: center;
-  margin-top: 1.5vw;
-  margin-left: 0.5vw;
+  margin: 1vw 0 1vw 0.5vw;
 }
 main #share .form-box .form-memo .rate-box label {
   margin-right: 0.5vw;
@@ -3495,7 +3493,8 @@ main #share .form-box .form-memo .rate-box .rate:not(:checked) > label {
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 20px; /*0118*/
+  font-size: 20px;
+  /*0118*/
   color: #ccc;
 }
 main #share .form-box .form-memo .rate-box .rate:not(:checked) > label:before {
@@ -3522,7 +3521,7 @@ main #share .form-box .form-memo .form-control {
   font-family: "Noto Serif TC";
   padding: 0.5vw 0.5vw;
   letter-spacing: 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; /*0118*/
+  /*0118*/
 }
 main #share .form-box #submit {
   margin: 0.5rem;
