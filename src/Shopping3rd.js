@@ -1,41 +1,79 @@
-import React from "react";
+import React, { useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
 
 const Shopping3rd = () => {
+    const [modalVisible, setModalVisible] = useState(false);
+  
+    const showDialog = () => {
+      setModalVisible(true);
+    };
+    const hideDialog = () => {
+      setModalVisible(false);
+    };
+  
+    const handleOkButtonClick = () => {
+      // 隱藏dialog和modal的邏輯
+      hideDialog();
+    };
+    
+    useEffect(() => {
+      // 在modalVisible改變時執行的效果
+      if (modalVisible) {
+        console.log("Modal is visible");
+      } else {
+        console.log("Modal is hidden");
+      }
+    }, [modalVisible]);
+    
   return (
     <div>
       <body className="scrollBox">
         <main>
-          <div classNames="modal"></div>
+          {/* <div className="modal"></div> */}
+          {modalVisible && (
+            <div className="modal">
+              <div className="dialog">
+                <div className="content">
+                  <div>訂單已完成</div>
+                </div>
+                <div className="okBtn" onClick={handleOkButtonClick}>
+                  <img
+                              src="./icon/icon _check small_.svg"
+                              alt="check"
+                            />
+                </div>
+              </div>
+            </div>
+          )};
           <section id="shopping3rd">
-            <div classNames="big-box">
-              <div classNames="top-steps">
-                <div classNames="steps">
+            <div className="big-box">
+              <div className="top-steps">
+                <div className="steps">
                   <h3 id="s1">1</h3>
                   <p>購物車</p>
                 </div>
-                <div classNames="steps">
+                <div className="steps">
                   <h3 id="s2">2</h3>
                   <p>選擇配送與付款資訊</p>
                 </div>
-                <div classNames="steps">
+                <div className="steps">
                   <h3 id="s3">3</h3>
                   <p>完成訂單</p>
                 </div>
               </div>
-              <div classNames="list-box">
-                <h3 classNames="title">購物訂單</h3>
-                <div classNames="list">
-                  <p classNames="products">商品</p>
-                  <p classNames="price">價格</p>
-                  <p classNames="qty">數量</p>
-                  <p classNames="total">商品金額</p>
+              <div className="list-box">
+                <h3 className="title">購物訂單</h3>
+                <div className="list">
+                  <p className="products">商品</p>
+                  <p className="price">價格</p>
+                  <p className="qty">數量</p>
+                  <p className="total">商品金額</p>
                 </div>
-                <article classNames="list-item">
+                <article className="list-item">
                   <figure>
                     <img id="product" src="./images/product1.png" alt="" />
                   </figure>
-                  <div classNames="item">
+                  <div className="item">
                     <p>靈魂深處的幽林冒險</p>
                     <p>$2,880</p>
                     <div id="shopping-cart">
@@ -51,42 +89,52 @@ const Shopping3rd = () => {
                     </p>
                   </div>
                 </article>
-                <div classNames="total">
-                  <div classNames="t1">
+                <div className="total">
+                  <div className="t1">
                     <ul>
                       <h4>商品金額：</h4>
                       <h4>$2,880</h4>
                     </ul>
                     <ul>
-                      <h3>運費：</h3>
-                      <h3>$60</h3>
+                      <h4>運費：</h4>
+                      <h4>$60</h4>
                     </ul>
                     <ul>
-                      <h3>總金額：</h3>
-                      <h3>$2,940</h3>
+                      <h4>總金額：</h4>
+                      <h4>$2,940</h4>
                     </ul>
                   </div>
                 </div>
-                <div classNames="next">
-                  <div classNames="btn">
+                <div className="next">
+                  <div className="btn">
                     <Link to="/shopping2nd">
                       <button type="button">返回前頁</button>
                     </Link>
-                    <button classNames="showDialogBtn">確認結帳</button>
+                    <button className="showDialogBtn" onClick={showDialog}>
+                      確認結帳
+                    </button>
+                    {/* modal */}
                     <div>
-                      <div classNames="dialog">
-                        <div classNames="content">
+                      {/* <button className="showDialogBtn" onClick={showDialog}>
+                            Show Dialog
+                        </button> */}
+                    </div>
+                    {/* modal */}
+
+                    <div>
+                      {/* <div className="dialog">
+                        <div className="content">
                           <div>訂單已完成</div>
                         </div>
-                        <div classNames="buttons">
-                          <div classNames="okBtn">
+                        <div className="buttons">
+                          <div className="okBtn">
                             <img
                               src="./icon/icon _check small_.svg"
                               alt="check"
                             />
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
