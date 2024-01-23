@@ -4250,6 +4250,7 @@ main #shopping2nd .big-box #contact_form .list-boxes .form-sign .sign label {
   }
 }
 main #shopping2nd .big-box #contact_form .list-boxes .form-sign .sign input {
+  font-family: "Noto Serif TC";
   font-size: 0.8rem;
   border: 0;
   border-bottom: 1px solid #535353;
@@ -4323,6 +4324,7 @@ main #shopping2nd .big-box #contact_form .list-boxes .form .form-check input:che
 }
 main #shopping2nd .big-box #contact_form .list-boxes .form #regularSelect {
   height: 1.6rem;
+  font-family: "Noto Serif TC";
 }
 @media (max-width: 576px) {
   main #shopping2nd .big-box #contact_form .list-boxes .form {
