@@ -1,37 +1,25 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { useRef } from 'react';
+import { Link,useNavigate } from "react-router-dom"
+//import { useRef } from 'react';
 
 const SelectSapmle = () => {
+    const navigate = useNavigate();
+    const item =["盛裝約會","低調精緻","休閒放鬆"];
+    const listItems = item.map((number) =>{
+    //console.log(number);
+     return( <li className="que-btn" onClick={handleClick} value={number}>{number}</li>)}
+    );
 
-    const chooseRef = useRef(null);
-    //const navigate = useNavigate();
-    // localStorage.setItem("Q1",chooseRef.current.value);
-
-    function handleClick() {
-        chooseRef.current = chooseRef.current + 1; 
-        console.log(chooseRef.current.children.nextSibling);
-        // localStorage.setItem("Q1",chooseRef.current.value);
-        // alert('You clicked ' + chooseRef.current + ' times!');
-      }
-
-
-    // const handleSubmit = (e)=>{
-    //       console.log(chooseRef.current.value);
-      
-          
-    //       if (chooseRe){
-
-    //       } else {
-    //         localStorage.setItem("",sthRef.current.value);
-    //         navigate("/shopping3rd");
-    //       }}
-
-
+   
+    function handleClick(e){
+        console.log(e.target.getAttribute('value'));
+        localStorage.setItem("Q1",e.target.getAttribute('value'));
+        navigate('/selectsamplesec');
+    };
 
     return (
-        <div>
-            <div className="scrollBox">
+        
+            <body className="scrollBox">
                 <section id="select-bg">
                     <div className="select-div">
                         <div className="select-frame">
@@ -41,11 +29,12 @@ const SelectSapmle = () => {
                             <div className="que">
                                 <p>您想要在什麼時刻使用香水？</p>
                             </div>
-                            <div className="que-btn-div">
-                                <button className="que-btn" onClick={handleClick} ref={chooseRef}><Link to="/selectsamplesec" >盛裝約會</Link></button>
-                                <button className="que-btn">低調精緻</button>
-                                <button className="que-btn">休閒放鬆</button>
-                            </div>
+                            <ul className="que-btn-div">
+                                {/* <li className="que-btn" onClick={handleClick}>盛裝約會</li>
+                                <li className="que-btn" onClick={handleClick}>低調精緻</li>
+                                <li className="que-btn" onClick={handleClick}>休閒放鬆</li> */}
+                                {listItems}
+                            </ul>
                             </div>
                             <div className="Q-page">
                                 <Link to="#">&lt;</Link><p>1 / 2</p><Link to="/selectsamplesec">&gt;</Link>
@@ -53,8 +42,8 @@ const SelectSapmle = () => {
                         </div>
                     </div>
                 </section>
-            </div>
-        </div>
+            </body>
+        
 
     )
 }

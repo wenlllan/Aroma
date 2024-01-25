@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from "react-router-dom"
-//import logo from "./images/logo.svg";
 const Nav = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
     const [navVisible, setNavVisible] = useState(false);

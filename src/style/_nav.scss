@@ -114,19 +114,19 @@ nav {
             &:hover .hide-prod {
                 transition: all .3s;
                 opacity: 1;
-                left: 25%;
-                transform: translateX(0%) translateY(5%);
+                // left: 25%;
+                transform: translateX(-15%) translateY(5%);
 
                 @include mac {
-                    left: 20%;
+                    // left: 20%;
                 }
 
                 @include pad {
-                    left: 15%;
+                   // left: 15%;
                 }
 
                 @include mobile{
-                    left: 10%;
+                   // left: 10%;
                 }
             }
 
@@ -143,7 +143,7 @@ nav {
 
             .hide-prod {
                 position: absolute;
-                width: 100px;
+                width: 130px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
@@ -153,22 +153,29 @@ nav {
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 backdrop-filter: blur(6.6px);
                 border: 1px solid rgba(255, 255, 255, 0.13);
-                left: 25%;
-                transform: translateX(0) translateY(0);
+                //left: 25%;
+                float: left;
+                transform: translateX(-15%) translateY(0);
                 opacity: 0;
                 transition: all .3s;
 
                 @include mac {
-                    left: 20%;
+                    width: 110px;
+                    //left: 20%;
                 }
 
                 @include pad {
-                    left: 15%;
+                    width: 90px;
+                    //left: 15%;
+                }
+
+                @include miniPad{
+                    width: 90px;
                 }
 
                 @include mobile {
                     display: block;
-                    left: 10%;
+                    //left: 10%;
                     max-height: 0;
                     overflow: hidden;
                     background:transparent;
@@ -221,7 +228,7 @@ nav {
                 box-shadow: none;
                 backdrop-filter: none;
                 transition:0.1s ease;
-                left: 10% ;
+                //left: 10% ;
             }
         }
 
