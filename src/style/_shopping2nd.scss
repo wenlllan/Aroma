@@ -375,6 +375,7 @@ main {
               }
 
               input {
+                font-family: "Noto Serif TC";
                 font-size: 0.8rem;
                 border: 0;
                 border-bottom: 1px solid #535353;
@@ -465,6 +466,7 @@ main {
 
             #regularSelect {
               height: 1.6rem;
+              font-family: "Noto Serif TC";
             }
 
             @include mobile {
