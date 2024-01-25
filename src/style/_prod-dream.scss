@@ -5,26 +5,69 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 15vh;
+
 
     @include mobile {
         padding-top: 2vh;
     }
 
-    .shopping-cart-div {
+    .shopping-cart {
         position: fixed;
-        width: 5vw;
-        height: 5vw;
+        width: 80px;
+        height: 80px;
         right: 10vh;
         bottom: 10vh;
         z-index: 99;
-        animation: 120s linear 1s infinite running circle-rotation;
 
-        img {
-            object-fit: cover;
+        .shopping-cart-div {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            right: 10vh;
+            bottom: 10vh;
+            z-index: 99;
+            animation: 120s linear 1s infinite running circle-rotation;
+
+            img {
+                object-fit: cover;
+            }
         }
-        #cartBtn{
-            border:none;
+
+        .cart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            z-index: 100;
+
+            &:before {
+                content: attr(data-totalitems);
+                font-size: 12px;
+                position: absolute;
+                top: -12px;
+                right: -12px;
+                background: #FF9B99;
+                line-height: 24px;
+                padding: 0 1px;
+                height: 24px;
+                min-width: 24px;
+                color: white;
+                text-align: center;
+                border-radius: calc(infinity * 1px);
+            }
+
+            &.shake {
+                animation: shakeCart .4s ease-in-out forwards;
+            }
+        }
+
+        #cartBtn {
+            border: none;
             font-family: "Noto Serif TC";
             background-color: unset;
         }
@@ -55,6 +98,7 @@
     .prod-div {
         display: flex;
         margin: 0 auto;
+        padding-top: 15vh;
 
         @include mobile {
             flex-direction: column;
@@ -68,6 +112,11 @@
             @include mac {
                 width: 25vw;
                 margin: 0 0 0 18vw;
+            }
+
+            @include miniPad {
+                width: 30vw;
+                margin: 0 0 0 6vw;
             }
 
             @include mobile {
@@ -180,6 +229,7 @@
                     letter-spacing: 1px;
                     padding: 0.2rem 0.5rem;
                     transition: all 0.35s;
+                    position: relative;
 
                     &:hover {
                         background-color: #FF9B99;
@@ -187,8 +237,75 @@
                         border: 1px solid #FF9B99;
                         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                     }
+
+                    .cart-item {
+                        position: absolute;
+                        height: 24px;
+                        width: 24px;
+                        top: -10px;
+                        right: -10px;
+
+                        &:before {
+                            content: '1';
+                            display: block;
+                            line-height: 24px;
+                            height: 24px;
+                            width: 24px;
+                            font-size: 12px;
+                            font-weight: 600;
+                            background: #FF9B99;
+                            color: white;
+                            border-radius: calc(infinity * 1px);
+                            text-align: center;
+                        }
+
+                    }
+
+                    &.sendtocart {
+                        .cart-item {
+                            display: block;
+                            opacity: 1;
+                            animation: yAxis 1s alternate forwards cubic-bezier(1.000, 0.440, 0.840, 0.165);
+
+                            &:before {
+                                opacity: 0;
+                                transition: all 1s;
+                                animation: xAxis 1s forwards cubic-bezier(0.165, 0.840, 0.440, 1.000);
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+
+    @keyframes xAxis {
+        100% {
+            transform: translateX(calc(8vw - 50px));
+        }
+    }
+
+    @keyframes yAxis {
+        100% {
+            transform: translateY(calc(30vh + 110px));
+        }
+    }
+
+    @keyframes shakeCart {
+        25% {
+            transform: translateX(6px)
+        }
+
+        50% {
+            transform: translateX(-4px);
+        }
+
+        75% {
+            transform: translateX(2px);
+        }
+
+        100% {
+            transform: translateX(0);
         }
     }
 
@@ -203,6 +320,10 @@
 
         @include mac {
             margin: 0 0 0 18vw;
+        }
+
+        @include miniPad {
+            margin: 2vw 0 0 18vw;
         }
 
         @include mobile {
@@ -287,11 +408,11 @@
             align-items: center;
             margin: 4vh auto;
 
-            .ml{
+            .ml {
                 width: 10%;
             }
 
-            .price{
+            .price {
                 width: 20%;
             }
 
@@ -345,7 +466,7 @@
     position: relative;
     justify-content: flex-end;
     align-items: flex-end;
-    margin: 10vh 25vh;
+    margin: 5vw 13vw;
 
     @include mobile {
         display: none;
@@ -356,27 +477,56 @@
         height: auto;
         width: 9.3vw;
         animation: 30s linear 1s infinite running circle-rotation;
-        top: -15%;
-        left: 21.5%;
+        top: -13%;
+        left: 9%;
+
+        @include pad {
+            width: 12vw;
+            top: -12%;
+            left: -8%;
+        }
     }
 
     .arrow-down {
+        position: absolute;
         height: 20vh;
         width: auto;
-        margin-right: 5vw;
+        left: 5%;
+
+        @include mac {
+            left: -7%;
+        }
+
+        @include pad {
+            height: 15vh;
+            left: -7%;
+        }
+
+        @include miniPad {
+            left: -10%;
+        }
     }
 
     .small-dream {
         position: absolute;
         top: 6vh;
-        right: 8vw;
-        height: 50vh;
+        right: 9vw;
+        height: 27vw;
         width: auto;
+
+
+        @include miniPad {
+            height: 35vw;
+        }
     }
 
     .small-dream-bg {
         height: 65vh;
         width: auto;
+
+        @include miniPad {
+            height: 38vh;
+        }
     }
 }
 
@@ -429,6 +579,14 @@
             @include dec_Eng;
             color: #FFB6B5;
 
+            @include pad {
+                font-size: 3rem;
+            }
+
+            @include miniPad {
+                font-size: 2rem;
+            }
+
             @include mobile {
                 font-size: 1.2rem;
             }
@@ -458,6 +616,10 @@
                 align-items: flex-start;
                 justify-content: flex-end;
                 margin: 2vw;
+
+                @include pad {
+                    width: 28.5vw;
+                }
 
                 @include mobile {
                     width: 100%;
@@ -566,8 +728,6 @@
                         width: 90%;
                         height: 40vh;
                     }
-
-
                 }
             }
 
@@ -729,25 +889,51 @@
 }
 
 .prod-material {
-    width: 68vw;
-    height: 68vw;
-    border-radius: 50%;
-    background-color: #FFEFEF;
-    margin: 6vw auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: #FFF;
+    padding: 6vw 0;
+    margin: 0;
+
+    @include pad {
+        // width: 90vw;
+        // height: 90vw;
+    }
+
+    @include miniPad {
+        // width: 90vh;
+        // height: 90vh;
+    }
 
     @include mobile {
-        width: auto;
-        height: auto;
+        // width: auto;
+        // height: auto;
         border-radius: 0;
     }
 
 
     .prod-material-contain {
+        width: 68vw;
         height: 68vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-radius: 50%;
+        background-color: #FFEFEF;
+
+        @include pad {
+            width: 90vw;
+            height: 90vw;
+        }
+
+        @include miniPad {
+            width: 90vh;
+            height: 90vh;
+        }
 
         @include mobile {
             width: auto;
@@ -762,6 +948,10 @@
             align-items: center;
             padding: 2vw 0;
             margin: 0;
+
+            @include miniPad {
+                width: 50vw;
+            }
 
             @include mobile {
                 width: 80%;
@@ -786,9 +976,6 @@
                     line-height: 150%;
                     letter-spacing: 1px;
                     z-index: 2;
-
-
-
                 }
 
                 p {
@@ -817,7 +1004,6 @@
                     letter-spacing: 1px;
                     color: rgba(0, 0, 0, 0.80);
 
-
                     span {
                         font-weight: 700;
                     }
@@ -834,6 +1020,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 
     .prod-photo-all {
         display: flex;
@@ -959,6 +1146,10 @@
             top: 40%;
             left: 100%;
 
+            @include miniPad {
+                font-size: 2rem;
+            }
+
             @include mobile {
                 position: static;
                 font-size: 1.25rem;
@@ -1028,6 +1219,10 @@
                 flex-direction: column;
                 width: 25vw;
                 padding-left: 4vw;
+
+                @include pad {
+                    width: 33vw;
+                }
 
                 @include mobile {
                     width: 80%;
@@ -1118,6 +1313,14 @@
             /* 设置距左侧的位置为容器宽度的50% */
             transform: translate(-50%, -50%);
             z-index: -1;
+
+            @include pad {
+                font-size: 3rem;
+            }
+
+            @include miniPad {
+                font-size: 2rem;
+            }
 
             @include mobile {
                 font-size: 1.5rem;
