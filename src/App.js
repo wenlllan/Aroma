@@ -15,6 +15,10 @@ import Shopping3rd from "./Shopping3rd";
 import NewsArticle from "./NewsArticle";
 import Shops from "./Shops";
 import SelectSampleSec from "./SelectSampleSec";
+import SelectSampleThird from "./SelectSampleThird";
+// import OrbCanvas from './OrbCanvas';
+// import Test2 from './Test2';
+import BgGradient from "./BgGradient";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
@@ -30,6 +34,7 @@ function App() {
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
             <Route path="selectsamplesec" element={<SelectSampleSec />}></Route>
+            <Route path="selectsamplethird" element={<SelectSampleThird />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping />}></Route>
@@ -38,6 +43,8 @@ function App() {
             <Route path="newsArticle" element={<NewsArticle />}></Route>
             <Route path="shops" element={<Shops />}></Route>
           </Route>
+          {/* <Route path="/test" element={<Test2 />}></Route> */}
+          <Route path="/test" element={<BgGradient />}></Route>
         </Routes>
       </BrowserRouter>
     
