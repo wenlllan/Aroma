@@ -5366,4 +5366,9 @@ main #shops .shops-img {
     padding: 5vh 6vh;
     justify-content: space-between;
   }
+}
+
+.sec-bg {
+  background-image: url(../../public/images/select-bg2.png);
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
