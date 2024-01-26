@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Homepage />}></Route>
+            <Route index element={<HomepageSw />}></Route>
             <Route path="prod" element={<ProdDream />}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
@@ -46,10 +46,10 @@ function App() {
             <Route path="shopping3rd" element={<Shopping3rd />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
             <Route path="shops" element={<Shops />}></Route>
-            {/* <Route path="homepageSw" element={<HomepageSw />}></Route> */}
+            {/* <Route path="homepagesw" element={<HomepageSw />}></Route> */}
           </Route>
 
-          <Route path="/homepagesw" element={<HomepageSw />}></Route>
+          {/* <Route path="/homepagesw" element={<HomepageSw />}></Route> */}
 
           {/* <Route path="/test" element={<Test2 />}></Route> */}
           <Route path="/test" element={<BgGradient />}></Route>

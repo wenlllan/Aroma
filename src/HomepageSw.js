@@ -1,15 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-
-// import "./styles.css";
-
 // import required modules
 import {
   Navigation,
@@ -17,14 +8,29 @@ import {
   Mousewheel,
   Keyboard,
   Autoplay,
+  EffectFade
 } from "swiper/modules";
+
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+// import "./styles.css";
+
 
 const HomepageSw = () => {
   return (
     <div>
+      <body className="scrollBox">
       <Swiper
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectFade]}
         cssMode={true}
         navigation={true}
+        // effect={'fade'}
         pagination={true}
         mousewheel={true}
         keyboard={true}
@@ -32,22 +38,15 @@ const HomepageSw = () => {
         slidesPerView={1}
         loop={true}
         autoplay={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+        
         className="mySwiper"
         // ref={bannerSectionRef}
       >
-        <SwiperSlide>Slide 1
-          <figure><img src="../images/main_bg1.jpg" alt="" ></img></figure>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2
+        
+        <SwiperSlide className="swiperslide">
         <figure><img src="../images/main_bg1.jpg" alt="" ></img></figure>
-        </SwiperSlide>
-        <SwiperSlide>Slide 3
-        <figure><img src="../images/main_bg1.jpg" alt="" ></img></figure>
-        </SwiperSlide>
-      </Swiper>
-      <body className="scrollBox">
-        <section className="main">
+          {/* 導入section main */}
+          <section className="main">
           <div className="main-center-div">
             <div className="main-center-div-logo">
               <img src="./images/logo.svg" alt="" />
@@ -68,7 +67,65 @@ const HomepageSw = () => {
               <img src="./images/prod-dream.png" alt="" />
             </div>
           </div>
+          
         </section>
+        </SwiperSlide>
+        <SwiperSlide className="swiperslide">
+        <figure><img src="../images/main_bg2.jpg" alt="" ></img></figure>
+          {/* 導入section main */}
+          <section className="main">
+          <div className="main-center-div">
+            <div className="main-center-div-logo">
+              <img src="./images/logo.svg" alt="" />
+            </div>
+            <h2>
+              尋找清新與自然的氣息，
+              <br />
+              Aroma 。
+            </h2>
+            <p>
+              無論你是在城市的繁華中，還是自然的懷抱裡，
+              <br />
+              Aroma都帶給你春天的氛圍，讓你感受到清新和自在。
+            </p>
+          </div>
+          <div className="main-prod">
+            <div className="index-main-prod-dream">
+              <img src="./images/prod-soulwood.png" alt="" />
+            </div>
+          </div>
+          
+        </section>
+        </SwiperSlide>
+        <SwiperSlide className="swiperslide">
+        <figure><img src="../images/main_bg3.jpg" alt="" ></img></figure>
+          {/* 導入section main */}
+          <section className="main">
+          <div className="main-center-div">
+            <div className="main-center-div-logo">
+              <img src="./images/logo.svg" alt="" />
+            </div>
+            <h2>
+              尋找清新與自然的氣息，
+              <br />
+              Aroma 。
+            </h2>
+            <p>
+              無論你是在城市的繁華中，還是自然的懷抱裡，
+              <br />
+              Aroma都帶給你春天的氛圍，讓你感受到清新和自在。
+            </p>
+          </div>
+          <div className="main-prod">
+            <div className="index-main-prod-dream">
+              <img src="./images/prod-summer.png" alt="" />
+            </div>
+          </div>
+          
+        </section>
+        </SwiperSlide>
+      </Swiper>
+
         <section className="all-prod-list">
           <h2>商品列表</h2>
           <div className="prod-list">

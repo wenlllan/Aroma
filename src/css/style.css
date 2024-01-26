@@ -356,106 +356,6 @@ nav .nav-list-item-icons ul a img {
     opacity: 1;
   }
 }
-/*main*/
-.main {
-  width: auto;
-  height: 100vh;
-  background-image: url(../images/main_bg1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 1024px) {
-  .main {
-    height: 63vw;
-    background-image: url(../images/main_bg1_m.jpg);
-  }
-}
-@media (max-width: 576px) {
-  .main {
-    height: 100vh;
-    flex-direction: column-reverse;
-  }
-}
-.main .main-center-div {
-  width: 26vw;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 0;
-}
-@media (max-width: 576px) {
-  .main .main-center-div {
-    width: 70vw;
-    padding-top: 4vh;
-  }
-}
-.main .main-center-div .main-center-div-logo {
-  width: 28.3vw;
-  height: auto;
-}
-@media (max-width: 576px) {
-  .main .main-center-div .main-center-div-logo {
-    width: 48vw;
-    margin: 2vw 0 2vw 0;
-  }
-}
-.main h2 {
-  font-size: 1.8125rem; /*h2 29px*/
-  font-weight: 700;
-  padding-top: 4vw;
-  line-height: 120%;
-  letter-spacing: 2px;
-}
-@media (max-width: 1440px) {
-  .main h2 {
-    font-size: 1.25rem; /*20px*/
-  }
-}
-@media (max-width: 1024px) {
-  .main h2 {
-    font-size: 1rem; /*16px*/
-  }
-}
-@media (max-width: 576px) {
-  .main h2 {
-    font-size: 1.25rem; /*20px*/
-  }
-}
-.main p {
-  font-size: 1.25rem; /*20px*/
-  padding-top: 2vw;
-  line-height: 150%;
-  font-weight: 300;
-}
-@media (max-width: 1440px) {
-  .main p {
-    font-size: 1rem; /*16px*/
-  }
-}
-@media (max-width: 1024px) {
-  .main p {
-    font-size: 0.8rem; /*12.8px*/
-  }
-}
-@media (max-width: 576px) {
-  .main p {
-    font-size: 1rem; /*16px*/
-  }
-}
-.main .main-prod .index-main-prod-dream {
-  width: 28vw;
-  height: auto;
-}
-@media (max-width: 576px) {
-  .main .main-prod .index-main-prod-dream {
-    width: 75vw;
-    margin-left: 10vh;
-  }
-}
-
 .all-prod-list {
   display: flex;
   flex-direction: column;
@@ -947,6 +847,126 @@ nav .nav-list-item-icons ul a img {
 }
 .brand-info .brand-info-img3 img {
   object-fit: cover;
+}
+
+/* Swiper箭頭樣式 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+/* 圓點樣式 */
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.swiperslide {
+  /*main*/
+}
+.swiperslide figure {
+  position: fixed;
+  z-index: -1;
+}
+.swiperslide figure img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.swiperslide .main {
+  width: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .swiperslide .main {
+    height: 63vw;
+  }
+}
+@media (max-width: 576px) {
+  .swiperslide .main {
+    height: 100vh;
+    flex-direction: column-reverse;
+  }
+}
+.swiperslide .main .main-center-div {
+  width: 26vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+@media (max-width: 576px) {
+  .swiperslide .main .main-center-div {
+    width: 70vw;
+    padding-top: 4vh;
+  }
+}
+.swiperslide .main .main-center-div .main-center-div-logo {
+  width: 28.3vw;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .swiperslide .main .main-center-div .main-center-div-logo {
+    width: 48vw;
+    margin: 2vw 0 2vw 0;
+  }
+}
+.swiperslide .main h2 {
+  font-size: 1.8125rem; /*h2 29px*/
+  font-weight: 700;
+  padding-top: 4vw;
+  line-height: 120%;
+  letter-spacing: 2px;
+}
+@media (max-width: 1440px) {
+  .swiperslide .main h2 {
+    font-size: 1.25rem; /*20px*/
+  }
+}
+@media (max-width: 1024px) {
+  .swiperslide .main h2 {
+    font-size: 1rem; /*16px*/
+  }
+}
+@media (max-width: 576px) {
+  .swiperslide .main h2 {
+    font-size: 1.25rem; /*20px*/
+  }
+}
+.swiperslide .main p {
+  font-size: 1.25rem; /*20px*/
+  padding-top: 2vw;
+  line-height: 150%;
+  font-weight: 300;
+}
+@media (max-width: 1440px) {
+  .swiperslide .main p {
+    font-size: 1rem; /*16px*/
+  }
+}
+@media (max-width: 1024px) {
+  .swiperslide .main p {
+    font-size: 0.8rem; /*12.8px*/
+  }
+}
+@media (max-width: 576px) {
+  .swiperslide .main p {
+    font-size: 1rem; /*16px*/
+  }
+}
+.swiperslide .main .main-prod .index-main-prod-dream {
+  width: 28vw;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .swiperslide .main .main-prod .index-main-prod-dream {
+    width: 75vw;
+    margin-left: 10vh;
+  }
 }
 
 footer {
