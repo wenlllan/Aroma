@@ -1,9 +1,7 @@
-@import "./media.scss";
-@import "./fontSize";
-
-$color-deep: #535353;
-$color-pink: #ff9b99;
-$color-orange: #ffedc9;
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 
 
@@ -11,7 +9,6 @@ main {
   min-height: calc(100vh - 20vw);
   h3 {
     @include h3;
-    //color: $color-deep;
   }
   
   p {
@@ -20,10 +17,8 @@ main {
 
   /*修*/
   #news {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     .title {
       font-weight: 600;
@@ -37,18 +32,12 @@ main {
       flex-direction: column;
 
       .list-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
         height: auto;
         margin: 2vw 0;
 
         @include mobile {
-          // 改直排
-          display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
           margin: 1vw 0;
         }
 
@@ -73,14 +62,16 @@ main {
       .paragraph {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 37vw;
+        height: 15vw;
         margin-left: 5vw;
 
         @include mobile {
           margin-left: 0;
           width: 60%;
           padding: 2vh 0;
+          height: auto;
         }
 
         .p1 {
@@ -89,11 +80,6 @@ main {
           padding: 1vh 0;
           line-height: 1.6rem;
 
-          // @include pad {
-          //   line-height: 1rem;
-          //   padding: 0;
-          //   // 參考版
-          // }
           @include mobile {
             flex-wrap: wrap;
             padding: 0;
@@ -118,12 +104,7 @@ main {
             text-align: justify;
             line-height: 1.6rem;
 
-            /* 多行省略 */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* 可省略，為瀏覽器預設值 */
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
+            @extend %multiple-lines;
             -webkit-line-clamp: 4;
 
             @include pad {
@@ -148,31 +129,27 @@ main {
 
           a {
             @include p;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffff;
+            @extend %flex-center;
+            color: $color-white;
             padding: 0.5vw 1vw;
             /*修*/
             height: auto;
             min-height: 1.5rem;
             width: auto;
-            border-radius: calc(infinity * 1px);
+            border-radius: $radius-infinity;
             background-color: $color-pink;
+
+            @include mobile {
+              padding: 0.8vh 1.5vh;
+              background-color: $color-white;
+              color: $color-pink;
+              border: 1px solid;
+              font-size: .8rem;
+            }
 
             &:hover {
               box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             }
-
-            @include mobile {
-              padding: 0.8vh 1.5vh;
-              background-color: #fff;
-              color: #ff9b99;
-              border: 1px solid;
-              font-size: .8rem;
-
-            }
-
 
           }
 
@@ -182,9 +159,7 @@ main {
       }
 
       .pagenumber {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         margin: 4vh 0;
 
         a {

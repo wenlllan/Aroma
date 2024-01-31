@@ -1,12 +1,7 @@
-@import "./media.scss";
-@import "./fontSize.scss";
-
-$color-deep: #535353;
-$color-pink: #ff9b99;
-$color-orange: #ffedc9;
-$color-gray: #d9d9d9;
-$color-orange-deep: #ffd279;
-$color-lightpink: #ffdcdc;
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 
 main {
@@ -19,36 +14,42 @@ main {
 
   #shopping2nd {
     min-height: 400px;
-
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    .big-box {
-      display: flex;
-      flex-direction: column;
-      /* 主軸：文章列表 */
-      margin: 1vw 0 0 0;
+    .big-box{
+     
+      @include mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
 
       .top-steps {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         width: 100%;
-
         margin-right: 8%;
         padding-top: 6.5vw;
+
+        @include mobile {
+          justify-content: center;
+          margin: 0;
+          padding: 10vh 0 2vh 0;
+        }
 
         .steps {
           display: flex;
           flex-direction: column;
           align-items: center;
-          // width: 10rem;
-
           padding: 2vw;
 
           p {
+            padding-top: 1vw;
             @include p;
 
             @include mobile {
@@ -60,8 +61,6 @@ main {
             width: 3rem;
             height: 3rem;
             align-items: center;
-
-            // font-size: 1.5rem;
             background-color: #d9d9d9;
             border-radius: 50px;
             @include h3;
@@ -78,8 +77,6 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: center;
-
-            //   background-color: $color-pink;
             background-color: $color-lightpink;
             color: white;
 
@@ -88,10 +85,8 @@ main {
               z-index: -1;
               content: "";
               position: absolute;
-
               left: 3rem;
               /* 直線空行 */
-              // width: 25vw;
               width: 8.5rem;
               height: 1.5px;
               background-color: $color-pink;
@@ -110,7 +105,6 @@ main {
 
           #s2 {
             position: relative;
-
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -137,7 +131,6 @@ main {
 
               @include mobile {
                 left: 2rem;
-                /* 直線空行 */
                 width: 5rem;
               }
             }
@@ -149,55 +142,47 @@ main {
             justify-content: center;
             background-color: #d9d9d9;
           }
-
-          p {
-            padding-top: 1vw;
-          }
         }
       }
 
       .list-box {
+
+        @include mobile{
+          width: 70%;
+        }
         .title {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-
           font-weight: 600;
           color: $color-deep;
-
           padding: 2vw 0 2vw 0.5vw;
-          //   縮首排
 
           @include mobile {
-            padding-top: 4vw;
+            justify-content: center;
+            padding: 2vh 0;
           }
         }
 
         .list {
-          display: flex;
+          @extend %flex-center;
           flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
           border-top: 1px solid $color-pink;
           border-bottom: 1px solid $color-pink;
           padding: 0.8vw 4vw 0.8vw 9vw;
 
+          @include mobile {
+            padding: 1vh;
+          }
+
           p:nth-child(n + 2) {
             @include mobile {
               display: none;
-              // display: flex;
-              // flex-direction: column;
-              // justify-content: center;
             }
           }
 
-          // 商品項目表頭寬度
           p {
-
-            // padding: 0 3.5vw;
-            // 同.item {p{
             @include mobile {
               font-size: 0.75rem;
             }
@@ -207,7 +192,7 @@ main {
             width: 34%;
 
             @include mobile {
-              width: 20%;
+              width: 2rem;
             }
           }
 
@@ -229,45 +214,58 @@ main {
         }
 
         .list-item {
-          display: flex;
+          @extend %flex-center;
           flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
           height: auto;
           width: auto;
-          margin: 1vw 0;
+          padding: 1vw 0;
           border-bottom: 1.5px groove $color-gray;
 
           @include mobile {
-            height: 30vw;
             line-height: 2.5rem;
+            flex-direction: column;
+            padding: 2vh;
           }
 
-          figure {
+          .list-item-product {
+            width: 10vw;
             height: 8vw;
-            width: auto;
+            @extend %flex-center;
+            background-color: aliceblue;
 
-            min-width: 100px;
-            min-height: 80px;
-            padding-left: 0.5vw;
+            @include mobile {
+              width: auto;
+              height: auto;
+            }
 
-            img {
-              object-fit: cover;
-              height: 100%;
+            .product {
+              height: 8vw;
+              width: auto;
+
+              @include mobile {
+                height: 20vh;
+                padding: 0;
+                margin: 2vh 0;
+              }
             }
           }
 
           .item {
-            display: flex;
+            @extend %flex-center;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            // 對齊下緣
+
+            @include mobile {
+              flex-direction: column;
+              align-items: center;
+            }
 
             #shopping-cart {
               display: flex;
               align-items: center;
+
+              @include mobile {
+                padding: 1vh 0;
+              }
 
               #quantity {
                 width: 30px;
@@ -290,35 +288,48 @@ main {
               padding: 0 3.5vw;
 
               @include mobile {
-                font-size: 0.75rem;
+                font-size: 1rem;
+                padding: 1vh 0;
+              }
+
+              &:nth-child(2) {
+                @include mobile {
+                  display: none;
+                }
               }
             }
 
-            img {
-              width: 4vw;
-              max-width: 2rem;
+            .garbage-can {
+
+              @include mobile {
+                width: 4vh;
+                height: auto;
+              }
             }
 
             @include mobile {
               flex-wrap: wrap;
-              // justify-self: flex-end;
               align-items: center;
             }
           }
         }
 
         .total {
-          ul {
+          .t1{
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             margin-right: 3vw;
             padding: 1vw 0;
+
+            @include mobile{
+              padding: 2vh 0;
+            }
           }
 
           .next {
             #submit {
-              color: #ffff;
+              color: $color-white;
               padding: 1vh 1vh;
               height: auto;
               width: 100px;
@@ -336,25 +347,23 @@ main {
       }
 
       #contact_form {
+        @include mobile{
+          width: 70%;
+        }
         .list-boxes {
           min-height: 140px;
-
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
 
-          // margin: 1vw;
-
           .title {
             font-weight: 600;
             color: $color-deep;
-
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-
             padding: 2vw 0 2vw 0.5vw;
             border-bottom: 1px solid $color-pink;
             width: 100%;
@@ -362,6 +371,11 @@ main {
 
           .form-sign {
             padding: 1.5vw 0 1.5vw 0.5vw;
+
+            @include mobile{
+              width: 100%;
+              padding: 1vh 0 2vh;
+            }
 
             .sign {
               display: flex;
@@ -372,15 +386,21 @@ main {
               label {
                 margin: 1.5rem 0 0.3rem 0;
                 @include p;
+
+                @include mobile{
+                  margin: 1.5vh 0;
+                }
               }
 
               input {
                 font-family: "Noto Serif TC";
                 font-size: 0.8rem;
                 border: 0;
-                border-bottom: 1px solid #535353;
+                border-bottom: 1px solid $color-deep;
 
-                // 不要在這裡設padding，會很奇怪
+                @include mobile{
+                  width: 80%;
+                }
               }
             }
           }
@@ -391,40 +411,44 @@ main {
             p {
               color: $color-deep;
               font-size: 0.8rem;
+
+              @include mobile{
+                line-height: 120%;
+                margin: 0 0 2vh 0;
+              }
             }
           }
 
           .form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center;
             padding: 1.5vw 0 1vw 0.5vw;
 
+            @include mobile {
+              flex-direction: column;
+              width: 100%;
+              padding: 0;
+            }
+
             .form-check {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              color: #ffff;
+              @extend %flex-center;
+              color: $color-white;
               padding: 1vh 1vh;
               border-radius: 16px;
               border: none;
               background-color: $color-pink;
               margin: 0 0.5vw;
 
-              @include pad {
-                // width: 20vw;
-              }
-
               @include mobile {
                 height: 50px;
-                width: 220px;
-                margin: 0.3vw;
+                width: 100%;
+                margin: 1vh 0;
+                justify-content: flex-start;
               }
 
               &:hover {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                 background-color: $color-pink;
-                color: #ffff;
+                color: $color-white;
               }
 
               input {
@@ -435,7 +459,7 @@ main {
                 width: 14px;
                 height: 14px;
 
-                border: 2px solid #ffff;
+                border: 2px solid $color-white;
                 transition: 0.2s all linear;
                 margin-right: 5px;
               }
@@ -444,7 +468,6 @@ main {
               .form-check-label {
                 display: flex;
                 align-items: center;
-                //   min-height: 50px;
                 height: 5vw;
                 width: 15vw;
                 cursor: pointer;
@@ -455,22 +478,20 @@ main {
               }
 
               input:checked {
-                border: 3px solid #ffff;
+                border: 3px solid $color-white;
                 background-color: $color-orange-deep;
-              }
-
-              @include mobile {
-                justify-content: flex-start;
               }
             }
 
             #regularSelect {
               height: 1.6rem;
               font-family: "Noto Serif TC";
-            }
 
-            @include mobile {
-              flex-direction: column;
+              @include mobile{
+                width: 100%;
+                height: 4vh;
+                margin: 1vh 0;
+              }
             }
           }
         }
@@ -481,7 +502,6 @@ main {
           justify-content: flex-end;
           align-items: center;
           padding: 0.8vw 0;
-
           height: auto;
           min-height: 140px;
 
@@ -502,12 +522,11 @@ main {
               &:hover {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                 background-color: $color-pink;
-                color: #ffff;
+                color: $color-white;
               }
             }
           }
         }
       }
-    }
   }
 }

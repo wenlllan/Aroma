@@ -1,6 +1,4 @@
 import "../src/css/style.css";
-// import Nav from './Nav';
-// import Footer from './Footer';
 import Layout from "./Layout"
 import Homepage from "./Homepage";
 import ProdDream from "./ProdDream";
@@ -15,20 +13,20 @@ import Shopping3rd from "./Shopping3rd";
 import NewsArticle from "./NewsArticle";
 import Shops from "./Shops";
 import SelectSampleSec from "./SelectSampleSec";
-
 import HomepageSw from "./HomepageSw";
-
 import SelectSampleThird from "./SelectSampleThird";
-// import OrbCanvas from './OrbCanvas';
-// import Test2 from './Test2';
+import SelectSampleThirdS from "./SelectSampleThird-S";
 import BgGradient from "./BgGradient";
 
-
+import { Helmet } from 'react-helmet';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <link rel="preload" href="../src/css/style.css" as="font/script/style" />
+      </Helmet>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -39,6 +37,7 @@ function App() {
             <Route path="selectsample" element={<SelectSample />}></Route>
             <Route path="selectsamplesec" element={<SelectSampleSec />}></Route>
             <Route path="selectsamplethird" element={<SelectSampleThird />}></Route>
+            <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping />}></Route>
@@ -46,7 +45,6 @@ function App() {
             <Route path="shopping3rd" element={<Shopping3rd />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
             <Route path="shops" element={<Shops />}></Route>
-            {/* <Route path="homepageSw" element={<HomepageSw />}></Route> */}
           </Route>
 
           <Route path="/homepagesw" element={<HomepageSw />}></Route>

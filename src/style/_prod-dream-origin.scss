@@ -4,46 +4,6 @@
 @use "./function" as *;
 @use './keyframe' as *;
 
-.background-pink{
-    background-color: $color-pink;
-}
-
-.background-white{
-    background-color: $color-white;
-}
-
-.background-lightpink{
-    background-color: $color-lightpink;
-}
-
-.color-white{
-    color: $color-white;
-}
-
-.color-pink{
-    color: $color-pink;
-}
-
-.color-lightpink{
-   color: $color-lightpink;
-}
-
-.color-middlepink{
-	color:$color-middlepink;
-}
-
-.color-lightpinkM{
-	color:$color-lightpinkM;
-}
-
-.border-pink{
-    border: 1px solid $color-pink;
-}
-
-.background-linear-pink{
-	background: linear-gradient(180deg, #FECAC8 20%, $color-white 100%);
-}
-/* pink */
 
 .main-prod-dream {
     display: flex;
@@ -395,7 +355,7 @@
         width: 100%;
         overflow: hidden;
         @include dec_Eng;
-        //color: $color-lightpink;
+        color: $color-lightpink;
         line-height: normal;
         margin: 1.5vw 0;
 

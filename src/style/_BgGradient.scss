@@ -1,35 +1,27 @@
 :root {
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
-  // --color1: 18, 113, 255;
-  // --color2: 221, 74, 255;
-  // --color3: 100, 220, 255;
-  // --color4: 200, 50, 50;
-  // --color5: 180, 180, 50;
-
   //pink
   --color1: 255, 233, 233;
   --color2: 255, 182, 181;
   --color3: 255, 233, 233;
   --color4: 255, 182, 181;
   --color5: 255, 233, 233;
-  --color-interactive: 255, 233, 233;
+  --color-interactive-pink: 255, 233, 233;
 
-  // //yellow
-  // --color1: 255, 247, 215;
-  // --color2: 255, 232, 183;
-  // --color3: 255, 232, 183;
-  // --color4: 255, 247, 215;
-  // --color5: 255, 247, 215;
-  // --color-interactive: 255, 247, 215;
+  //yellow
+  --color6: 255, 247, 215;
+  --color7: 255, 232, 183;
+  --color8: 255, 232, 183;
+  --color9: 255, 247, 215;
+  --color10: 255, 247, 215;
+  --color-interactive-yellow: 255, 247, 215;
 
-  // //green
-  // --color1: 218, 255, 239;
-  // --color2: 218, 255, 239;
-  // --color3: 249, 255, 241;
-  // --color4: 218, 255, 239;
-  // --color5: 249, 255, 241;
-  // --color-interactive: 249, 255, 241;
+  //green
+  --color11: 218, 255, 239;
+  --color12: 218, 255, 239;
+  --color13: 249, 255, 241;
+  --color14: 218, 255, 239;
+  --color15: 249, 255, 241;
+  --color-interactive-green: 249, 255, 241;
 
   --circle-size: 80%;
   --blending: hard-light;
@@ -106,7 +98,6 @@
 
   .g1 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -120,9 +111,18 @@
     opacity: 1;
   }
 
+  .g1-pink{
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  }
+  .g1-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color6), 0.8) 0, rgba(var(--color6), 0) 50%) no-repeat;
+  }
+  .g1-green{
+    background: radial-gradient(circle at center, rgba(var(--color11), 0.8) 0, rgba(var(--color11), 0) 50%) no-repeat;
+  }
+
   .g2 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -135,10 +135,18 @@
 
     opacity: 1;
   }
+  .g2-pink{
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  }
+  .g2-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color7), 0.8) 0, rgba(var(--color7), 0) 50%) no-repeat;
+  }
+  .g2-green{
+    background: radial-gradient(circle at center, rgba(var(--color12), 0.8) 0, rgba(var(--color12), 0) 50%) no-repeat;
+  }
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -151,10 +159,18 @@
 
     opacity: 1;
   }
+  .g3-pink{
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  }
+  .g3-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color8), 0.8) 0, rgba(var(--color8), 0) 50%) no-repeat;
+  }
+  .g3-green{
+    background: radial-gradient(circle at center, rgba(var(--color13), 0.8) 0, rgba(var(--color13), 0) 50%) no-repeat;
+  }
 
   .g4 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -168,9 +184,18 @@
     opacity: 0.7;
   }
 
+  .g4-pink{
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  }
+  .g4-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color9), 0.8) 0, rgba(var(--color9), 0) 50%) no-repeat;
+  }
+  .g4-green{
+    background: radial-gradient(circle at center, rgba(var(--color14), 0.8) 0, rgba(var(--color14), 0) 50%) no-repeat;
+  }
+
   .g5 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
@@ -184,9 +209,18 @@
     opacity: 1;
   }
 
+  .g5-pink{
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  }
+  .g5-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color10), 0.8) 0, rgba(var(--color10), 0) 50%) no-repeat;
+  }
+  .g5-green{
+    background: radial-gradient(circle at center, rgba(var(--colo15), 0.8) 0, rgba(var(--color15), 0) 50%) no-repeat;
+  }
+
   .interactive {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;
@@ -195,5 +229,14 @@
     left: -50%;
 
     opacity: 0.7;
+  }
+  .interactive-pink{
+    background: radial-gradient(circle at center, rgba(var(--color-interactive-pink), 0.8) 0, rgba(var(--color-interactive-pink), 0) 50%) no-repeat;
+  }
+  .interactive-yellow{
+    background: radial-gradient(circle at center, rgba(var(--color-interactive-yellow), 0.8) 0, rgba(var(--color-interactive-yellow), 0) 50%) no-repeat;
+  }
+  .interactive-green{
+    background: radial-gradient(circle at center, rgba(var(--color-interactive-green), 0.8) 0, rgba(var(--color-interactive-green), 0) 50%) no-repeat;
   }
 }

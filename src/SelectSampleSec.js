@@ -37,7 +37,7 @@ const SelectSapmleSec = () => {
                     case '單純':
                     case '溫暖':
                         console.log('Summer Serenity');
-                        navigate('/selectsamplethird');
+                        navigate('/selectsamplethird-s');
                         break;
                     case '知性':
                     case '神秘':
@@ -63,7 +63,7 @@ const SelectSapmleSec = () => {
                     case '單純':
                     case '溫暖':
                         console.log('Summer Serenity');
-                        navigate('/selectsamplethird');
+                        navigate('/selectsamplethird-s');
                         break;
                     case '知性':
                     case '神秘':
@@ -89,7 +89,7 @@ const SelectSapmleSec = () => {
                     case '單純':
                     case '溫暖':
                         console.log('Summer Serenity');
-                        navigate('/selectsamplethird');
+                        navigate('/selectsamplethird-s');
                         break;
                     case '知性':
                     case '神秘':
@@ -105,7 +105,7 @@ const SelectSapmleSec = () => {
                 console.log(`Sorry, we are out of ${final}.`);
         }
 
-        //navigate('/selectsampleThird');
+        navigate('/selectsampleThird');
     };
 
 
@@ -113,7 +113,6 @@ const SelectSapmleSec = () => {
     localStorage.clear();
 
     return (
-
         <body className="scrollBox">
             <section id="select-bg" className="sec-bg">
                 <div className="select-div">
@@ -146,8 +145,6 @@ const SelectSapmleSec = () => {
                 </div>
             </section>
         </body>
-
-
     )
 }
 export default SelectSapmleSec;

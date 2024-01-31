@@ -1,5 +1,7 @@
-@import './media.scss';
-@import './fontSize.scss';
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 #select-bg {
     width: 100%;
@@ -23,7 +25,7 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                align-items: end;
+                align-items: flex-end;
 
                 @include mobile {
                     width: auto;
@@ -39,7 +41,6 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            // align-items: end;
             border: 1px solid #000;
             border-radius: 20px;
             padding: 5vw 5vw;
@@ -160,7 +161,7 @@
                     }
 
                     &:hover {
-                        color: #FF9B99;
+                        color: $color-pink;
                         transition: .35s;
 
                         &::after {
@@ -170,7 +171,7 @@
                             height: 2px;
                             left: 10%;
                             bottom: 25%;
-                            background-color: #FF9B99;
+                            background-color: $color-pink;
                             transition: .45s;
 
                             @include mobile {
@@ -227,7 +228,7 @@
                     padding: 0 1vw;
 
                     &:hover {
-                        color: #FFF;
+                        color: $color-white;
                     }
                 }
             }
@@ -236,7 +237,7 @@
         .sec {
             align-items: flex-start;
             justify-content: flex-end;
-            background: linear-gradient(178deg, rgba(255, 255, 255, 0.40) 10%, #FFF 55%, #D8EFFF 100%);
+            background: linear-gradient(178deg, rgba(255, 255, 255, 0.40) 10%, $color-white 55%, #D8EFFF 100%);
 
             @include mobile {
                 width: auto;

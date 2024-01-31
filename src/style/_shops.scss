@@ -1,25 +1,22 @@
-@import "./media.scss";
-@import "./fontSize.scss";
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
-h3 {
-  @include h3;
-  //color: $color-deep;
-}
-
-p {
-  @include p;
-  //color: $color-deep;
-}
 
 main {
-
+  h3 {
+    @include h3;
+  }
+  
+  p {
+    @include p;
+  }
   min-height: calc(100vh - 20vw);
 
   #shops {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     .title {
       font-weight: 600;
@@ -58,10 +55,8 @@ main {
       padding: 2vw 0 0 0;
 
       .list-item {
-        display: flex;
+        @extend %flex-center;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
 
         height: auto;
         width: auto;
@@ -73,7 +68,7 @@ main {
 
         figure {
           height: 16vw;
-          width: auto;
+          width: 24vw;
 
           img {
             object-fit: cover;
@@ -87,9 +82,8 @@ main {
         }
 
         .sites {
-          display: flex;
+          @extend %flex-between;
           flex-direction: column;
-          justify-content: space-between;
           height: 16vw;
           padding: 0 80px;
 
@@ -111,8 +105,6 @@ main {
             display: flex;
             align-items: flex-end;
 
-            /* padding: 5px; */
-            // width: fit-content;
             .left {
               display: flex;
               flex-direction: column;

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,6 +17,7 @@ import {
   Mousewheel,
   Keyboard,
   Autoplay,
+  EffectFade
 } from "swiper/modules";
 
 const HomepageSw = () => {
@@ -32,7 +33,7 @@ const HomepageSw = () => {
         slidesPerView={1}
         loop={true}
         autoplay={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay,EffectFade]}
         className="mySwiper"
         // ref={bannerSectionRef}
       >
