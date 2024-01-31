@@ -2,6 +2,7 @@ import "../src/css/style.css";
 import Layout from "./Layout"
 import Homepage from "./Homepage";
 import ProdDream from "./ProdDream";
+import ProdSummer from "./ProdSummer";
 import Member from "./Member";
 import Register from "./Register";
 import SelectSample from "./SelectSample";
@@ -31,7 +32,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />}></Route>
-            <Route path="prod" element={<ProdDream />}></Route>
+            <Route path="prod" element={<ProdDream theme="pink"/>}></Route>
+            <Route path="prod-summer" element={<ProdSummer theme="yellow"/>}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>

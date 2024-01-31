@@ -93,7 +93,7 @@ const Nav = () => {
                         <Link to="#" className="list-item" onClick={toggleDropdown}>選擇香氣</Link>
                         <ul className={`hide-prod ${isActive ? 'active' : ''}`} ref={hideProdRef}>
                             <li><Link to="/prod" className="dream">夢幻花境</Link></li>
-                            <li><Link to="/prod" className="summer">夏日晴空</Link></li>
+                            <li><Link to="/prod-summer" className="summer">夏日晴空</Link></li>
                             <li><Link to="/prod" className="forest">幽林冒險</Link></li>
                         </ul>
                     </li>

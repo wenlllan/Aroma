@@ -77,7 +77,7 @@ const Homepage = () => {
 
                     </div>
                     <div className="prod-list-items">
-                        <Link to="/prod">
+                        <Link to="/prod-summer">
                             <div>
                                 <img src="./images/prod-summer.png" alt="" />
                             </div>

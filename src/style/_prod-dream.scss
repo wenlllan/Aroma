@@ -4,51 +4,33 @@
 @use "./function" as *;
 @use './keyframe' as *;
 
-.background-pink{
-    background-color: $color-pink;
-}
 
-.background-white{
-    background-color: $color-white;
-}
-
-.background-lightpink{
-    background-color: $color-lightpink;
-}
-
-.color-white{
-    color: $color-white;
-}
-
-.color-pink{
-    color: $color-pink;
-}
-
-.color-lightpink{
-   color: $color-lightpink;
-}
-
-.color-middlepink{
-	color:$color-middlepink;
-}
-
-.color-lightpinkM{
-	color:$color-lightpinkM;
-}
-
-.border-pink{
-    border: 1px solid $color-pink;
-}
-
-.background-linear-pink{
-	background: linear-gradient(180deg, #FECAC8 20%, $color-white 100%);
-}
-/* pink */
+.theme-yellow {
+    --main-color:#FFB117;
+    --light-color:#FFFEF1;;
+    --middle-color:#FFE6B6;
+    --secondary-color:#FFF1D3;
+  }
+  
+  .theme-pink {
+    --main-color: #ff9b99;
+    --light-color:#FFEFEF;
+    --middle-color:#FFB6B5;
+    --secondary-color:#FFE0DF;
+  }
+  
+  .theme-green {
+    --main-color: #7FB33D;
+    --light-color:#F9FFF1;
+    --middle-color:#EDEDED;
+    --secondary-color:#E7EFDD;
+  }
 
 .main-prod-dream {
     display: flex;
     flex-direction: column;
     position: relative;
+    animation: fade 2s linear 0s 1;
 
     .shopping-cart {
         position: fixed;
@@ -93,12 +75,12 @@
                 position: absolute;
                 top: -12px;
                 right: -12px;
-                background: $color-pink;
+                background: var(--main-color);
                 line-height: 24px;
                 padding: 0 1px;
                 height: 24px;
                 min-width: 24px;
-                color: white;
+                color: $color-white;
                 text-align: center;
                 border-radius: calc(infinity * 1px);
             }
@@ -117,15 +99,16 @@
 
     .left-deco {
         position: absolute;
-        width: 18vw;
+        width: 22vw;
         height: auto;
         top: 40vh;
-        left: -3vw;
+        left: -10vw;
 
         @include mac {
-            width: 18vw;
+            width: 25vw;
+            height: auto;
             top: 16vh;
-            left: -5vw;
+            left: -8vw;
         }
 
         @include mobile {
@@ -274,9 +257,9 @@
                     position: relative;
 
                     &:hover {
-                        background-color: $color-pink;
+                        background-color: var(--main-color);
                         color: $color-white;
-                        border: 1px solid $color-pink;
+                        border: 1px solid var(--main-color);
                         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                     }
 
@@ -295,8 +278,8 @@
                             width: 24px;
                             font-size: 12px;
                             font-weight: 600;
-                            background: $color-pink;
-                            color: white;
+                            background: var(--main-color);
+                            color: $color-white;
                             border-radius: calc(infinity * 1px);
                             text-align: center;
                         }
@@ -395,7 +378,7 @@
         width: 100%;
         overflow: hidden;
         @include dec_Eng;
-        //color: $color-lightpink;
+        color: var(--light-color);
         line-height: normal;
         margin: 1.5vw 0;
 
@@ -489,10 +472,10 @@
         .add-m {
             font-family: 'Noto Serif TC', serif;
             @include p;
-            background-color: $color-pink;
+            background-color: var(--main-color);
             color: $color-white;
             border-radius: 4px;
-            border: 1px solid $color-pink;
+            border: 1px solid var(--main-color);
             letter-spacing: 1px;
             padding: 1vh 14vh;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -509,7 +492,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin: 5vw 13vw;
-    animation: fade 3s linear 0s 1;
+    animation: fade 5s linear 0s 1;
 
     @include mobile {
         display: none;
@@ -585,10 +568,11 @@
 }
 
 .prod-story-container {
-    background-color: #FFEFEF;
+    background-color: var(--light-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fade 5s linear 0s 1;
 
     .prod-story-title {
         display: flex;
@@ -621,7 +605,7 @@
 
         .prod-story-title-ENG {
             @include dec_Eng;
-            color: #FFB6B5;
+            color: var(--middle-color);
 
             @include pad {
                 font-size: 3rem;
@@ -798,7 +782,7 @@
 }
 
 .prod-notes {
-    background: linear-gradient(180deg, #FECAC8 20%, $color-white 100%);
+    background: linear-gradient(180deg, var(--middle-color) 20%, $color-white 100%);
     width: 100%;
     display: flex;
 
@@ -953,7 +937,7 @@
         @extend %flex-center;
         flex-direction: column;
         border-radius: 50%;
-        background-color: #FFEFEF;
+        background-color: var(--light-color);
 
         @include pad {
             width: 90vw;
@@ -1012,7 +996,7 @@
                     @include dec_Eng;
                     /*ENG 64px*/
                     letter-spacing: 1px;
-                    color: #FFB6B5;
+                    color: var(--middle-color);
                     top: 20%;
                     /* 设置距顶部的位置为容器高度的50% */
                     left: 50%;
@@ -1111,7 +1095,7 @@
         font-size: 1.25rem;
         /*ENG 64px*/
         padding: 4vw 0;
-        color: $color-pink;
+        color: var(--main-color);
 
         @include mac {
             font-size: 1rem;
@@ -1132,7 +1116,7 @@
 .prod-function {
     @extend %flex-center;
     flex-direction: column;
-    background: linear-gradient(124deg, #FFEFEF 75%, #FECFCD 100%);
+    background: linear-gradient(124deg, var(--light-color) 75%, var(--middle-color) 100%);
     padding-bottom: 5vw;
 
     .prod-function-title {
@@ -1164,7 +1148,7 @@
         .prod-function-title-ENG {
             position: absolute;
             @include dec_Eng;
-            color: #FFE0DF;
+            color: var(--secondary-color);
             top: 40%;
             left: 100%;
 
@@ -1322,7 +1306,7 @@
         .find-ENG {
             @include dec_Eng;
             position: absolute;
-            color: #FFE0DF;
+            color: var(--secondary-color);
             top: 50%;
             /* 设置距顶部的位置为容器高度的50% */
             left: 50%;
@@ -1371,11 +1355,11 @@
             @extend %flex-center;
             flex-direction: column;
             justify-content: center;
-            border: 1px solid $color-pink;
+            border: 1px solid var(--main-color);
             background: $color-white;
             font-size: 1.25rem;
             /*20px*/
-            color: $color-pink;
+            color: var(--main-color);
             letter-spacing: 4px;
             border-radius: $radius-infinity;
             line-height: normal;
@@ -1384,13 +1368,12 @@
             transition: all 0.35s ease 0s;
 
             &:hover {
-                border: 1px solid $color-pink;
-                background: $color-pink;
+                border: 1px solid var(--main-color);
+                background: var(--main-color);
                 color: $color-white;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.35s ease 0s;
                 transform: translateY(-3px);
-
             }
 
             @include mac {

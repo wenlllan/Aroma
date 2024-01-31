@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
-const ProdDream = ({theme}) => {
+const ProdSummer = ({theme}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);
@@ -33,55 +33,55 @@ const ProdDream = ({theme}) => {
                             </defs>
                         </svg>
                         <div className="gradients-container">
-                            <div className="g1 g1-pink"></div>
-                            <div className="g2 g2-pink"></div>
-                            <div className="g3 g3-pink"></div>
-                            <div className="g4 g4-pink"></div>
-                            <div className="g5 g5-pink"></div>
-                            <div className="interactive interactive-pink"></div>
+                            <div className="g1 g1-yellow"></div>
+                            <div className="g2 g2-yellow"></div>
+                            <div className="g3 g3-yellow"></div>
+                            <div className="g4 g4-yellow"></div>
+                            <div className="g5 g5-yellow"></div>
+                            <div className="interactive interactive-yellow"></div>
                         </div>
                     </div>
                 </div>
                 <div className={`shopping-cart theme-${theme}`}>
                     {/* <span className="cart-item"></span> */}
-                    <div id="cart" className={isShaking ? ' cart pink-theme' : ' cart shake pink-theme'} data-totalitems={cartTotal}></div>
+                    <div id="cart" className={isShaking ? ' cart' : ' cart shake'} data-totalitems={cartTotal}></div>
                     <div className="shopping-cart-div">
                         <Link to="/shopping"><figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure></Link>
                     </div>
                 </div>
-                <figure className="left-deco"><img src="./images/dream-flower.svg" alt="" /></figure>
+                <figure className="left-deco"><img src="./images/summer-flower.svg" alt="" /></figure>
                 <div className="prod-div">
-                    <figure className="main-prod-img"><img src="./images/prod-dream.png" alt="尋香奇遊的夢幻花境" /></figure>
+                    <figure className="main-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
                     <div className="prod-info-div">
                         <div className="prod-info-title">
-                            <h3>尋香奇遊的</h3>
-                            <h1>夢幻花境</h1>
-                            <p>Dreamscape Bloom</p>
-                            <small>花香調Floral | 前調雛菊、中調玫瑰、後調廣藿香</small>
+                            <h3>恬靜風情的</h3>
+                            <h1>夏日晴空</h1>
+                            <p>Summer Serenity</p>
+                            <small>清新調Fresh | 前調白檸檬、中調鬱金香、後調鼠尾草</small>
                         </div>
                         <div className="prod-info-contain">
                             <div className="prod-info-contain-item">
                                 <div className="ml">30ml</div>
                                 <div className="price">NT$1,880</div>
-                                <button className="add">加入購物車</button>
+                                <button className={`add theme-${theme}`}>加入購物車</button>
                             </div>
                             <div className="prod-info-contain-item">
                                 <div className="ml">50ml</div>
                                 <div className="price">NT$2,880</div>
-                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={addToCart}>加入購物車<span className="cart-item"></span></button>
+                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={addToCart}>加入購物車<span className={`cart-item theme-${theme}`}></span></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="prod-contain">
-                    <h4>徜徉於花香與夢境的神奇領域，<br />
-                        尋覓屬於我獨特芳香。</h4>
-                    <p>香氛如詩般編織著回憶的線索，<br />
-                        一瓶香水，一場夢幻之旅。</p>
+                    <h4>夏日午後的微旅，沐浴陽光與輕風的溫柔，<br />
+                        一抹清新在陽光下輕盈綻放。</h4>
+                    <p>彷彿溫暖擁抱，讓你於每個盛夏時刻悅然心懷。
+                        </p>
                 </div>
-                <div className="marquee-container color-lightpink">
-                    <div className="marquee-content">
-                        Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods
+                <div className={`marquee-container theme-${theme}`}>
+                    <div className={`marquee-content theme-${theme}`}>
+                        Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods 
                         Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods
                     </div>
                 </div>
@@ -95,14 +95,14 @@ const ProdDream = ({theme}) => {
                             <button id="increase">＋</button>
                         </div>
                     </div>
-                    <button class="add-m">加入購物車</button>
+                    <button class={`add-m theme-${theme}`}>加入購物車</button>
                 </section>
             </section>
             <section className="dream-img">
                 <figure className="circle"><img src="./images/prod-circle-soul.svg" alt="" /></figure>
                 <figure className="arrow-down"><img src="./images/prod-arrow-down.svg" alt="" /></figure>
-                <figure className="small-dream"><img src="./images/prod-dream.png" alt="" /></figure>
-                <figure className="small-dream-bg"><img src="./images/main_bg1.jpg" alt="" /></figure>
+                <figure className="small-dream"><img src="./images/prod-summer.png" alt="" /></figure>
+                <figure className="small-dream-bg"><img src="./images/main_bg3.jpg" alt="" /></figure>
             </section>
             <section className={`prod-story-container theme-${theme}`}>
                 <div className="prod-story-title">
@@ -110,13 +110,13 @@ const ProdDream = ({theme}) => {
                         <p>香氛的靈感</p>
                         <h2>香水故事</h2>
                     </div>
-                    <p className="prod-story-title-ENG">the story about the perfume</p>
+                    <p className={`prod-story-title-ENG theme-${theme}`}>the story about the perfume</p>
                 </div>
                 <div className="story-contain">
                     <div className="prod-story">
                         <div>
-                            <h4>在春日晨光的溫柔中</h4>
-                            <p>當初春的晨光柔和地灑落，你開啟了一段春天的浪漫之旅。春日清晨，伴隨著雛菊的清新氣息，輕撫過你的面龐，喚醒心中對春天美好的期待，引領你走進這片充滿生機與浪漫的花園。</p>
+                            <h4>在夏日的清晨輕風中</h4>
+                            <p>隨著晨曦的溫暖光芒輕拂過花園，你開啟了一天的美好。夏日的早晨，帶著白檸檬的清新氣息，輕輕撫過你的臉頰，喚醒內心對大自然之美的向往，引領你走入這片充滿生機的夏日花園。</p>
                         </div>
                         <div>
                             <div className="img-border">
@@ -128,14 +128,14 @@ const ProdDream = ({theme}) => {
                     <div className="prod-story">
                         <div></div>
                         <div className="prod-story-right">
-                            <h4>在玫瑰的魅力中尋幽</h4>
-                            <p>這片花園裡，玫瑰以其醉人的香氣和繽紛的色彩在春光中綻放。你隨著這股芬芳，漫步於花叢之間，沉浸在春天的魅力和悠閒中。</p>
+                            <h4>在鬱金香的繽紛中徜徉</h4>
+                            <p>這座花園裡，繽紛的鬱金香在陽光下綻放，它們的豐富色彩和香氣引領你穿梭於花叢之間。你跟隨著這股花香，沉浸在色彩斑斕的世界中，感受夏日的活力和喜悅。</p>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div>
-                            <h4>廣藿香與綠葉的和諧共鳴</h4>
-                            <p>在這片春日花園中，你發現了廣藿香的深沉香氣與新鮮綠葉的清新相結合。空氣中充滿了廣藿香的神秘與綠葉的活力，創造出一種平衡而愉悅的氛圍。你在這片角落中靜靜地享受著春日的悠閒時光。</p>
+                            <h4>鼠尾草與綠葉的清新融合</h4>
+                            <p>在這片花園中，你發現了一片覆蓋著鼠尾草和新鮮綠葉的角落。這裡的空氣中充滿了清新與生機，鼠尾草的淡雅香氣與綠葉的清新完美融合，創造出一種平靜而恬淡的氛圍。你在這個角落靜靜地享受著這個夏日早晨，與自然和諧共處。</p>
                         </div>
                         <div>
                             <figure className="right-photo3"><img src="./images/prod-story-2.jpg" alt="" /></figure>
@@ -152,93 +152,93 @@ const ProdDream = ({theme}) => {
                             </figure>
                         </div>
                         <div className="prod-story-right">
-                            <h4>春天浪漫之旅的香氛</h4>
-                            <p>這款香水融合了雛菊的清新、玫瑰的浪漫與廣藿香的深邃，完美地捕捉了春天浪漫之旅的精髓。它將春日花園的美好瞬間固定在每一滴香水中。</p>
+                            <h4>夏日花園的香氛</h4>
+                            <p>這款香水融合了白檸檬的活力、鬱金香的華麗與鼠尾草的自然氣息，成為一款完美的夏日香氛。它將夏日花園的精髓捕捉於每一滴香水之中。</p>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div className="prod-story-left">
-                            <h4>你的春天野餐旅程</h4>
-                            <p>讓這款香水成為你春日野餐旅程的理想伴侶。每次噴灑，都仿佛重現春日野餐的每一個愉悅瞬間，帶你進入一個充滿生機與浪漫的夢幻世界。這款香水不只是一種香氛，它象徵著你在春日旅程中所體驗的每一刻美好回憶。
+                            <h4>你的夏日花園時光</h4>
+                            <p>讓這款香水成為你在夏日花園中的完美伴侶。每次噴灑，都仿佛重現花園裡的每一個美好瞬間，將你帶入一個充滿色彩和生命力的夢幻世界。這款香水不僅是一種香氛，它是你在夏日花園中度過的每一刻美好記憶的象徵。
                             </p>
                         </div>
                         <div></div>
                     </div>
                 </div>
                 <div className="prod-story-last">
-                    沉浸在春日的浪漫中，去感受、去體驗這個世界所賦予的美好和可能性。<br />
-                    這款香水將成為你在春日浪漫之旅中的完美伴侶，引領你踏上一段充滿愉悅和探索的新旅程。
-                    <figure><img src="./images/prod-story-last-circle-pink.svg" alt="" /></figure>
+                勇敢地去享受，去感受，這個世界充滿了夏日的美好與驚喜。<br/>
+                這款香水將成為你沉浸在自然美景中的伴侶，引領你進入一個充滿生機與活力的全新世界。
+                    <figure><img src="./images/prod-story-last-circle-yellow.svg" alt="" /></figure>
                 </div>
 
             </section>
-            <section className="prod-notes">
+            <section className={`prod-notes theme-${theme}`}>
                 <div className="prod-notes-title">
 
-                    <figure className="note-time"><img src="./images/prod-note-time-pink.svg" alt="" /></figure>
+                    <figure className="note-time"><img src="./images/prod-note-time-yellow.svg" alt="" /></figure>
                     <h2>香調輪廓</h2>
 
                 </div>
                 <div className="prod-note-contain">
                     <div className="top">
                         <h2>香調</h2>
-                        <h3>花香調Floral</h3>
+                        <h3>清新調Fresh</h3>
                         <figure className="top-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                     </div>
                     <div className="bottom">
                         <div>
                             <h2>前調</h2>
-                            <h3>雛菊</h3>
+                            <h3>白檸檬</h3>
                         </div>
                         <figure className="bottom-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                         <div>
                             <h2>中調</h2>
-                            <h3>玫瑰</h3>
+                            <h3>鬱金香</h3>
                         </div>
                         <figure className="bottom-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                         <div>
                             <h2>後調</h2>
-                            <h3>廣藿香</h3>
+                            <h3>鼠尾草</h3>
                         </div>
                     </div>
                 </div>
             </section>
             <section className={`prod-material theme-${theme}`}>
-                <div className="prod-material-contain">
+                <div className={`prod-material-contain theme-${theme}`}>
                     <div className="material-info-div">
                         <div className="material-name">
-                            <h4>雛菊</h4>
-                            <p>Daisy</p>
+                            <h4>白檸檬</h4>
+                            <p>White lemon</p>
                         </div>
                         <div className="material-info">
-                            <p><span>香氣特性｜</span>雛菊散發出清新芬芳，如同微風拂過的溫柔香氛。它帶來淡雅、清新的感覺，讓人聯想到春日的芬芳和自然的清新。</p>
+                            <p><span>香氣特性｜</span>白檸檬散發著清新、明亮、柑橘的香氣。白檸檬具有激動人心的酸爽，帶來活力四射的感覺。</p>
                         </div>
                         <div className="material-info">
-                            <p><span>象徵意義｜</span>雛菊象徵著純潔、忠誠與希望。其細小的花朵代表著純潔無瑕的美，而它們的堅韌生存也暗示著對抗逆境的勇氣。</p>
+                            <p><span>象徵意義｜</span>白檸檬通常與清新、活力、喜悅相聯繫。其明亮的香氣被視為提升情緒的元素，為人帶來快樂的感受。</p>
                         </div>
                     </div>
                     <div className="material-info-div">
                         <div className="material-name">
-                            <h4>玫瑰</h4>
-                            <p>Rose</p>
+                            <h4>鬱金香</h4>
+                            <p>Tulip</p>
                         </div>
                         <div className="material-info">
-                            <p><span>香氣特性｜</span>玫瑰花散發出獨特的、甜美而芳香的香氣，具有深厚的花香和微妙的香辛料調。</p>
+                            <p><span>香氣特性｜</span>鬱金香散發著清淡、溫暖、馥郁的香氣，具有濃郁的奶油和焦糖風味。</p>
                         </div>
                         <div className="material-info">
-                            <p><span>象徵意義｜</span>玫瑰象徵著愛、浪漫和美麗。在文學、藝術和文化中，玫瑰經常被視為愛情的象徵，並與女性之美相聯繫。</p>
+                            <p><span>象徵意義｜</span>鬱金香象徵著高貴與優雅，展現著永恆的美與熱情。鬱金香散發著深沉的情感，代表著愛情、熱情和優雅的魅力。</p>
                         </div>
                     </div>
                     <div className="material-info-div">
                         <div className="material-name">
-                            <h4>廣藿香</h4>
-                            <p>Patchouli</p>
+                            <h4>鼠尾草</h4>
+                            <p>Sage</p>
                         </div>
                         <div className="material-info">
-                            <p><span>香氣特性｜</span>廣藿香散發出濃郁、深沉、帶有木質和土壤氣息的香氣。其香調屬於地中海調，具有一種迷人的、持久的香味。</p>
+                            <p><span>香氣特性｜</span>鼠尾草散發出草本、清新的香氣，帶有迷迭香獨特的濃烈草本香調，，清新而活潑。</p>
                         </div>
                         <div className="material-info">
-                            <p><span>象徵意義｜</span>廣藿香香氣被認為有助於提升心靈平靜，被廣泛用於冥想和舒緩壓力的環境中。</p>
+                            <p><span>象徵意義｜</span>鼠尾草在象徵上與清新、純淨、健康相聯繫。其草本香氣被認為有助於提升精神，帶來正面的能量。</p>
                         </div>
                     </div>
                 </div>
@@ -317,4 +317,4 @@ const ProdDream = ({theme}) => {
     )
 
 }
-export default ProdDream;
+export default ProdSummer;

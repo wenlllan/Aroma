@@ -1110,51 +1110,32 @@ footer div .footer-box a {
   }
 }
 
-.background-pink {
-  background-color: #ff9b99;
+.theme-yellow {
+  --main-color:#FFB117;
+  --light-color:#FFFEF1;
+  --middle-color:#FFE6B6;
+  --secondary-color:#FFF1D3;
 }
 
-.background-white {
-  background-color: #FFFFFF;
+.theme-pink {
+  --main-color: #ff9b99;
+  --light-color:#FFEFEF;
+  --middle-color:#FFB6B5;
+  --secondary-color:#FFE0DF;
 }
 
-.background-lightpink {
-  background-color: #FFEFEF;
+.theme-green {
+  --main-color: #7FB33D;
+  --light-color:#F9FFF1;
+  --middle-color:#EDEDED;
+  --secondary-color:#E7EFDD;
 }
 
-.color-white {
-  color: #FFFFFF;
-}
-
-.color-pink {
-  color: #ff9b99;
-}
-
-.color-lightpink {
-  color: #FFEFEF;
-}
-
-.color-middlepink {
-  color: #FFB6B5;
-}
-
-.color-lightpinkM {
-  color: #FFE0DF;
-}
-
-.border-pink {
-  border: 1px solid #ff9b99;
-}
-
-.background-linear-pink {
-  background: linear-gradient(180deg, #FECAC8 20%, #FFFFFF 100%);
-}
-
-/* pink */
 .main-prod-dream {
   display: flex;
   flex-direction: column;
   position: relative;
+  animation: fade 2s linear 0s 1;
 }
 .main-prod-dream .shopping-cart {
   position: fixed;
@@ -1197,12 +1178,12 @@ footer div .footer-box a {
   position: absolute;
   top: -12px;
   right: -12px;
-  background: #ff9b99;
+  background: var(--main-color);
   line-height: 24px;
   padding: 0 1px;
   height: 24px;
   min-width: 24px;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   border-radius: calc(infinity * 1px);
 }
@@ -1216,16 +1197,17 @@ footer div .footer-box a {
 }
 .main-prod-dream .left-deco {
   position: absolute;
-  width: 18vw;
+  width: 22vw;
   height: auto;
   top: 40vh;
-  left: -3vw;
+  left: -10vw;
 }
 @media (max-width: 1440px) {
   .main-prod-dream .left-deco {
-    width: 18vw;
+    width: 25vw;
+    height: auto;
     top: 16vh;
-    left: -5vw;
+    left: -8vw;
   }
 }
 @media (max-width: 576px) {
@@ -1417,9 +1399,9 @@ footer div .footer-box a {
   }
 }
 .main-prod-dream .prod-div .prod-info-div .prod-info-contain-item .add:hover {
-  background-color: #ff9b99;
+  background-color: var(--main-color);
   color: #FFFFFF;
-  border: 1px solid #ff9b99;
+  border: 1px solid var(--main-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .main-prod-dream .prod-div .prod-info-div .prod-info-contain-item .add .cart-item {
@@ -1437,8 +1419,8 @@ footer div .footer-box a {
   width: 24px;
   font-size: 12px;
   font-weight: 600;
-  background: #ff9b99;
-  color: white;
+  background: var(--main-color);
+  color: #FFFFFF;
   border-radius: calc(infinity * 1px);
   text-align: center;
 }
@@ -1551,6 +1533,7 @@ footer div .footer-box a {
   overflow: hidden;
   font-family: "Beth Ellen", cursive;
   font-size: 4rem;
+  color: var(--light-color);
   line-height: normal;
   margin: 1.5vw 0;
 }
@@ -1648,10 +1631,10 @@ footer div .footer-box a {
   .prod-info-contain-m .add-m {
     font-family: "Noto Serif TC", serif;
     font-size: 1rem;
-    background-color: #ff9b99;
+    background-color: var(--main-color);
     color: #FFFFFF;
     border-radius: 4px;
-    border: 1px solid #ff9b99;
+    border: 1px solid var(--main-color);
     letter-spacing: 1px;
     padding: 1vh 14vh;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -1680,7 +1663,7 @@ footer div .footer-box a {
   justify-content: flex-end;
   align-items: flex-end;
   margin: 5vw 13vw;
-  animation: fade 3s linear 0s 1;
+  animation: fade 5s linear 0s 1;
 }
 @media (max-width: 576px) {
   .dream-img {
@@ -1756,10 +1739,11 @@ footer div .footer-box a {
   }
 }
 .prod-story-container {
-  background-color: #FFEFEF;
+  background-color: var(--light-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fade 5s linear 0s 1;
 }
 .prod-story-container .prod-story-title {
   display: flex;
@@ -1807,7 +1791,7 @@ footer div .footer-box a {
 .prod-story-container .prod-story-title .prod-story-title-ENG {
   font-family: "Beth Ellen", cursive;
   font-size: 4rem;
-  color: #FFB6B5;
+  color: var(--middle-color);
 }
 @media (max-width: 1440px) {
   .prod-story-container .prod-story-title .prod-story-title-ENG {
@@ -2029,7 +2013,7 @@ footer div .footer-box a {
 }
 
 .prod-notes {
-  background: linear-gradient(180deg, #FECAC8 20%, #FFFFFF 100%);
+  background: linear-gradient(180deg, var(--middle-color) 20%, #FFFFFF 100%);
   width: 100%;
   display: flex;
 }
@@ -2229,7 +2213,7 @@ footer div .footer-box a {
   height: 68vw;
   flex-direction: column;
   border-radius: 50%;
-  background-color: #FFEFEF;
+  background-color: var(--light-color);
 }
 @media (max-width: 1024px) {
   .prod-material .prod-material-contain {
@@ -2308,7 +2292,7 @@ footer div .footer-box a {
   font-size: 4rem;
   /*ENG 64px*/
   letter-spacing: 1px;
-  color: #FFB6B5;
+  color: var(--middle-color);
   top: 20%;
   /* 设置距顶部的位置为容器高度的50% */
   left: 50%;
@@ -2418,7 +2402,7 @@ footer div .footer-box a {
   font-size: 1.25rem;
   /*ENG 64px*/
   padding: 4vw 0;
-  color: #ff9b99;
+  color: var(--main-color);
 }
 @media (max-width: 1440px) {
   .prod-photo p {
@@ -2440,7 +2424,7 @@ footer div .footer-box a {
 
 .prod-function {
   flex-direction: column;
-  background: linear-gradient(124deg, #FFEFEF 75%, #FECFCD 100%);
+  background: linear-gradient(124deg, var(--light-color) 75%, var(--middle-color) 100%);
   padding-bottom: 5vw;
 }
 .prod-function .prod-function-title {
@@ -2486,7 +2470,7 @@ footer div .footer-box a {
   position: absolute;
   font-family: "Beth Ellen", cursive;
   font-size: 4rem;
-  color: #FFE0DF;
+  color: var(--secondary-color);
   top: 40%;
   left: 100%;
 }
@@ -2708,7 +2692,7 @@ footer div .footer-box a {
   font-family: "Beth Ellen", cursive;
   font-size: 4rem;
   position: absolute;
-  color: #FFE0DF;
+  color: var(--secondary-color);
   top: 50%;
   /* 设置距顶部的位置为容器高度的50% */
   left: 50%;
@@ -2767,11 +2751,11 @@ footer div .footer-box a {
 .prod-find .prod-find-btn a {
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #ff9b99;
+  border: 1px solid var(--main-color);
   background: #FFFFFF;
   font-size: 1.25rem;
   /*20px*/
-  color: #ff9b99;
+  color: var(--main-color);
   letter-spacing: 4px;
   border-radius: calc(infinity * 1px);
   line-height: normal;
@@ -2780,8 +2764,8 @@ footer div .footer-box a {
   transition: all 0.35s ease 0s;
 }
 .prod-find .prod-find-btn a:hover {
-  border: 1px solid #ff9b99;
-  background: #ff9b99;
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
   color: #FFFFFF;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.35s ease 0s;
