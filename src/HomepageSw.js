@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect  } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
@@ -27,10 +27,8 @@ const HomepageSw = () => {
     <div>
       <body className="scrollBox">
       <Swiper
-        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectFade]}
         cssMode={true}
         navigation={true}
-        // effect={'fade'}
         pagination={true}
         mousewheel={true}
         keyboard={true}
@@ -41,6 +39,8 @@ const HomepageSw = () => {
         
         className="mySwiper"
         // ref={bannerSectionRef}
+        // effect={'fade'}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectFade]}
       >
         
         <SwiperSlide className="swiperslide">
