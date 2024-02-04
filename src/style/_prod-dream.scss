@@ -1,15 +1,36 @@
-@import './media.scss';
-@import './fontSize.scss';
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
+@use './keyframe' as *;
+
+
+.theme-yellow {
+    --main-color:#FFB117;
+    --light-color:#FFFEF1;;
+    --middle-color:#FFE6B6;
+    --secondary-color:#FFF1D3;
+  }
+  
+  .theme-pink {
+    --main-color: #ff9b99;
+    --light-color:#FFEFEF;
+    --middle-color:#FFB6B5;
+    --secondary-color:#FFE0DF;
+  }
+  
+  .theme-green {
+    --main-color: #7FB33D;
+    --light-color:#F9FFF1;
+    --middle-color:#EDEDED;
+    --secondary-color:#E7EFDD;
+  }
 
 .main-prod-dream {
     display: flex;
     flex-direction: column;
     position: relative;
-
-
-    @include mobile {
-        padding-top: 2vh;
-    }
+    animation: fade 2s linear 0s 1;
 
     .shopping-cart {
         position: fixed;
@@ -18,6 +39,11 @@
         right: 10vh;
         bottom: 10vh;
         z-index: 99;
+        cursor: pointer;
+
+        @include mobile {
+            display: none;
+        }
 
         .shopping-cart-div {
             position: fixed;
@@ -39,9 +65,7 @@
             right: 20px;
             width: 50px;
             height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @extend %flex-center;
             border-radius: 5px;
             z-index: 100;
 
@@ -51,12 +75,12 @@
                 position: absolute;
                 top: -12px;
                 right: -12px;
-                background: #FF9B99;
+                background: var(--main-color);
                 line-height: 24px;
                 padding: 0 1px;
                 height: 24px;
                 min-width: 24px;
-                color: white;
+                color: $color-white;
                 text-align: center;
                 border-radius: calc(infinity * 1px);
             }
@@ -75,15 +99,16 @@
 
     .left-deco {
         position: absolute;
-        width: 18vw;
+        width: 22vw;
         height: auto;
-        top: 23vh;
-        left: -3vw;
+        top: 40vh;
+        left: -10vw;
 
         @include mac {
-            width: 18vw;
+            width: 25vw;
+            height: auto;
             top: 16vh;
-            left: -5vw;
+            left: -8vw;
         }
 
         @include mobile {
@@ -102,6 +127,7 @@
 
         @include mobile {
             flex-direction: column;
+            padding-top: 4vh;
         }
 
         .main-prod-img {
@@ -212,19 +238,18 @@
                 }
 
                 @include p;
-                display: flex;
+                @extend %flex-between;
                 line-height: normal;
                 letter-spacing: 1px;
-                justify-content: space-between;
                 align-items: center;
                 padding: .8vw 0 .1vw 0;
 
                 .add {
                     font-family: 'Noto Serif TC', serif;
                     @include p;
-                    background-color: #fff;
+                    background-color: transparent;
                     border-radius: 2px;
-                    border: 1px solid #535353;
+                    border: 1px solid $color-deep;
                     flex-shrink: 0;
                     letter-spacing: 1px;
                     padding: 0.2rem 0.5rem;
@@ -232,9 +257,9 @@
                     position: relative;
 
                     &:hover {
-                        background-color: #FF9B99;
-                        color: #fff;
-                        border: 1px solid #FF9B99;
+                        background-color: var(--main-color);
+                        color: $color-white;
+                        border: 1px solid var(--main-color);
                         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                     }
 
@@ -253,8 +278,8 @@
                             width: 24px;
                             font-size: 12px;
                             font-weight: 600;
-                            background: #FF9B99;
-                            color: white;
+                            background: var(--main-color);
+                            color: $color-white;
                             border-radius: calc(infinity * 1px);
                             text-align: center;
                         }
@@ -353,7 +378,7 @@
         width: 100%;
         overflow: hidden;
         @include dec_Eng;
-        color: #FEE9E9;
+        color: var(--light-color);
         line-height: normal;
         margin: 1.5vw 0;
 
@@ -392,7 +417,7 @@
         flex-direction: column;
         width: 100vw;
         height: auto;
-        background-color: #FFF;
+        background-color: $color-white;
         align-items: center;
         justify-content: center;
         border-radius: 8px 8px 0px 0px;
@@ -447,10 +472,10 @@
         .add-m {
             font-family: 'Noto Serif TC', serif;
             @include p;
-            background-color: #FF9B99;
-            color: #fff;
+            background-color: var(--main-color);
+            color: $color-white;
             border-radius: 4px;
-            border: 1px solid #FF9B99;
+            border: 1px solid var(--main-color);
             letter-spacing: 1px;
             padding: 1vh 14vh;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -467,6 +492,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     margin: 5vw 13vw;
+    animation: fade 5s linear 0s 1;
 
     @include mobile {
         display: none;
@@ -512,11 +538,12 @@
         top: 6vh;
         right: 9vw;
         height: 27vw;
-        width: auto;
+        width: 27vw;
 
 
         @include miniPad {
             height: 35vw;
+            width: 35vw;
         }
     }
 
@@ -541,10 +568,11 @@
 }
 
 .prod-story-container {
-    background-color: #FFEFEF;
+    background-color: var(--light-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fade 5s linear 0s 1;
 
     .prod-story-title {
         display: flex;
@@ -577,7 +605,7 @@
 
         .prod-story-title-ENG {
             @include dec_Eng;
-            color: #FFB6B5;
+            color: var(--middle-color);
 
             @include pad {
                 font-size: 3rem;
@@ -596,10 +624,8 @@
 
     .story-contain {
         width: 80%;
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         margin: 0 auto;
 
         .prod-story {
@@ -647,9 +673,7 @@
                 height: 18vw;
                 border: 1px solid #000;
                 border-radius: 10rem 10rem 0rem 0rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend %flex-center;
                 margin: 0;
 
                 @include mobile {
@@ -698,9 +722,7 @@
             .prod-story-4 {
                 position: relative;
                 height: 30vw;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend %flex-center;
 
                 @include mobile {
                     height: 50vh;
@@ -760,7 +782,7 @@
 }
 
 .prod-notes {
-    background: linear-gradient(180deg, #FECAC8 20%, #FFF 100%);
+    background: linear-gradient(180deg, var(--middle-color) 20%, $color-white 100%);
     width: 100%;
     display: flex;
 
@@ -803,10 +825,8 @@
 
     .prod-note-contain {
         position: relative;
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 4vw 0;
         margin: 0 auto;
 
@@ -840,9 +860,7 @@
         }
 
         .bottom {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center;
 
             @include mobile {
                 flex-direction: column;
@@ -889,12 +907,10 @@
 }
 
 .prod-material {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
     width: auto;
     height: auto;
-    background-color: #FFF;
+    background-color: $color-white;
     padding: 6vw 0;
     margin: 0;
 
@@ -918,12 +934,15 @@
     .prod-material-contain {
         width: 68vw;
         height: 68vw;
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         border-radius: 50%;
-        background-color: #FFEFEF;
+        background-color: var(--light-color);
+
+        @include mac{
+            width: 80vw;
+            height: 80vw;
+        }
 
         @include pad {
             width: 90vw;
@@ -938,14 +957,13 @@
         @include mobile {
             width: auto;
             height: auto;
+            border-radius: 0;
         }
 
         .material-info-div {
             width: 22vw;
-            display: flex;
+            @extend %flex-center;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 2vw 0;
             margin: 0;
 
@@ -983,7 +1001,7 @@
                     @include dec_Eng;
                     /*ENG 64px*/
                     letter-spacing: 1px;
-                    color: #FFB6B5;
+                    color: var(--middle-color);
                     top: 20%;
                     /* 设置距顶部的位置为容器高度的50% */
                     left: 50%;
@@ -1016,16 +1034,12 @@
 }
 
 .prod-photo {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+    background-color: $color-white;
 
     .prod-photo-all {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex-center;
 
         .p1 {
             width: 22vw;
@@ -1086,7 +1100,7 @@
         font-size: 1.25rem;
         /*ENG 64px*/
         padding: 4vw 0;
-        color: #FF9B99;
+        color: var(--main-color);
 
         @include mac {
             font-size: 1rem;
@@ -1105,11 +1119,9 @@
 }
 
 .prod-function {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(124deg, #FFEFEF 75%, #FECFCD 100%);
+    background: linear-gradient(124deg, var(--light-color) 75%, var(--middle-color) 100%);
     padding-bottom: 5vw;
 
     .prod-function-title {
@@ -1124,7 +1136,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            // padding-right: 2vw;
             padding: 4vw 0 1vw 0;
 
             p {
@@ -1142,7 +1153,7 @@
         .prod-function-title-ENG {
             position: absolute;
             @include dec_Eng;
-            color: #FFE0DF;
+            color: var(--secondary-color);
             top: 40%;
             left: 100%;
 
@@ -1179,9 +1190,7 @@
         }
 
         .prod-function-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-center;
             padding: 0 20vw 0 0;
 
             @include mobile {
@@ -1193,10 +1202,8 @@
                 height: 15vw;
                 width: 15vw;
                 border-radius: 50%;
-                background-color: #FFF;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                background-color: $color-white;
+                @extend %flex-center;
                 margin: 1vw;
 
                 @include mobile {
@@ -1286,10 +1293,8 @@
     height: auto;
 
     .find-CN {
-        display: flex;
+        @extend %flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         position: relative;
         padding: 4vw 0;
 
@@ -1306,7 +1311,7 @@
         .find-ENG {
             @include dec_Eng;
             position: absolute;
-            color: #FFE0DF;
+            color: var(--secondary-color);
             top: 50%;
             /* 设置距顶部的位置为容器高度的50% */
             left: 50%;
@@ -1349,36 +1354,31 @@
     }
 
     .prod-find-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
 
         a {
-            display: flex;
+            @extend %flex-center;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #FF9B99;
-            background: #fff;
+            border: 1px solid var(--main-color);
+            background: $color-white;
             font-size: 1.25rem;
             /*20px*/
-            color: #FF9B99;
+            color: var(--main-color);
             letter-spacing: 4px;
-            border-radius: 90px;
+            border-radius: $radius-infinity;
             line-height: normal;
             padding: 0.5vw 2vw;
             margin: 0 0 2vw 0;
             transition: all 0.35s ease 0s;
 
             &:hover {
-                border: 1px solid #FF9B99;
-                background: #FF9B99;
-                color: #FFF;
+                border: 1px solid var(--main-color);
+                background: var(--main-color);
+                color: $color-white;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.35s ease 0s;
                 transform: translateY(-3px);
-
             }
 
             @include mac {

@@ -1,0 +1,31 @@
+%flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%bg-cover{
+	/* 背景剪裁 */
+    background-repeat: no-repeat;
+	background-size: cover;
+    
+}
+%multiple-lines {
+    /* 多行省略 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	// -webkit-line-clamp: 5;
+}
+%single-line {
+    /* 單行省略 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

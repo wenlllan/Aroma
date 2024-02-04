@@ -1,6 +1,7 @@
-$color-deep: #535353;
-$color-pink: #ff9b99;
-$color-orange: #FFEDC9;
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+
 
 footer{
     background-color: $color-orange;
@@ -19,7 +20,7 @@ footer{
 
         .footer-box {
             text-align: center;
-            margin: 10px;
+            margin: 5vw;
             h3 {
                 padding: 20px 0;
                 @include footer_title;
@@ -30,8 +31,14 @@ footer{
                 color: #9C8563;
                 margin: 10px 0;
             }
+
+            @include mac{
+                margin: 3vw;
+            }
             
-            
+            @include pad{
+                margin: 2vw;
+            }
         }
     }
 }

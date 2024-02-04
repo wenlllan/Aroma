@@ -3,16 +3,9 @@ import { Link, useNavigate } from "react-router-dom"
 //import { useRef } from 'react';
 
 const SelectSapmleThird = () => {
-    // const navigate = useNavigate();
-    // const item =["盛裝約會","低調精緻","休閒放鬆"];
-
-    // function handleClick(e){
-    //     //navigate('/proddream');
-    // };
-
     return (
         <div>
-            <div className="scrollBox">
+            <body className="scrollBox">
                 <section id="selectThird">
                     <div class="selectThird-prod-title">
                         <h3>尋香奇遊的</h3>
@@ -25,8 +18,12 @@ const SelectSapmleThird = () => {
                             <p>索取試用</p>
                         </Link>
                     </div>
+                    <div className="sample-div">
+                        <div className="sample-text">試用小樣</div>
+                        <figure className="sample-pic"><img src="./images/perfumeSamle-dream.jpg" alt="小樣-尋香奇遊的夢幻花境" /></figure>
+                    </div>
                 </section>
-            </div>
+            </body>
         </div>
 
     )
