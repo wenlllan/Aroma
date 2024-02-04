@@ -103,7 +103,7 @@ const Homepage = () => {
 
             </section>
             <section className="brand-info">
-                <div className="brand-info-video"><img src="./video/florist_background_HD_BG_yellow.gif" alt="" /></div>
+                <div className="brand-info-video"><video autoplay muted src="./video/BG-homepage1.mp4" loop></video></div>
                 <div className="brand-info-img1" ref={imgRef1}></div>
                 <div className="brand-info-story">
                     <h2>品牌故事</h2>

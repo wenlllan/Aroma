@@ -9,7 +9,7 @@
     width: auto;
     height: 100vh;
     @extend %flex-center;
-    background-image: url(../images/main_bg1.jpg);
+    // background-image: url(../images/main_bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     animation: fade 2s linear 0s 1;
@@ -22,7 +22,7 @@
 
     @include mobile {
         height: 100vh;
-        background-image: url(../images/main_bg1_m.jpg);
+        // background-image: url(../images/main_bg1_m.jpg);
         flex-direction: column-reverse;
     }
 
@@ -296,8 +296,15 @@
     position: relative;
 
     .brand-info-video {
-        width: auto;
+        width: 100%;
         height: 23.4vw;
+
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
 
         @include mobile {
             width: 100vw;

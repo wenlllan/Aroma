@@ -183,6 +183,8 @@
             border-radius: 50%;
             right: -45px;
             top: -30px;
+
+            @include p;
         }
         .sample-pic{
             width: 10vw;

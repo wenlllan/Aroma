@@ -31,7 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Homepage />}></Route>
+            <Route index element={<HomepageSw />}></Route>
             <Route path="prod" element={<ProdDream theme="pink"/>}></Route>
             <Route path="prod-summer" element={<ProdSummer theme="yellow"/>}></Route>
             <Route path="member" element={<Member />}></Route>

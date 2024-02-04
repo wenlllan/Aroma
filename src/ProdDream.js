@@ -245,11 +245,11 @@ const ProdDream = ({theme}) => {
             </section>
             <section className={`prod-photo theme-${theme}`}>
                 <div className="prod-photo-all">
-                    <figure className="p1"><img src="./images/prod-story-1.jpg" alt="" /></figure>
-                    <figure className="p2"><img src="./images/prod-story-1.jpg" alt="" /></figure>
+                    <figure className="p1"><img src="./images/prod-photo-dream1.png" alt="" /></figure>
+                    <figure className="p2"><img src="./images/prod-photo-dream2.png" alt="" /></figure>
                     <div className="prod-photo-small">
-                        <figure><img src="./images/prod-story-1.jpg" alt="" /></figure>
-                        <figure><img src="./images/prod-story-1.jpg" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-dream3.png" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-dream4.png" alt="" /></figure>
                     </div>
                 </div>
                 <p>warm, natural and comfortable</p>

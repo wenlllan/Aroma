@@ -120,7 +120,7 @@ const ProdSummer = ({theme}) => {
                         </div>
                         <div>
                             <div className="img-border">
-                                <figure><img src="./images/prod-story-1.jpg" alt="" /></figure>
+                                <figure><img src="./images/prod-story-summer1.jpg" alt="" /></figure>
                             </div>
                         </div>
 
@@ -138,14 +138,14 @@ const ProdSummer = ({theme}) => {
                             <p>在這片花園中，你發現了一片覆蓋著鼠尾草和新鮮綠葉的角落。這裡的空氣中充滿了清新與生機，鼠尾草的淡雅香氣與綠葉的清新完美融合，創造出一種平靜而恬淡的氛圍。你在這個角落靜靜地享受著這個夏日早晨，與自然和諧共處。</p>
                         </div>
                         <div>
-                            <figure className="right-photo3"><img src="./images/prod-story-2.jpg" alt="" /></figure>
+                            <figure className="right-photo3"><img src="./images/prod-story-summer2.svg" alt="" /></figure>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div className="prod-story-4">
 
                             <figure className="left-photo4-2">
-                                <img src="./images/prod-story-3.jpg" alt="" />
+                                <img src="./images/prod-story-summer3.jpg" alt="" />
                             </figure>
                             <figure className="left-photo4">
                                 <img src="./images/prod-story-3-frame.svg" alt="" />
@@ -208,7 +208,7 @@ const ProdSummer = ({theme}) => {
                     <div className="material-info-div">
                         <div className="material-name">
                             <h4>白檸檬</h4>
-                            <p>White lemon</p>
+                            <p>lemon</p>
                         </div>
                         <div className="material-info">
                             <p><span>香氣特性｜</span>白檸檬散發著清新、明亮、柑橘的香氣。白檸檬具有激動人心的酸爽，帶來活力四射的感覺。</p>
@@ -245,11 +245,11 @@ const ProdSummer = ({theme}) => {
             </section>
             <section className={`prod-photo theme-${theme}`}>
                 <div className="prod-photo-all">
-                    <figure className="p1"><img src="./images/prod-story-1.jpg" alt="" /></figure>
-                    <figure className="p2"><img src="./images/prod-story-1.jpg" alt="" /></figure>
+                    <figure className="p1"><img src="./images/prod-photo-summer1.jpg" alt="" /></figure>
+                    <figure className="p2"><img src="./images/prod-photo-summer2.svg" alt="" /></figure>
                     <div className="prod-photo-small">
-                        <figure><img src="./images/prod-story-1.jpg" alt="" /></figure>
-                        <figure><img src="./images/prod-story-1.jpg" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-summer3.svg" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-summer4.png" alt="" /></figure>
                     </div>
                 </div>
                 <p>warm, natural and comfortable</p>

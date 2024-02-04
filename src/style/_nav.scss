@@ -182,6 +182,14 @@ nav {
             letter-spacing: 1px;
         }
 
+        @media only screen and (max-width:1158px){
+            font-size: .9rem;
+        }
+
+        @media only screen and (max-width:1061px){
+            font-size: .8rem;
+        }
+
         @include pad {
             font-size: 0.8rem;
             letter-spacing: 0;
