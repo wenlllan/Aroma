@@ -1,6 +1,8 @@
-@import "./media.scss";
-@import "./fontSize.scss";
-@import "./keyframe";
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use './keyframe' as *;
+@use "./color" as *;
+@use "./function" as *;
 
 /* Swiper箭頭樣式 */
 .swiper-button-next,
@@ -38,23 +40,32 @@
         visibility: visible;
         transform: translateY(0px);
     }
-    
-    
-    100% {
+    70% {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0px);
+    }
+    
+    80% {
+        opacity: .05;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
         transform: translateY(0px);
     }
 }
 /* active動態畫面 */
 .swiper-slide-active .img {
-    animation: scale1 4s ease forwards;
+    animation: scale1 8s ease forwards;
     transition: all 0.7s ease-in;
 }
 
 .swiper-slide-active .main .main-center-div {
-    animation: mytransition 4s ease forwards;
-    animation-delay: 1s;
+    animation: mytransition 9s ease forwards;
+    // animation-delay: 1s;
     transition: all 0.7s ease-in;
 }
 
@@ -162,7 +173,7 @@
         font-weight: 700;
         letter-spacing: 2px;
         padding: 6vw 0 2vw 0;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(0, 0, 0, 0.80);
 
         @include mobile {
             padding: 6vh 0 0 0;
@@ -170,11 +181,9 @@
     }
 
     .prod-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         padding: 4vw 0;
-
+       
         @include pad {
             padding: 2vw 0;
         }
@@ -187,10 +196,8 @@
             a {
                 width: 17.8vw;
                 height: auto;
-                display: flex;
+                @extend %flex-center;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 margin: 0;
 
                 @include mobile {
@@ -204,15 +211,15 @@
                     transform: translateY(-3px);
 
                     .sq-title {
-                        color: #7fb33d;
+                        color: #7FB33D;
                     }
 
                     .d-title {
-                        color: #ff9b99;
+                        color: $color-pink;
                     }
 
                     .sum-title {
-                        color: #ffb117;
+                        color: #FFB117;
                     }
                 }
 
@@ -225,7 +232,7 @@
                 }
 
                 div {
-                    background: linear-gradient(140deg, #ffffff00 0%, #eeeeee 90%);
+                    background: linear-gradient(140deg, #FFFFFF00 0%, #EEEEEE 90%);
                     margin: 0 1.6vw;
 
                     @include mobile {
@@ -236,7 +243,7 @@
                 h3 {
                     @include h4;
                     line-height: normal;
-                    color: rgba(0, 0, 0, 0.8);
+                    color: rgba(0, 0, 0, 0.80);
                     padding: 1.5vw 0 0.2vw 0;
 
                     @include mobile {
@@ -248,7 +255,7 @@
                     @include h3;
                     line-height: normal;
                     font-weight: 700;
-                    color: rgba(0, 0, 0, 0.8);
+                    color: rgba(0, 0, 0, 0.80);
                 }
             }
         }
@@ -262,6 +269,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fade 3s linear 0s 1;
 
     @include mobile {
         width: auto;
@@ -270,23 +278,24 @@
 
     .select-sample-cn {
         @include h4;
-        color: #535353;
+        color: $color-deep;
         padding: 7.2vw 0 1vw 0;
         display: flex;
 
         @include mobile {
             width: 52vw;
             line-height: 150%;
-            font-size: 0.8rem;
+            font-size: .8rem;
             flex-direction: column;
             align-items: center;
+
         }
     }
 
     .select-sample-eng {
         p {
             @include dec_Eng;
-            color: #fee9e9;
+            color: $color-lightpink;
             line-height: normal;
             padding: 0;
 
@@ -303,52 +312,49 @@
                 padding: 2vh 0;
             }
         }
+
     }
 
     #select-sample-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         padding-bottom: 0;
+        animation: fade 3s linear 0s 1;
 
         @include mobile {
             padding-bottom: 4vh;
         }
 
         a {
-            display: flex;
+            @extend %flex-center;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            border: 1px solid #ff9b99;
-            background: #fff;
-            font-size: 1.25rem;
-            /*20px*/
-            color: #ff9b99;
-            letter-spacing: 4px;
-            border-radius: calc(infinity * 1px);
+            border: 1px solid $color-pink;
+            background: $color-white;
+            font-size: 1rem;
+            color: $color-pink;
+            letter-spacing: 2px;
+            border-radius: $radius-infinity;
             line-height: normal;
-            padding: 0.5vw 2vw;
+            padding: 1vw 4.5vw;
             margin: 2vw 1vw;
             transition: all 0.35s ease 0s;
 
             &:hover {
-                border: 1px solid #ff9b99;
-                background: #ff9b99;
-                color: #fff;
+                border: 1px solid $color-pink;
+                background: $color-pink;
+                color:$color-white;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.35s ease 0s;
                 transform: translateY(-3px);
+
             }
 
             @include mac {
-                font-size: 0.9rem;
+                font-size: .9rem;
             }
 
             @include pad {
-                font-size: 0.875rem;
-                /*14px*/
+                font-size: .875rem;
             }
 
             @include mobile {
@@ -362,7 +368,10 @@
             width: 5.2vw;
             height: auto;
         }
+
     }
+
+    
 }
 
 /*brand-info*/
@@ -370,22 +379,23 @@
     min-height: calc(100vh - 20vw);
     display: flex;
     flex-direction: column;
-    background-color: #faf3d7;
+    background-color: #FAF3D7;
     position: relative;
 
     .brand-info-video {
-        width: auto;
+        width: 100%;
         height: 23.4vw;
+
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
 
         @include mobile {
             width: 100vw;
             height: auto;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
     }
 
@@ -395,6 +405,9 @@
         height: 24vw;
         top: 20vw;
         transition: all 0.4s ease 0s;
+        background-image: url(../../public/images/brand-info-img1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
 
         @include mac {
             width: 45vw;
@@ -408,10 +421,6 @@
             position: initial;
             width: auto;
             height: 20vh;
-        }
-
-        img {
-            object-fit: cover;
         }
     }
 
@@ -440,7 +449,7 @@
 
         h2 {
             @include h2;
-            color: #535353;
+            color: $color-deep;
             padding: 2.1vw 0 1vw 0;
             letter-spacing: 2px;
             padding: 10% 0;
@@ -449,20 +458,22 @@
         p {
             @include p;
             line-height: 150%;
-            color: #535353;
+            color: $color-deep;
             text-align: start;
+
         }
     }
 
     .brand-info-concept {
         width: 40vw;
-        height: auto;
+        height:  26vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         margin-left: 40vw;
         margin-right: 2vw;
+        
 
         @include mobile {
             width: auto;
@@ -473,7 +484,7 @@
 
         h2 {
             @include h2;
-            color: #535353;
+            color: $color-deep;
             padding: 2.1vw 0 1vw 0;
             letter-spacing: 2px;
             padding: 10% 0;
@@ -482,15 +493,19 @@
         p {
             @include p;
             line-height: 150%;
-            color: #535353;
+            color: $color-deep;
             text-align: start;
         }
     }
 
     .brand-info-img2 {
-        width: auto;
+        width: 60vw;
         height: 26vw;
         margin: 2vw 0 8vw 40vw;
+        background-image: url(../../public/images/brand-info-concept-.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
 
         @include mobile {
             width: 100vw;
@@ -504,16 +519,15 @@
     }
 
     .brand-info-img3 {
-        width: auto;
+        width:100%;
         height: 27vw;
+        background-image: url(../../public/images/brand-info-show.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
 
         @include mobile {
             width: 100vw;
             height: 40vw;
-        }
-
-        img {
-            object-fit: cover;
         }
     }
 }

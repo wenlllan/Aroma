@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 const News = () => {
     return (
-        <div>
             <body className="scrollBox">
                 <main>
                     <section id="news">
@@ -132,8 +131,6 @@ const News = () => {
                     </section>
                 </main>
             </body>
-        </div>
-
     )
 }
 export default News;

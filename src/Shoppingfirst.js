@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-const Shopping2nd = () => {
+const Shoppingfirst = () => {
   // const sthRef = useRef(null);//null / undefined / 0 / -0 / "" / [] / {} => false
   // const [error, setError] = useState(null);
   // const navigate = useNavigate();
@@ -199,4 +199,4 @@ const Shopping2nd = () => {
   )
 }
 
-export default Shopping2nd;
+export default Shoppingfirst;

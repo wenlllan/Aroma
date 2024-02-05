@@ -5,14 +5,14 @@ import { Link, useNavigate } from "react-router-dom"
 const SelectSapmleThird = () => {
     return (
         <div>
-            <body className="scrollBox">
+            <div className="scrollBox">
                 <section id="selectThird">
                     <div class="selectThird-prod-title">
                         <h3>尋香奇遊的</h3>
                         <h1>夢幻花境</h1>
                         <p>Dreamscape Bloom</p>
                     </div>
-                    <figure class="selectThird-prod-img"><img src="./images/prod-dream.png" alt="尋香奇遊的夢幻花境" /></figure>
+                    <figure class="selectThird-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
                     <div class="selectThird-btn">
                         <Link to="/shopping">
                             <p>索取試用</p>
@@ -20,10 +20,10 @@ const SelectSapmleThird = () => {
                     </div>
                     <div className="sample-div">
                         <div className="sample-text">試用小樣</div>
-                        <figure className="sample-pic"><img src="./images/perfumeSamle-dream.jpg" alt="小樣-尋香奇遊的夢幻花境" /></figure>
+                        <figure className="sample-pic"><img src="./images/perfumeSamle-summer.jpg" alt="小樣-恬靜風情的夏日晴空" /></figure>
                     </div>
                 </section>
-            </body>
+            </div>
         </div>
 
     )

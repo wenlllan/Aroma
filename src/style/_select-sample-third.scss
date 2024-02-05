@@ -1,5 +1,7 @@
-@use './media.scss' as *;
-@use './fontSize.scss' as *;
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 #selectThird{
     width: 100%;
@@ -8,10 +10,8 @@
     background-image: url(../../public/images/main_bg1.jpg);
     background-repeat: no-repeat;
     position: relative;
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     &::before{
         content: "";
@@ -97,7 +97,7 @@
 
 
     .selectThird-prod-img {
-        width: 30vw;
+        width: 16vw;
         height: auto;
         margin: 1vw 2vw ;
         z-index: 2;
@@ -119,33 +119,29 @@
     }
 
     .selectThird-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex-center;
         z-index: 2;
 
         a {
-            display: flex;
+            @extend %flex-center;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            border: 1px solid #FF9B99;
-            background: #FF9B99;
+            border: 1px solid $color-pink;
+            background: $color-pink;
             font-size: 1.25rem;
             /*20px*/
-            color: #fff;
+            color: $color-white;
             letter-spacing: 4px;
-            border-radius: 90px;
+            border-radius: $radius-infinity;
             line-height: normal;
             padding: 0.5vw 2vw;
             margin: 2vw 0 5vw 0;
             transition: all 0.35s ease 0s;
 
             &:hover {
-                border: 1px solid #FF9B99;
-                background: #FF9B99;
-                color: #FFF;
+                border: 1px solid $color-pink;
+                background: $color-pink;
+                color: $color-white;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.35s ease 0s;
                 //transform: translateY(-3px);
@@ -170,5 +166,33 @@
             }
         }
     }
+    
+    .sample-div{
+        position: absolute;
+        z-index: 100;
+        top:25vw;
+        right:26vw;
 
+        .sample-text{
+            width: 6.25vw;
+            height: 6.25vw;
+            position: absolute;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 6.25vw;
+            border-radius: 50%;
+            right: -45px;
+            top: -30px;
+
+            @include p;
+        }
+        .sample-pic{
+            width: 10vw;
+            height: 10vw;
+
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
 }

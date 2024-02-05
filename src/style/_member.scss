@@ -1,7 +1,7 @@
-$color-deep: #535353;
-$color-pink: #ff9b99;
-$color-orange: #ffedc9;
-
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 main {
   min-height: calc(100vh - 20vw);
@@ -14,10 +14,8 @@ main {
   }
   
   #member {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     .title {
       font-weight: 600;
@@ -48,7 +46,7 @@ main {
           padding: 10px;
           margin: 10px;
           border: 0;
-          border-bottom: 1px solid #535353;
+          border-bottom: 1px solid $color-deep;
         }
       }
 
@@ -65,7 +63,7 @@ main {
           padding: 1vh 1vh;
           height: auto;
           width: 150px;
-          border-radius: 16px;
+          border-radius: $radius-infinity;
           border: none;
           background-color: $color-pink;
           cursor: pointer;

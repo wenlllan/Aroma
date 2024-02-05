@@ -1,11 +1,7 @@
-@import "./media.scss";
-@import "./fontSize";
-
-$color-deep: #535353;
-$color-pink: #ff9b99;
-$color-orange: #ffedc9;
-$color-gray: #d9d9d9;
-
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
+@use "./function" as *;
 
 
 
@@ -21,10 +17,8 @@ main {
   min-height: calc(100vh - 20vw);
 
   #share {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     .title {
       font-weight: 600;
@@ -34,10 +28,8 @@ main {
     }
 
     .list-box {
-      display: flex;
+      @extend %flex-center;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
       .list-item-bg {
         display: flex;
@@ -103,7 +95,7 @@ main {
           }
 
           p {
-            color: #fff;
+            color: $color-white;
             line-height: 1rem;
             @include p;
 
@@ -130,7 +122,6 @@ main {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          // min-width: 300px;
           margin: 2vw;
           padding: 2vw;
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -140,9 +131,8 @@ main {
           }
 
           .p1 {
-            display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            @extend %flex-between;
             line-height: 1.6rem;
 
             @include mobile {
@@ -227,7 +217,6 @@ main {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          // min-width: 300px;
           margin: 2vw;
           padding: 2vw;
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -238,9 +227,9 @@ main {
 
 
           .p1 {
-            display: flex;
+            @extend %flex-between;
             flex-direction: column;
-            justify-content: space-between;
+
             line-height: 1.6rem;
 
             @include mobile {
@@ -334,10 +323,8 @@ main {
     }
 
     .form-box {
-      display: flex;
+      @extend %flex-center;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin: 6vw 2vw;
 
       .title {
@@ -359,7 +346,7 @@ main {
           input {
             font-size: 0.8rem;
             border: 0;
-            border-bottom: 1px solid #535353;
+            border-bottom: 1px solid $color-deep;
             font-family: "Noto Serif TC";
             /*0118*/
           }
@@ -462,7 +449,7 @@ main {
         &:hover {
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           background-color: $color-pink;
-          color: #ffff;
+          color: $color-white;
         }
       }
     }

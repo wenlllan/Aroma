@@ -1,28 +1,28 @@
 import React from "react"
-import { Link,useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 //import { useRef } from 'react';
 
 const SelectSapmle = () => {
     const navigate = useNavigate();
-    const item =["盛裝約會","低調精緻","休閒放鬆"];
-    const listItems = item.map((number) =>{
-    //console.log(number);
-     return( <li className="que-btn" onClick={handleClick} value={number}>{number}</li>)}
+    const item = ["盛裝約會", "低調精緻", "休閒放鬆"];
+    const listItems = item.map((number) => {
+        //console.log(number);
+        return (<li className="que-btn" onClick={handleClick} value={number}>{number}</li>)
+    }
     );
 
-   
-    function handleClick(e){
+
+    function handleClick(e) {
         console.log(e.target.getAttribute('value'));
-        localStorage.setItem("Q1",e.target.getAttribute('value'));
+        localStorage.setItem("Q1", e.target.getAttribute('value'));
         navigate('/selectsamplesec');
     };
 
     return (
-        
-            <body className="scrollBox">
-                <section id="select-bg">
-                    <div className="select-div">
-                        <div className="select-frame">
+        <body className="scrollBox">
+            <section id="select-bg">
+                <div className="select-div">
+                    <div className="select-frame">
                         <div className="select-frame-top">
                             <figure className="select-stars"><img src="./images/select-star.svg" alt="" /></figure>
                             <figure className="select-num1"><img src="./images/select-num1.svg" alt="" /></figure>
@@ -35,16 +35,14 @@ const SelectSapmle = () => {
                                 <li className="que-btn" onClick={handleClick}>休閒放鬆</li> */}
                                 {listItems}
                             </ul>
-                            </div>
-                            <div className="Q-page">
-                                <Link to="#">&lt;</Link><p>1 / 2</p><Link to="/selectsamplesec">&gt;</Link>
-                            </div>
+                        </div>
+                        <div className="Q-page">
+                            <Link to="#">&lt;</Link><p>1 / 2</p><Link to="/selectsamplesec">&gt;</Link>
                         </div>
                     </div>
-                </section>
-            </body>
-        
-
+                </div>
+            </section>
+        </body>
     )
 }
 export default SelectSapmle;

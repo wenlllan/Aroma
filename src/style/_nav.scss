@@ -1,20 +1,139 @@
-@import './media.scss';
+@use "./media.scss" as *;
+@use "./fontSize.scss" as *;
+@use "./color" as *;
 
 .hamburger-menu {
     display: none;
     position: fixed;
-    width: 3vh;
-    height: auto;
-    top: 2vh;
-    left: 2vh;
+
     z-index: 1001;
-    cursor: pointer;
-    transition: all 0.35s;
+    // 
+    // transition: all 0.35s;
 
     @include mobile {
         transition: all 0.35s;
         display: block;
+        position: relative;
+
+        figure {
+            width: 3.5vh;
+            height: auto;
+            max-width: 100px;
+            max-height: 100px;
+            cursor: pointer;
+            position: absolute;
+            top: 4vh;
+            right: 4vh;
+            
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            width: 50vh;
+            height: 50vh;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        @media (min-aspect-ratio: 1/1) {
+            label {
+                width: 50vh;
+                height: 50vh;
+            }
+        }
+
+        .menu--4 label {
+            top: 0;
+            left: 0;
+        }
+
+        path {
+            fill: none;
+            stroke: $color-pink;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            --length: 24;
+            --offset: -38;
+            stroke-dasharray: var(--length) var(--total-length);
+            stroke-dashoffset: var(--offset);
+            transition: all .8s cubic-bezier(.645, .045, .355, 1);
+            background-color: transparent;
+        }
+
+        circle {
+            fill: #fff3;
+            opacity: 0;
+        }
+
+        label:hover circle {
+            opacity: 0;
+        }
+
+        .cross input:checked+svg {
+
+            .line--1,
+            .line--3 {
+                --length: 22.627416998;
+            }
+
+            .line--2 {
+                --length: 0;
+            }
+        }
+
+        .back input:checked+svg {
+
+            .line--1,
+            .line--3 {
+                --length: 8.602325267;
+            }
+        }
+
+        .menu--4 {
+
+            .line--1,
+            .line--3 {
+                --total-length: 103.35061645507812;
+                --offset: -42.35061645507812;
+            }
+
+            .line--2 {
+                --total-length: 99;
+            }
+
+            input:checked+svg {
+                path {
+                    transform: translateX(31px);
+                }
+
+                .line--1,
+                .line--3 {
+                    --offset: -8.602325267;
+                }
+
+                .line--2 {
+                    --offset: -7;
+                }
+            }
+        }
+
+        .debug {
+            display: none;
+        }
+
+        .line--debug {
+            opacity: 0;
+            stroke-dasharray: none;
+        }
     }
+
 }
 
 nav {
@@ -31,9 +150,9 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.13);
     z-index: 999;
     padding: 0 8%;
-    top:0;
-    left:0;
-    
+    top: 0;
+    left: 0;
+
 
     @include mobile {
         width: 70%;
@@ -41,8 +160,8 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        top:0;
-        left:-70%;
+        top: 0;
+        left: -70%;
     }
 
     .nav-list {
@@ -50,7 +169,7 @@ nav {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-evenly;
-        padding: 1.2vw 5vw 0.2vw 5vw;
+        padding: 1.2vw 5vw 0.2vw 6vw;
         font-size: 1rem;
         line-height: 150%;
         letter-spacing: 4px;
@@ -61,6 +180,14 @@ nav {
         @include mac {
             font-size: 1rem;
             letter-spacing: 1px;
+        }
+
+        @media only screen and (max-width:1158px){
+            font-size: .9rem;
+        }
+
+        @media only screen and (max-width:1061px){
+            font-size: .8rem;
         }
 
         @include pad {
@@ -82,9 +209,11 @@ nav {
             position: relative;
             margin: 0;
 
-            @include pad{
+            @include pad {
                 padding: 0 2vw;
-            } /*0117*/
+            }
+
+            /*0117*/
 
             @include mobile {
                 padding: 5vw 3vw;
@@ -92,13 +221,15 @@ nav {
             }
 
             .list-item {
-                color: #535353;
+                color: $color-deep;
                 transition: all 0.35s;
                 padding: 0 0 0.2vw 0;
-                border-bottom: 2px solid transparent;
+                //border-bottom: 2px solid transparent;
 
                 &:hover {
-                    border-bottom: 2px solid #FFB117;
+                    //border-bottom: 2px solid #FFB117;
+                    color: #000;
+                    
                 }
 
                 img {
@@ -122,11 +253,12 @@ nav {
                 }
 
                 @include pad {
-                   // left: 15%;
+                    // left: 15%;
                 }
 
-                @include mobile{
-                   // left: 10%;
+                @include mobile {
+                    // left: 10%;
+                    transform: translateX(0) translateY(0);
                 }
             }
 
@@ -135,7 +267,7 @@ nav {
                     border-bottom: 2px solid transparent;
                 }
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
 
@@ -169,7 +301,7 @@ nav {
                     //left: 15%;
                 }
 
-                @include miniPad{
+                @include miniPad {
                     width: 90px;
                 }
 
@@ -178,12 +310,13 @@ nav {
                     //left: 10%;
                     max-height: 0;
                     overflow: hidden;
-                    background:transparent;
+                    background: transparent;
                     box-shadow: none;
-                    backdrop-filter: none;  
+                    backdrop-filter: none;
                     border: 1px solid transparent;
                     transition: max-height 0.35s ease;
                     opacity: 0;
+                    transform: translateX(0) translateY(0);
                 }
 
                 li {
@@ -195,13 +328,13 @@ nav {
                     .forest {
                         border-bottom: 2px solid transparent;
                         transition: all 0.35s;
-                        color: #535353;
+                        color: $color-deep;
                     }
 
                     &:hover {
                         .dream {
-                            color: #FF9B99;
-                            border-bottom: 2px solid #FF9B99;
+                            color: $color-pink;
+                            border-bottom: 2px solid $color-pink;
                         }
 
                         .summer {
@@ -224,11 +357,12 @@ nav {
                 display: block;
                 opacity: 1;
                 max-height: 500px;
-                background:transparent;
+                background: transparent;
                 box-shadow: none;
                 backdrop-filter: none;
-                transition:0.1s ease;
+                transition: 0.1s ease;
                 //left: 10% ;
+                transform: translateX(0) translateY(0);
             }
         }
 
