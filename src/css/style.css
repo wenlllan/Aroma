@@ -1823,6 +1823,8 @@ footer div .footer-box a {
   height: 20vh;
   width: auto;
   left: 5%;
+  transition: all 0.35s;
+  transform: translateY(0);
 }
 @media (max-width: 1440px) {
   .dream-img .arrow-down {
@@ -1839,6 +1841,9 @@ footer div .footer-box a {
   .dream-img .arrow-down {
     left: -10%;
   }
+}
+.dream-img .arrow-down:hover {
+  transform: translateY(5px);
 }
 .dream-img .small-dream {
   position: absolute;
@@ -4264,24 +4269,42 @@ main #shopping .list-box .total .t1 {
 }
 main #shopping .list-box .total .next {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   margin-right: 3vw;
   padding: 8vw 0 12vw 0;
 }
-main #shopping .list-box .total .next #submit {
+main #shopping .list-box .total .next a {
+  display: flex;
   color: #FFFFFF;
   padding: 1vh 1vh;
   height: auto;
   width: 100px;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: calc(infinity * 1px);
   border: none;
   background-color: #ff9b99;
+  justify-content: center;
+  align-items: center;
+}
+main #shopping .list-box .total .next a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+main #shopping .list-box .total .next a:hover .right-arrow {
+  transform: translateX(4px);
+}
+main #shopping .list-box .total .next #submit {
+  border: none;
+  background: none;
+  color: #FFFFFF;
   font-family: "Noto Serif TC";
 }
-main #shopping .list-box .total .next #submit:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+main #shopping .list-box .total .next .right-arrow {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+  transition: all 0.35s;
+  transform: translateX(0);
 }
 
 main h3 {

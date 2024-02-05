@@ -331,25 +331,45 @@ main {
 
           .next {
             display: flex;
-            flex-direction: row;
             justify-content: flex-end;
             margin-right: 3vw;
             padding: 8vw 0 12vw 0;
-
-            #submit {
+            
+            a{
+              display: flex;
               color: $color-white;
               padding: 1vh 1vh;
               height: auto;
               width: 100px;
               cursor: pointer;
-              border-radius: 16px;
+              border-radius: $radius-infinity;
               border: none;
               background-color: $color-pink;
-              font-family: "Noto Serif TC";
+              justify-content: center;
+              align-items: center;
 
               &:hover {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+                .right-arrow{
+                  transform: translateX(4px);
+                }
               }
+            }
+
+            #submit {
+              border: none;
+              background: none;
+              color:$color-white;
+              font-family: "Noto Serif TC";
+            }
+            .right-arrow{
+              display: flex;
+              width: 20px;
+              height: 20px;
+              color:$color-white;
+              transition: all .35s;
+              transform: translateX(0);
             }
           }
         }
