@@ -162,7 +162,7 @@ const Test = () => {
             </Link>
           </div>
           <div className="prod-list-items">
-            <Link to="/prod-summer">
+            <Link to="/prod">
               <div>
                 <img src="./images/prod-summer.png" alt="" />
               </div>

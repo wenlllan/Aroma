@@ -19,15 +19,15 @@ import SelectSampleThird from "./SelectSampleThird";
 import SelectSampleThirdS from "./SelectSampleThird-S";
 import BgGradient from "./BgGradient";
 
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Helmet>
+      {/* <Helmet>
         <link rel="preload" href="../src/css/style.css" as="font/script/style" />
-      </Helmet>
+      </Helmet> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -47,9 +47,10 @@ function App() {
             <Route path="shopping3rd" element={<Shopping3rd />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
             <Route path="shops" element={<Shops />}></Route>
+            {/* <Route path="homepageSw" element={<HomepageSw />}></Route> */}
           </Route>
 
-          <Route path="/homepagesw" element={<HomepageSw />}></Route>
+          {/* <Route path="/homepagesw" element={<HomepageSw />}></Route> */}
 
           {/* <Route path="/test" element={<Test2 />}></Route> */}
           <Route path="/test" element={<BgGradient />}></Route>
