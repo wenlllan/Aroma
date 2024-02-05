@@ -172,7 +172,7 @@ const ProdDream = ({theme}) => {
                 </div>
 
             </section>
-            <section className="prod-notes">
+            <section className={`prod-notes theme-${theme}`}>
                 <div className="prod-notes-title">
 
                     <figure className="note-time"><img src="./images/prod-note-time-pink.svg" alt="" /></figure>

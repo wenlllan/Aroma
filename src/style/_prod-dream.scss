@@ -518,6 +518,8 @@
         height: 20vh;
         width: auto;
         left: 5%;
+        transition: all .35s;
+        transform: translateY(0);
 
         @include mac {
             left: -7%;
@@ -530,6 +532,10 @@
 
         @include miniPad {
             left: -10%;
+        }
+
+        &:hover{
+            transform: translateY(5px);
         }
     }
 

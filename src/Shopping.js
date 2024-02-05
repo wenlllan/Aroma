@@ -56,9 +56,10 @@ const Shopping = () => {
                   <h4>$2,880</h4>
                 </div>
                 <div className="next">
-                  <Link to="/shopping2nd"
-                  ><input type="submit" id="submit" value="下一步 &rarr;"
-                    /></Link>
+                  <Link to="/shopping2nd">
+                    <input type="submit" id="submit" value="下一步"/>
+                    <figure className="right-arrow"><img src="./icon/right-arrows.svg" alt="" /></figure>
+                  </Link>
                 </div>
               </div>
             </div>
