@@ -1,21 +1,23 @@
 import React from "react"
 import { Link, useNavigate } from "react-router-dom"
+import Cookies from "js-cookie";
 //import { useRef } from 'react';
 
-const SelectSapmle = () => {
+const SelectSample = () => {
     const navigate = useNavigate();
     const item = ["盛裝約會", "低調精緻", "休閒放鬆"];
-    const listItems = item.map((number) => {
+    const listItems = item.map((choose) => {
         //console.log(number);
-        return (<li className="que-btn" onClick={handleClick} value={number}>{number}</li>)
+        return (<li className="que-btn" onClick={handleClick} value={choose}>{choose}</li>)
     }
     );
 
-
     function handleClick(e) {
         console.log(e.target.getAttribute('value'));
-        localStorage.setItem("Q1", e.target.getAttribute('value'));
-        navigate('/selectsamplesec');
+        window.localStorage.setItem("Q1", JSON.stringify(e.target.getAttribute('value')));
+        Cookies.set("q1",JSON.stringify(e.target.getAttribute('value')));
+        // navigate('/selectsamplesec');
+        console.log(Cookies.get("q1"));
     };
 
     return (
@@ -30,9 +32,6 @@ const SelectSapmle = () => {
                                 <p>您想要在什麼時刻使用香水？</p>
                             </div>
                             <ul className="que-btn-div">
-                                {/* <li className="que-btn" onClick={handleClick}>盛裝約會</li>
-                                <li className="que-btn" onClick={handleClick}>低調精緻</li>
-                                <li className="que-btn" onClick={handleClick}>休閒放鬆</li> */}
                                 {listItems}
                             </ul>
                         </div>
@@ -45,4 +44,4 @@ const SelectSapmle = () => {
         </body>
     )
 }
-export default SelectSapmle;
+export default SelectSample;

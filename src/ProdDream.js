@@ -19,7 +19,7 @@ const ProdDream = ({theme}) => {
     };
 
     return (
-        <body className="scrollBox">
+        <body>
             <section className={`main-prod-dream theme-${theme}`}>
                 <div className="gradient-bg-div">
                     <div className="gradient-bg">
@@ -95,7 +95,7 @@ const ProdDream = ({theme}) => {
                             <button id="increase">＋</button>
                         </div>
                     </div>
-                    <button class="add-m">加入購物車</button>
+                    <button className="add-m">加入購物車</button>
                 </section>
             </section>
             <section className="dream-img">

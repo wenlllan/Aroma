@@ -5,15 +5,15 @@ import { Link, useNavigate } from "react-router-dom"
 const SelectSapmleThird = () => {
     return (
         <div>
-            <div className="scrollBox">
+            <div>
                 <section id="selectThird">
-                    <div class="selectThird-prod-title">
+                    <div className="selectThird-prod-title">
                         <h3>尋香奇遊的</h3>
                         <h1>夢幻花境</h1>
                         <p>Dreamscape Bloom</p>
                     </div>
-                    <figure class="selectThird-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
-                    <div class="selectThird-btn">
+                    <figure className="selectThird-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
+                    <div className="selectThird-btn">
                         <Link to="/shopping">
                             <p>索取試用</p>
                         </Link>

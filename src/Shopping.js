@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Shopping = () => {
   return (
     <div>
-      <body className="scrollBox">
+      <body>
       <main>
         <section id="shopping">
           <div className="big-box">

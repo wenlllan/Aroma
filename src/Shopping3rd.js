@@ -26,8 +26,7 @@ const Shopping3rd = () => {
     }, [modalVisible]);
     
   return (
-    <div>
-      <body className="scrollBox">
+      <body>
         <main>
           {/* <div className="modal"></div> */}
           {modalVisible && (
@@ -143,7 +142,6 @@ const Shopping3rd = () => {
           </section>
         </main>
       </body>
-    </div>
   );
 };
 export default Shopping3rd;

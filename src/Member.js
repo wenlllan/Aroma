@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 const Member = () => {
     return (
-        <body className="scrollBox">
+        <body>
             <main>
                 <section id="member">
                     <h3 className="title">會員登入</h3>

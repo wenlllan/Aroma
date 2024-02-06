@@ -3,7 +3,7 @@ import React from "react";
 const Share = () => {
   return (
     <div>
-      <body className="scrollBox">
+      <body>
         <main>
           <section id="share">
             <h3 className="title">好評推薦</h3>

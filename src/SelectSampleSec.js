@@ -113,7 +113,7 @@ const SelectSapmleSec = () => {
     localStorage.clear();
 
     return (
-        <body className="scrollBox">
+        <body>
             <section id="select-bg" className="sec-bg">
                 <div className="select-div">
                     <div className="select-frame sec">
