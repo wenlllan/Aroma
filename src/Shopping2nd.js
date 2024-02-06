@@ -181,8 +181,11 @@ const Shopping2nd = () => {
                   </div>
 
                   <div className="btn">
-                    <input type="submit" id="submit" value="確認結帳" />
-                    <Link to="/shopping3rd"><button type="button">下一步</button></Link>
+                    {/* <input type="submit" id="submit" value="確認結帳" /> */}
+                    <Link to="/shopping3rd">
+                      <button type="button">下一步<figure className="right-arrow"><img src="./icon/right-arrows.svg" alt="" /></figure></button>
+                    
+                    </Link>
                     {/* 結帳 */}
                   </div>
 

@@ -3,16 +3,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className="footer-div">
         <div className="footer-box">
-          <ul>
-            <li>
-            <h3>
             <Link to="/" className="item-logo">
+              <figure>
               <img src="./icon/logo-grey.svg" alt="LOGO" />
-            </Link></h3>
-            </li>
-          </ul>
+              </figure>
+            </Link>
         </div>
         <div className="footer-box">
           <ul>

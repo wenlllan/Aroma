@@ -506,14 +506,16 @@ main {
           min-height: 140px;
 
           .btn {
+
             button,
             #submit {
+              @extend %flex-center;
               margin: 0.5rem;
               padding: 1vh;
               height: auto;
               width: 120px;
               cursor: pointer;
-              border-radius: 8px;
+              border-radius: $radius-infinity;
               border: none;
               background-color: $color-gray;
               color: $color-deep;
@@ -523,6 +525,18 @@ main {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
                 background-color: $color-pink;
                 color: $color-white;
+
+                .right-arrow{
+                  transform: translateX(4px);
+                }
+              }
+              .right-arrow{
+                display: flex;
+                width: 20px;
+                height: 20px;
+                color:$color-white;
+                transition: all .35s;
+                transform: translateX(0);
               }
             }
           }

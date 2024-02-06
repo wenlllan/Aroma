@@ -69,9 +69,11 @@ const Shopping3rd = () => {
                   <p className="total">商品金額</p>
                 </div>
                 <article className="list-item">
-                  <figure>
-                    <img id="product" src="./images/product1.png" alt="" />
+                <div className="list-item-product">
+                  <figure className="product">
+                    <img src="./images/prod-soulwood.png" alt="" />
                   </figure>
+                  </div>
                   <div className="item">
                     <p>靈魂深處的幽林冒險</p>
                     <p>$2,880</p>
@@ -81,11 +83,9 @@ const Shopping3rd = () => {
                       <button id="increase">+</button>
                     </div>
                     <p>$2,880</p>
-                    <p>
-                      <Link to="">
-                        <img src="./images/garbage.svg" alt="垃圾桶" />
-                      </Link>
-                    </p>
+                    <figure className="garbage-can">
+                    <Link to=""><img src="./images/garbage.svg" alt="垃圾桶" /></Link>
+                  </figure>
                   </div>
                 </article>
                 <div className="total">
