@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Shops = () => {
   return (
-    <body className="scrollBox">
+    <body>
       <main>
         <section id="shops">
           <h3 className="title">尋找專門店</h3>
@@ -38,7 +38,7 @@ const Shops = () => {
                       <p>松仁路888號1樓</p>
                     </div>
                     <div>
-                      <box className="nono"></box>
+                      <div className="nono"></div>
                       <p>110,台北市,台灣</p>
                     </div>
                   </div>
@@ -74,7 +74,7 @@ const Shops = () => {
                       <p>松仁路888號1樓</p>
                     </div>
                     <div>
-                      <box className="nono"></box>
+                      <div className="nono"></div>
                       <p>110,台北市,台灣</p>
                     </div>
                   </div>
@@ -110,7 +110,7 @@ const Shops = () => {
                       <p>松仁路888號1樓</p>
                     </div>
                     <div>
-                      <box className="nono"></box>
+                      <div className="nono"></div>
                       <p>110,台北市,台灣</p>
                     </div>
                   </div>

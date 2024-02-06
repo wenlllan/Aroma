@@ -28,7 +28,7 @@ const Shoppingfirst = () => {
 
   return (
     
-      <body className="scrollBox">
+      <body>
         <main>
           <section id="shopping2nd">
             <div className="big-box">

@@ -41,7 +41,7 @@ const Homepage = () => {
         }
     }, []);
     return (
-        <body className="scrollBox">
+        <body>
             <section className="main">
                 <div className="main-center-div">
                     <div className="main-center-div-logo"><img src="./images/logo.svg" alt="" /></div>
@@ -89,10 +89,10 @@ const Homepage = () => {
                 </div>
             </section>
             <section id="select-sample">
-                <div class="select-sample-cn">
+                <div className="select-sample-cn">
                     <span>選擇屬於你的故事</span>&#12288;<span>或者</span>&#12288;<span>還沒決定踏上哪一段旅程嗎？</span>
                 </div>
-                <div class="select-sample-eng">
+                <div className="select-sample-eng">
                     <p>Find your story or start a new journey</p>
                 </div>
                 <div id="select-sample-btn">

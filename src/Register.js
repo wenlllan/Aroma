@@ -1,7 +1,7 @@
 import React from "react";
 const Register = () => {
     return (
-        <body className="scrollBox">
+        <body>
             <main>
                 <section id="register">
                     <h3 className="title">註冊會員</h3>

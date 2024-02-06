@@ -27,8 +27,7 @@ const Shopping2nd = () => {
   //   }}
 
   return (
-    
-      <body className="scrollBox">
+      <body>
         <main>
           <section id="shopping2nd">
             <div className="big-box">
@@ -194,8 +193,6 @@ const Shopping2nd = () => {
           </section>
         </main>
       </body>
-
-
   )
 }
 

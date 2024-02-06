@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NewsArticle = () => {
   return (
-    <body className="scrollBox">
+    <body>
       <main>
         <section id="news_article">
           <h3 className="title">最新消息</h3>

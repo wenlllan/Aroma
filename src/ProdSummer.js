@@ -19,7 +19,7 @@ const ProdSummer = ({theme}) => {
     };
 
     return (
-        <body className="scrollBox">
+        <body>
             <section className={`main-prod-dream theme-${theme}`}>
                 <div className="gradient-bg-div">
                     <div className="gradient-bg">
@@ -43,7 +43,6 @@ const ProdSummer = ({theme}) => {
                     </div>
                 </div>
                 <div className={`shopping-cart theme-${theme}`}>
-                    {/* <span className="cart-item"></span> */}
                     <div id="cart" className={isShaking ? ' cart' : ' cart shake'} data-totalitems={cartTotal}></div>
                     <div className="shopping-cart-div">
                         <Link to="/shopping"><figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure></Link>
@@ -95,7 +94,7 @@ const ProdSummer = ({theme}) => {
                             <button id="increase">＋</button>
                         </div>
                     </div>
-                    <button class={`add-m theme-${theme}`}>加入購物車</button>
+                    <button className={`add-m theme-${theme}`}>加入購物車</button>
                 </section>
             </section>
             <section className="dream-img">
