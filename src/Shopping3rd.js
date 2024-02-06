@@ -43,7 +43,7 @@ const Shopping3rd = () => {
                 </div>
               </div>
             </div>
-          )};
+          )}
           <section id="shopping3rd">
             <div className="big-box">
               <div className="top-steps">

@@ -470,6 +470,7 @@ main {
                 align-items: center;
                 height: 5vw;
                 width: 15vw;
+                min-width: 180px;
                 cursor: pointer;
 
                 @include mobile {
