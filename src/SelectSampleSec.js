@@ -106,11 +106,10 @@ const SelectSapmleSec = () => {
         }
 
         navigate('/selectsampleThird');
+
     };
 
 
-
-    localStorage.clear();
 
     return (
         <body>
