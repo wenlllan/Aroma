@@ -1181,7 +1181,7 @@ footer {
   min-height: 20vw;
 }
 footer div {
-  width: 65%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -1226,7 +1226,7 @@ footer div .footer-box .item a {
   }
 }
 footer div .footer-box p {
-  text-align: justify;
+  text-align: start;
   line-height: 1.6rem;
   font-size: 1rem;
   color: #9C8563;
@@ -1280,6 +1280,9 @@ footer div .footer-box a {
   footer div .footer-box a {
     font-size: 1rem;
   }
+}
+footer div .footer-box a:hover {
+  color: #FFB117;
 }
 @media (max-width: 1440px) {
   footer div .footer-box {

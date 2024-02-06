@@ -7,9 +7,10 @@ const Footer = () => {
         <div className="footer-box">
           <ul>
             <li>
+            <h3>
             <Link to="/" className="item-logo">
               <img src="./icon/logo-grey.svg" alt="LOGO" />
-            </Link>
+            </Link></h3>
             </li>
           </ul>
         </div>
@@ -20,13 +21,13 @@ const Footer = () => {
             </li>
             <li>
                 
-              <p>110 台北市花香二路28號1樓</p>
+              <p>110台北市花香二路2號1樓</p>
             </li>
             <li>
-              <p>+886 02 8788 8888</p>
+              <p>02-8788-8888</p>
             </li>
             <li>
-              <p>週一-週日 11:00-21:30</p>
+              <p>平日 11:00-21:30</p>
             </li>
           </ul>
         </div>
