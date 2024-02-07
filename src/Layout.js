@@ -4,10 +4,10 @@ import Nav from './Nav';
 import {Outlet} from "react-router-dom"
 import Footer from './Footer';
 
-const Layout = ()=>{
+const Layout = ({shopItems, setShopItems})=>{
     return (
         <>
-            <Nav />
+            <Nav shopItems={shopItems} setShopItems={setShopItems}/>
             <Outlet />
             <Footer />
         </>

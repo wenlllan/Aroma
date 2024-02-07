@@ -578,35 +578,7 @@ main #shops .list-box .list-item .sites, main #share .slider .slides1 .slide .p1
   justify-content: space-between;
 }
 
-.all-prod-list .prod-list, .all-prod-list .prod-list .prod-list-items a, #select-sample #select-sample-btn, #select-sample #select-sample-btn a, #selectThird, #selectThird .selectThird-btn, #selectThird .selectThird-btn a, main #shops, main #shops .list-box .list-item, main #news_article, main #news_article .list-box .list-item, main #news_article .list-box .pagenumber, main #shopping3rd, main #shopping3rd .big-box .list-box .list, main #shopping3rd .big-box .list-box .list-item, main #shopping3rd .big-box .list-box .list-item .list-item-product, main #shopping3rd .big-box .list-box .list-item .item, main .modal .dialog, main #shopping2nd, main #shopping2nd .list-box .list, main #shopping2nd .list-box .list-item, main #shopping2nd .list-box .list-item .list-item-product, main #shopping2nd .list-box .list-item .item, main #shopping2nd #contact_form .list-boxes .form, main #shopping2nd #contact_form .list-boxes .form .form-check, main #shopping2nd #contact_form .next-box .btn button,
-main #shopping2nd #contact_form .next-box .btn #submit, main #shopping, main #shopping .list-box .list, main #shopping .list-box .list-item, main #shopping .list-box .list-item .list-item-product, main #shopping .list-box .list-item .item, main #share, main #share .list-box, main #share .form-box, main #register, main #register .sign #contact_form, main #news, main #news .list-box .list-item, main #news .list-box .paragraph .p3 a, main #news .list-box .pagenumber, main #member, .main-prod-dream .shopping-cart .cart, .prod-story-container .story-contain, .prod-story-container .story-contain .prod-story .img-border, .prod-story-container .story-contain .prod-story .prod-story-4, .prod-notes .prod-note-contain, .prod-notes .prod-note-contain .bottom, .prod-material, .prod-material .prod-material-contain, .prod-material .prod-material-contain .material-info-div, .prod-photo, .prod-photo .prod-photo-all, .prod-function, .prod-function .prod-function-div .prod-function-info, .prod-function .prod-function-div .prod-function-info .prod-function-img, .prod-find .find-CN, .prod-find .prod-find-btn, .prod-find .prod-find-btn a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main #news .list-box .paragraph .p2 p {
-  /* 多行省略 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-main #shops .list-box .list-item .sites, main #share .slider .slides1 .slide .p1, main #share .slider .slides2 .slide .p1, main #register .sign #contact_form .sign2, .main-prod-dream .prod-div .prod-info-div .prod-info-contain-item {
-  display: flex;
-  justify-content: space-between;
-}
-
-.all-prod-list .prod-list, .all-prod-list .prod-list .prod-list-items a, #select-sample #select-sample-btn, #select-sample #select-sample-btn a, #selectThird, #selectThird .selectThird-btn, #selectThird .selectThird-btn a, main #shops, main #shops .list-box .list-item, main #news_article, main #news_article .list-box .list-item, main #news_article .list-box .pagenumber, main #shopping3rd, main #shopping3rd .big-box .list-box .list, main #shopping3rd .big-box .list-box .list-item, main #shopping3rd .big-box .list-box .list-item .item, main .modal .dialog, main #shopping2nd, main #shopping2nd .list-box .list, main #shopping2nd .list-box .list-item, main #shopping2nd .list-box .list-item .list-item-product, main #shopping2nd .list-box .list-item .item, main #shopping2nd #contact_form .list-boxes .form, main #shopping2nd #contact_form .list-boxes .form .form-check, main #shopping, main #shopping .list-box .list, main #shopping .list-box .list-item, main #shopping .list-box .list-item .list-item-product, main #shopping .list-box .list-item .item, main #share, main #share .list-box, main #share .form-box, main #register, main #register .sign #contact_form, main #news, main #news .list-box .list-item, main #news .list-box .paragraph .p3 a, main #news .list-box .pagenumber, main #member, .main-prod-dream .shopping-cart .cart, .prod-story-container .story-contain, .prod-story-container .story-contain .prod-story .img-border, .prod-story-container .story-contain .prod-story .prod-story-4, .prod-notes .prod-note-contain, .prod-notes .prod-note-contain .bottom, .prod-material, .prod-material .prod-material-contain, .prod-material .prod-material-contain .material-info-div, .prod-photo, .prod-photo .prod-photo-all, .prod-function, .prod-function .prod-function-div .prod-function-info, .prod-function .prod-function-div .prod-function-info .prod-function-img, .prod-find .find-CN, .prod-find .prod-find-btn, .prod-find .prod-find-btn a {
+.all-prod-list .prod-list, .all-prod-list .prod-list .prod-list-items a, #select-sample #select-sample-btn, #select-sample #select-sample-btn a, #selectThird, #selectThird .selectThird-btn, #selectThird .selectThird-btn a, main #shops, main #shops .list-box .list-item, main #news_article, main #news_article .list-box .list-item, main #news_article .list-box .pagenumber, main #shopping3rd, main #shopping3rd .big-box .list-box .list, main #shopping3rd .big-box .list-box .list-item, main #shopping3rd .big-box .list-box .list-item .list-item-product, main #shopping3rd .big-box .list-box .list-item .item, main .modal .dialog, main #shopping2nd, main #shopping2nd .list-box .list, main #shopping2nd .list-box .list-item, main #shopping2nd .list-box .list-item .list-item-product, main #shopping2nd .list-box .list-item .item, main #shopping2nd #contact_form .list-boxes .form, main #shopping2nd #contact_form .list-boxes .form .form-check, main #shopping2nd #contact_form .next-box .btn, main #shopping, main #shopping .list-box .list, main #shopping .list-box .list-item, main #shopping .list-box .list-item .list-item-div, main #shopping .list-box .list-item .list-item-div .list-item-product, main #shopping .list-box .list-item .list-item-div .item, main #share, main #share .list-box, main #share .form-box, main #register, main #register .sign #contact_form, main #news, main #news .list-box .list-item, main #news .list-box .paragraph .p3 a, main #news .list-box .pagenumber, main #member, .main-prod-dream .shopping-cart .cart, .prod-story-container .story-contain, .prod-story-container .story-contain .prod-story .img-border, .prod-story-container .story-contain .prod-story .prod-story-4, .prod-notes .prod-note-contain, .prod-notes .prod-note-contain .bottom, .prod-material, .prod-material .prod-material-contain, .prod-material .prod-material-contain .material-info-div, .prod-photo, .prod-photo .prod-photo-all, .prod-function, .prod-function .prod-function-div .prod-function-info, .prod-function .prod-function-div .prod-function-info .prod-function-img, .prod-find .find-CN, .prod-find .prod-find-btn, .prod-find .prod-find-btn a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3547,6 +3519,9 @@ main #shopping .list-box .list .total {
   width: 16%;
 }
 main #shopping .list-box .list-item {
+  flex-direction: column;
+}
+main #shopping .list-box .list-item .list-item-div {
   flex-direction: row;
   height: auto;
   width: auto;
@@ -3554,88 +3529,88 @@ main #shopping .list-box .list-item {
   border-bottom: 1.5px groove #d9d9d9;
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item {
+  main #shopping .list-box .list-item .list-item-div {
     line-height: 2.5rem;
     flex-direction: column;
     padding: 2vh;
   }
 }
-main #shopping .list-box .list-item .list-item-product {
+main #shopping .list-box .list-item .list-item-div .list-item-product {
   width: 10vw;
   height: 8vw;
-  background-color: aliceblue;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0) 0%, #EEEEEE 90%);
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .list-item-product {
+  main #shopping .list-box .list-item .list-item-div .list-item-product {
     width: auto;
     height: auto;
   }
 }
-main #shopping .list-box .list-item .list-item-product .product {
+main #shopping .list-box .list-item .list-item-div .list-item-product .product {
   height: 8vw;
   width: auto;
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .list-item-product .product {
+  main #shopping .list-box .list-item .list-item-div .list-item-product .product {
     height: 20vh;
     padding: 0;
     margin: 2vh 0;
   }
 }
-main #shopping .list-box .list-item .item {
+main #shopping .list-box .list-item .list-item-div .item {
   flex-direction: row;
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item {
+  main #shopping .list-box .list-item .list-item-div .item {
     flex-direction: column;
     align-items: center;
   }
 }
-main #shopping .list-box .list-item .item #shopping-cart {
+main #shopping .list-box .list-item .list-item-div .item #shopping-cart {
   display: flex;
   align-items: center;
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item #shopping-cart {
+  main #shopping .list-box .list-item .list-item-div .item #shopping-cart {
     padding: 1vh 0;
   }
 }
-main #shopping .list-box .list-item .item #shopping-cart #quantity {
+main #shopping .list-box .list-item .list-item-div .item #shopping-cart #quantity {
   width: 30px;
   text-align: center;
   margin: 0 5px;
   border: #d9d9d9;
   font-family: "Noto Serif TC";
 }
-main #shopping .list-box .list-item .item #shopping-cart button {
+main #shopping .list-box .list-item .list-item-div .item #shopping-cart button {
   width: 20px;
   height: 20px;
   cursor: pointer;
   border-radius: 100%;
   border: #d9d9d9;
 }
-main #shopping .list-box .list-item .item p {
+main #shopping .list-box .list-item .list-item-div .item p {
   padding: 0 3.5vw;
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item p {
+  main #shopping .list-box .list-item .list-item-div .item p {
     font-size: 1rem;
     padding: 1vh 0;
   }
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item p:nth-child(2) {
+  main #shopping .list-box .list-item .list-item-div .item p:nth-child(2) {
     display: none;
   }
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item .garbage-can {
+  main #shopping .list-box .list-item .list-item-div .item .garbage-can {
     width: 4vh;
     height: auto;
   }
 }
 @media (max-width: 576px) {
-  main #shopping .list-box .list-item .item {
+  main #shopping .list-box .list-item .list-item-div .item {
     flex-wrap: wrap;
     align-items: center;
   }
@@ -3663,7 +3638,7 @@ main #shopping .list-box .total .next a {
   color: #FFFFFF;
   padding: 1vh 1vh;
   height: auto;
-  width: 100px;
+  width: 120px;
   cursor: pointer;
   border-radius: calc(infinity * 1px);
   border: none;
@@ -4227,8 +4202,7 @@ main #shopping2nd #contact_form .next-box {
   height: auto;
   min-height: 140px;
 }
-main #shopping2nd #contact_form .next-box .btn button,
-main #shopping2nd #contact_form .next-box .btn #submit {
+main #shopping2nd #contact_form .next-box .btn {
   margin: 0.5rem;
   padding: 1vh;
   height: auto;
@@ -4240,24 +4214,43 @@ main #shopping2nd #contact_form .next-box .btn #submit {
   color: #535353;
   font-family: "Noto Serif TC";
 }
-main #shopping2nd #contact_form .next-box .btn button:hover,
-main #shopping2nd #contact_form .next-box .btn #submit:hover {
+main #shopping2nd #contact_form .next-box .btn button,
+main #shopping2nd #contact_form .next-box .btn #submit {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: "Noto Serif TC";
+}
+main #shopping2nd #contact_form .next-box .btn:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: #ff9b99;
-  color: #FFFFFF;
 }
-main #shopping2nd #contact_form .next-box .btn button:hover .right-arrow,
-main #shopping2nd #contact_form .next-box .btn #submit:hover .right-arrow {
+main #shopping2nd #contact_form .next-box .btn:hover a > button {
+  color: #FFFFFF;
+  transition: all 0.35s;
+}
+main #shopping2nd #contact_form .next-box .btn:hover > input {
+  color: #FFFFFF;
+  transition: all 0.35s;
+}
+main #shopping2nd #contact_form .next-box .btn:hover .right-arrow {
   transform: translateX(4px);
 }
-main #shopping2nd #contact_form .next-box .btn button .right-arrow,
-main #shopping2nd #contact_form .next-box .btn #submit .right-arrow {
+main #shopping2nd #contact_form .next-box .btn:hover .right-arrow path {
+  fill: #FFFFFF;
+  stroke: #FFFFFF;
+}
+main #shopping2nd #contact_form .next-box .btn .right-arrow {
   display: flex;
   width: 20px;
   height: 20px;
   color: #FFFFFF;
   transition: all 0.35s;
   transform: translateX(0);
+}
+main #shopping2nd #contact_form .next-box .btn .right-arrow path {
+  width: 100%;
+  height: 100%;
 }
 
 main h3 {

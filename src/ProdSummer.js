@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
-const ProdSummer = ({theme}) => {
+const ProdSummer = ({theme,shopItems, setShopItems}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);

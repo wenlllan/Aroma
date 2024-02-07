@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom"
-const Nav = () => {
+const Nav = ({shopItems, setShopItems}) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
     const [navVisible, setNavVisible] = useState(false);
 
