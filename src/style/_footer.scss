@@ -3,41 +3,93 @@
 @use "./color" as *;
 
 
-footer{
+footer {
     background-color: $color-orange;
-    min-height:20vw ;
-    div{
-        width: 65%;
+    min-height: 20vw;
+
+    .footer-div {
+        width: 70%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin: 0 auto;
-        
-        @include mobile{
-            flex-direction: column;
-            align-items: center;
+
+        @include mac {
+            width: 80%;
         }
 
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 5vh 0;
+        }
+
+
         .footer-box {
-            text-align: center;
-            margin: 5vw;
+            margin: 3.5vw 0;
+
+            &:nth-child(1) {
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            @include mac {
+                margin: 2.5vw 1vw;
+            }
+
+            .item-logo {
+                padding: 20px 0;
+                color: $color-deep;
+
+                figure {
+                    width: 12vw;
+                    height: auto;
+
+                    @include pad {
+                        width: 18vw;
+                        min-width: 150px;
+                    }
+                }
+            }
+
+            .item {
+                width: 100%;
+                flex-direction: row;
+
+                a {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: .5vw;
+
+                    @include mobile {
+                        margin-right: 1vh;
+                    }
+                }
+            }
+
+            p {
+                @include p;
+                color: #9C8563;
+                text-align: start;
+                line-height: 1.6rem;
+
+            }
+
             h3 {
                 padding: 20px 0;
                 @include footer_title;
                 color: #AE814D;
             }
+
             a {
                 @include p;
                 color: #9C8563;
-                margin: 10px 0;
-            }
+                line-height: 1.6rem;
 
-            @include mac{
-                margin: 3vw;
-            }
-            
-            @include pad{
-                margin: 2vw;
+                // margin: 10px 0;
+                &:hover {
+                    color: $color-yellow;
+                }
             }
         }
     }

@@ -19,7 +19,6 @@ main {
     flex-direction: column;
 
     .big-box{
-     
       @include mobile{
         display: flex;
         flex-direction: column;
@@ -358,6 +357,7 @@ main {
             }
 
             #submit {
+              cursor: pointer;
               border: none;
               background: none;
               color:$color-white;
