@@ -14,14 +14,14 @@ const SelectSample = () => {
 
     function handleClick(e) {
         console.log(e.target.getAttribute('value'));
-        window.localStorage.setItem("Q1", JSON.stringify(e.target.getAttribute('value')));
-        Cookies.set("q1",JSON.stringify(e.target.getAttribute('value')));
-        // navigate('/selectsamplesec');
-        console.log(Cookies.get("q1"));
+        localStorage.setItem("Q1", JSON.stringify(e.target.getAttribute('value')));
+        //Cookies.set("q1",JSON.stringify(e.target.getAttribute('value')));
+        // navigate('/q2');
+        //console.log(Cookies.get("q1"));
     };
 
     return (
-        <body className="scrollBox">
+        <body>
             <section id="select-bg">
                 <div className="select-div">
                     <div className="select-frame">

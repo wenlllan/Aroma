@@ -13,7 +13,7 @@ import Shopping2nd from "./Shopping2nd";
 import Shopping3rd from "./Shopping3rd";
 import NewsArticle from "./NewsArticle";
 import Shops from "./Shops";
-import SelectSampleSec from "./SelectSampleSec";
+import QSecond from "./QSecond";
 import HomepageSw from "./HomepageSw";
 import SelectSampleThird from "./SelectSampleThird";
 import SelectSampleThirdS from "./SelectSampleThird-S";
@@ -37,9 +37,9 @@ function App() {
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
-            <Route path="selectsamplesec" element={<SelectSampleSec />}></Route>
+            <Route path="q2" element={<QSecond />}></Route>
             <Route path="selectsamplethird" element={<SelectSampleThird />}></Route>
-            <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route>
+            {/* <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route> */}
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping />}></Route>

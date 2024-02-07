@@ -1,6 +1,8 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState, useEffect } from 'react';
+
 // import required modules
 import {
   Navigation,
@@ -21,8 +23,27 @@ import "swiper/css/autoplay";
 // import img1 from "./images/main_bg1.jpg";
 
 const Test = () => {
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [delayedCursorPos, setDelayedCursorPos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const newPos = { x: e.clientX, y: e.clientY };
+      setCursorPos(newPos);
+      setTimeout(() => setDelayedCursorPos(newPos), 120);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+  
   return (
-    <>
+    <body>
+        <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
       <Swiper
         // cssMode={true}
         navigation={true}
@@ -49,7 +70,10 @@ const Test = () => {
         ]}
         style={{ height: "100dvh" }}
       >
+        
         <SwiperSlide className="swiper-slide">
+        <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
           <div
             className="img"
             style={{
@@ -80,6 +104,8 @@ const Test = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
+        <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
           <div
             className="img"
             style={{
@@ -110,6 +136,8 @@ const Test = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
+        <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
           <div
             className="img"
             style={{
@@ -214,7 +242,7 @@ const Test = () => {
           <img src="./images/brand-info-show.jpg" alt="" />
         </div>
       </section>
-    </>
+    </body>
   );
 };
 
