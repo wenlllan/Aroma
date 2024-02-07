@@ -1,3 +1,4 @@
+import React,{useState,useEffect} from "react";
 import "../src/css/style.css";
 import Layout from "./Layout"
 import Homepage from "./Homepage";
@@ -23,6 +24,8 @@ import BgGradient from "./BgGradient";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
+  const[shopItems,setShopItems] = useState(null)
+  
   return (
     <div className="App">
       {/* <Helmet>
@@ -37,9 +40,9 @@ function App() {
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
-            <Route path="q2" element={<QSecond />}></Route>
+            <Route path="selectsamplesec" element={<QSecond />}></Route>
             <Route path="selectsamplethird" element={<SelectSampleThird />}></Route>
-            {/* <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route> */}
+            <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping />}></Route>
