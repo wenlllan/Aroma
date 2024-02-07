@@ -8,6 +8,7 @@ main {
   h3 {
     @include h3;
   }
+
   p {
     @include p;
   }
@@ -17,9 +18,9 @@ main {
     @extend %flex-center;
     flex-direction: column;
 
-    .big-box{
-     
-      @include mobile{
+    .big-box {
+
+      @include mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,520 +29,548 @@ main {
     }
 
 
-      .top-steps {
+    .top-steps {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: 8%;
+      padding-top: 6.5vw;
+
+      @include mobile {
+        justify-content: center;
+        margin: 0;
+        padding: 10vh 0 2vh 0;
+      }
+
+      .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vw;
+
+        p {
+          padding-top: 1vw;
+          @include p;
+
+          @include mobile {
+            font-size: 0.75rem;
+          }
+        }
+
+        h3 {
+          width: 3rem;
+          height: 3rem;
+          align-items: center;
+          background-color: #d9d9d9;
+          border-radius: 50px;
+          @include h3;
+
+          @include mobile {
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.75rem;
+          }
+        }
+
+        #s1 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: $color-lightpink;
+          color: white;
+
+          // 直線
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 3rem;
+            /* 直線空行 */
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-pink;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              /* 直線空行 */
+              width: 5rem;
+            }
+          }
+        }
+
+        #s2 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          //   background-color: $color-gray;
+          background-color: $color-pink;
+          color: white;
+
+          // 直線
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+
+            left: 3rem;
+            /* 直線空行 */
+            // width: 25vw;
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-gray;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              width: 5rem;
+            }
+          }
+        }
+
+        #s3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: #d9d9d9;
+        }
+      }
+    }
+
+    .list-box {
+
+      @include mobile {
+        width: 70%;
+      }
+
+      .title {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        width: 100%;
-        margin-right: 8%;
-        padding-top: 6.5vw;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 600;
+        color: $color-deep;
+        padding: 2vw 0 2vw 0.5vw;
 
         @include mobile {
           justify-content: center;
-          margin: 0;
-          padding: 10vh 0 2vh 0;
+          padding: 2vh 0;
+        }
+      }
+
+      .list {
+        @extend %flex-center;
+        flex-direction: row;
+        border-top: 1px solid $color-pink;
+        border-bottom: 1px solid $color-pink;
+        padding: 0.8vw 4vw 0.8vw 9vw;
+
+        @include mobile {
+          padding: 1vh;
         }
 
-        .steps {
-          display: flex;
+        p:nth-child(n + 2) {
+          @include mobile {
+            display: none;
+          }
+        }
+
+        p {
+          @include mobile {
+            font-size: 0.75rem;
+          }
+        }
+
+        .products {
+          width: 34%;
+
+          @include mobile {
+            width: 2rem;
+          }
+        }
+
+        .price {
+          width: 18%;
+
+          @include mobile {
+            width: 12%;
+          }
+        }
+
+        .qty {
+          width: 14%;
+        }
+
+        .total {
+          width: 16%;
+        }
+      }
+
+      .list-item {
+        @extend %flex-center;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        padding: 1vw 0;
+        border-bottom: 1.5px groove $color-gray;
+
+        @include mobile {
+          line-height: 2.5rem;
           flex-direction: column;
-          align-items: center;
-          padding: 2vw;
+          padding: 2vh;
+        }
+
+        .list-item-product {
+          width: 10vw;
+          height: 8vw;
+          @extend %flex-center;
+          background-color: aliceblue;
+
+          @include mobile {
+            width: auto;
+            height: auto;
+          }
+
+          .product {
+            height: 8vw;
+            width: auto;
+
+            @include mobile {
+              height: 20vh;
+              padding: 0;
+              margin: 2vh 0;
+            }
+          }
+        }
+
+        .item {
+          @extend %flex-center;
+          flex-direction: row;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          #shopping-cart {
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+              padding: 1vh 0;
+            }
+
+            #quantity {
+              width: 30px;
+              text-align: center;
+              margin: 0 5px;
+              border: $color-gray;
+              font-family: "Noto Serif TC";
+            }
+
+            button {
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+              border-radius: 100%;
+              border: $color-gray;
+            }
+          }
 
           p {
-            padding-top: 1vw;
-            @include p;
+            padding: 0 3.5vw;
 
             @include mobile {
-              font-size: 0.75rem;
+              font-size: 1rem;
+              padding: 1vh 0;
+            }
+
+            &:nth-child(2) {
+              @include mobile {
+                display: none;
+              }
             }
           }
 
-          h3 {
-            width: 3rem;
-            height: 3rem;
+          .garbage-can {
+
+            @include mobile {
+              width: 4vh;
+              height: auto;
+            }
+          }
+
+          @include mobile {
+            flex-wrap: wrap;
             align-items: center;
-            background-color: #d9d9d9;
-            border-radius: 50px;
-            @include h3;
-
-            @include mobile {
-              width: 2rem;
-              height: 2rem;
-              font-size: 0.75rem;
-            }
-          }
-
-          #s1 {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: $color-lightpink;
-            color: white;
-
-            // 直線
-            &::after {
-              z-index: -1;
-              content: "";
-              position: absolute;
-              left: 3rem;
-              /* 直線空行 */
-              width: 8.5rem;
-              height: 1.5px;
-              background-color: $color-pink;
-
-              @include pad {
-                width: 6rem;
-              }
-
-              @include mobile {
-                left: 2rem;
-                /* 直線空行 */
-                width: 5rem;
-              }
-            }
-          }
-
-          #s2 {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            //   background-color: $color-gray;
-            background-color: $color-pink;
-            color: white;
-
-            // 直線
-            &::after {
-              z-index: -1;
-              content: "";
-              position: absolute;
-
-              left: 3rem;
-              /* 直線空行 */
-              // width: 25vw;
-              width: 8.5rem;
-              height: 1.5px;
-              background-color: $color-gray;
-
-              @include pad {
-                width: 6rem;
-              }
-
-              @include mobile {
-                left: 2rem;
-                width: 5rem;
-              }
-            }
-          }
-
-          #s3 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: #d9d9d9;
           }
         }
       }
 
-      .list-box {
-
-        @include mobile{
-          width: 70%;
-        }
-        .title {
+      .total {
+        .t1 {
           display: flex;
           flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          font-weight: 600;
-          color: $color-deep;
-          padding: 2vw 0 2vw 0.5vw;
+          justify-content: flex-end;
+          margin-right: 3vw;
+          padding: 1vw 0;
 
           @include mobile {
-            justify-content: center;
             padding: 2vh 0;
           }
         }
 
-        .list {
-          @extend %flex-center;
-          flex-direction: row;
-          border-top: 1px solid $color-pink;
-          border-bottom: 1px solid $color-pink;
-          padding: 0.8vw 4vw 0.8vw 9vw;
+        .next {
+          #submit {
+            color: $color-white;
+            padding: 1vh 1vh;
+            height: auto;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 16px;
+            border: none;
+            background-color: $color-pink;
 
-          @include mobile {
-            padding: 1vh;
-          }
-
-          p:nth-child(n + 2) {
-            @include mobile {
-              display: none;
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             }
           }
+        }
+      }
+    }
+
+    #contact_form {
+      @include mobile {
+        width: 70%;
+      }
+
+      .list-boxes {
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .title {
+          font-weight: 600;
+          color: $color-deep;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 2vw 0 2vw 0.5vw;
+          border-bottom: 1px solid $color-pink;
+          width: 100%;
+        }
+
+        .form-sign {
+          padding: 1.5vw 0 1.5vw 0.5vw;
+
+          @include mobile {
+            width: 100%;
+            padding: 1vh 0 2vh;
+          }
+
+          .sign {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+
+            label {
+              margin: 1.5rem 0 0.3rem 0;
+              @include p;
+
+              @include mobile {
+                margin: 1.5vh 0;
+              }
+            }
+
+            input {
+              font-family: "Noto Serif TC";
+              font-size: 0.8rem;
+              border: 0;
+              border-bottom: 1px solid $color-deep;
+
+              @include mobile {
+                width: 80%;
+              }
+            }
+          }
+        }
+
+        .notice-box {
+          padding: 1.5vw 0 1.5vw 0.5vw;
 
           p {
-            @include mobile {
-              font-size: 0.75rem;
-            }
-          }
-
-          .products {
-            width: 34%;
+            color: $color-deep;
+            font-size: 0.8rem;
 
             @include mobile {
-              width: 2rem;
+              line-height: 120%;
+              margin: 0 0 2vh 0;
             }
-          }
-
-          .price {
-            width: 18%;
-
-            @include mobile {
-              width: 12%;
-            }
-          }
-
-          .qty {
-            width: 14%;
-          }
-
-          .total {
-            width: 16%;
           }
         }
 
-        .list-item {
+        .form {
           @extend %flex-center;
-          flex-direction: row;
-          height: auto;
-          width: auto;
-          padding: 1vw 0;
-          border-bottom: 1.5px groove $color-gray;
+          padding: 1.5vw 0 1vw 0.5vw;
 
           @include mobile {
-            line-height: 2.5rem;
             flex-direction: column;
-            padding: 2vh;
-          }
-
-          .list-item-product {
-            width: 10vw;
-            height: 8vw;
-            @extend %flex-center;
-            background-color: aliceblue;
-
-            @include mobile {
-              width: auto;
-              height: auto;
-            }
-
-            .product {
-              height: 8vw;
-              width: auto;
-
-              @include mobile {
-                height: 20vh;
-                padding: 0;
-                margin: 2vh 0;
-              }
-            }
-          }
-
-          .item {
-            @extend %flex-center;
-            flex-direction: row;
-
-            @include mobile {
-              flex-direction: column;
-              align-items: center;
-            }
-
-            #shopping-cart {
-              display: flex;
-              align-items: center;
-
-              @include mobile {
-                padding: 1vh 0;
-              }
-
-              #quantity {
-                width: 30px;
-                text-align: center;
-                margin: 0 5px;
-                border: $color-gray;
-                font-family: "Noto Serif TC";
-              }
-
-              button {
-                width: 20px;
-                height: 20px;
-                cursor: pointer;
-                border-radius: 100%;
-                border: $color-gray;
-              }
-            }
-
-            p {
-              padding: 0 3.5vw;
-
-              @include mobile {
-                font-size: 1rem;
-                padding: 1vh 0;
-              }
-
-              &:nth-child(2) {
-                @include mobile {
-                  display: none;
-                }
-              }
-            }
-
-            .garbage-can {
-
-              @include mobile {
-                width: 4vh;
-                height: auto;
-              }
-            }
-
-            @include mobile {
-              flex-wrap: wrap;
-              align-items: center;
-            }
-          }
-        }
-
-        .total {
-          .t1{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            margin-right: 3vw;
-            padding: 1vw 0;
-
-            @include mobile{
-              padding: 2vh 0;
-            }
-          }
-
-          .next {
-            #submit {
-              color: $color-white;
-              padding: 1vh 1vh;
-              height: auto;
-              width: 100px;
-              cursor: pointer;
-              border-radius: 16px;
-              border: none;
-              background-color: $color-pink;
-
-              &:hover {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-              }
-            }
-          }
-        }
-      }
-
-      #contact_form {
-        @include mobile{
-          width: 70%;
-        }
-        .list-boxes {
-          min-height: 140px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-
-          .title {
-            font-weight: 600;
-            color: $color-deep;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 2vw 0 2vw 0.5vw;
-            border-bottom: 1px solid $color-pink;
             width: 100%;
+            padding: 0;
           }
 
-          .form-sign {
-            padding: 1.5vw 0 1.5vw 0.5vw;
-
-            @include mobile{
-              width: 100%;
-              padding: 1vh 0 2vh;
-            }
-
-            .sign {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: baseline;
-
-              label {
-                margin: 1.5rem 0 0.3rem 0;
-                @include p;
-
-                @include mobile{
-                  margin: 1.5vh 0;
-                }
-              }
-
-              input {
-                font-family: "Noto Serif TC";
-                font-size: 0.8rem;
-                border: 0;
-                border-bottom: 1px solid $color-deep;
-
-                @include mobile{
-                  width: 80%;
-                }
-              }
-            }
-          }
-
-          .notice-box {
-            padding: 1.5vw 0 1.5vw 0.5vw;
-
-            p {
-              color: $color-deep;
-              font-size: 0.8rem;
-
-              @include mobile{
-                line-height: 120%;
-                margin: 0 0 2vh 0;
-              }
-            }
-          }
-
-          .form {
+          .form-check {
             @extend %flex-center;
-            padding: 1.5vw 0 1vw 0.5vw;
+            color: $color-white;
+            padding: 1vh 1vh;
+            border-radius: 16px;
+            border: none;
+            background-color: $color-pink;
+            margin: 0 0.5vw;
 
             @include mobile {
-              flex-direction: column;
+              height: 50px;
               width: 100%;
-              padding: 0;
+              margin: 1vh 0;
+              justify-content: flex-start;
             }
 
-            .form-check {
-              @extend %flex-center;
-              color: $color-white;
-              padding: 1vh 1vh;
-              border-radius: 16px;
-              border: none;
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
               background-color: $color-pink;
-              margin: 0 0.5vw;
+              color: $color-white;
+            }
+
+            input {
+              cursor: pointer;
+              appearance: none;
+
+              border-radius: 50%;
+              width: 14px;
+              height: 14px;
+
+              border: 2px solid $color-white;
+              transition: 0.2s all linear;
+              margin-right: 5px;
+            }
+
+            // 在label上面加寬度
+            .form-check-label {
+              display: flex;
+              align-items: center;
+              height: 5vw;
+              width: 15vw;
+              min-width: 180px;
+              cursor: pointer;
 
               @include mobile {
-                height: 50px;
-                width: 100%;
-                margin: 1vh 0;
-                justify-content: flex-start;
-              }
-
-              &:hover {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-                background-color: $color-pink;
-                color: $color-white;
-              }
-
-              input {
-                cursor: pointer;
-                appearance: none;
-
-                border-radius: 50%;
-                width: 14px;
-                height: 14px;
-
-                border: 2px solid $color-white;
-                transition: 0.2s all linear;
-                margin-right: 5px;
-              }
-
-              // 在label上面加寬度
-              .form-check-label {
-                display: flex;
-                align-items: center;
-                height: 5vw;
-                width: 15vw;
-                min-width: 180px;
-                cursor: pointer;
-
-                @include mobile {
-                  width: auto;
-                }
-              }
-
-              input:checked {
-                border: 3px solid $color-white;
-                background-color: $color-orange-deep;
+                width: auto;
               }
             }
 
-            #regularSelect {
-              height: 1.6rem;
-              font-family: "Noto Serif TC";
-
-              @include mobile{
-                width: 100%;
-                height: 4vh;
-                margin: 1vh 0;
-              }
+            input:checked {
+              border: 3px solid $color-white;
+              background-color: $color-orange-deep;
             }
           }
-        }
 
-        .next-box {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: center;
-          padding: 0.8vw 0;
-          height: auto;
-          min-height: 140px;
+          #regularSelect {
+            height: 1.6rem;
+            font-family: "Noto Serif TC";
 
-          .btn {
-
-            button,
-            #submit {
-              @extend %flex-center;
-              margin: 0.5rem;
-              padding: 1vh;
-              height: auto;
-              width: 120px;
-              cursor: pointer;
-              border-radius: $radius-infinity;
-              border: none;
-              background-color: $color-gray;
-              color: $color-deep;
-              font-family: "Noto Serif TC";
-
-              &:hover {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-                background-color: $color-pink;
-                color: $color-white;
-
-                .right-arrow{
-                  transform: translateX(4px);
-                }
-              }
-              .right-arrow{
-                display: flex;
-                width: 20px;
-                height: 20px;
-                color:$color-white;
-                transition: all .35s;
-                transform: translateX(0);
-              }
+            @include mobile {
+              width: 100%;
+              height: 4vh;
+              margin: 1vh 0;
             }
           }
         }
       }
+
+      .next-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.8vw 0;
+        height: auto;
+        min-height: 140px;
+
+        
+        .btn {
+          @extend %flex-center;
+          margin: 0.5rem;
+          padding: 1vh;
+          height: auto;
+          width: 120px;
+          cursor: pointer;
+          border-radius: $radius-infinity;
+          border: none;
+          background-color: $color-gray;
+          color: $color-deep;
+          font-family: "Noto Serif TC";
+
+          button,
+          #submit {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: "Noto Serif TC";
+          }
+
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: $color-pink;
+
+            a{
+              >button{
+                color: $color-white;
+                transition: all .35s;
+              }
+            }
+            
+            >input {
+              color: $color-white;
+              transition: all .35s;
+            }
+
+            .right-arrow {
+              transform: translateX(4px);
+              path {
+                fill: $color-white;
+                stroke: $color-white;
+              }
+            }
+          }
+
+          .right-arrow {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            color: $color-white;
+            transition: all .35s;
+            transform: translateX(0);
+
+            path{
+              width:100% ;
+              height:100%;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+import React,{useState,useEffect} from "react";
 import "../src/css/style.css";
 import Layout from "./Layout"
 import Homepage from "./Homepage";
@@ -23,6 +24,16 @@ import BgGradient from "./BgGradient";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
+
+  const [shopItems, setShopItems] = useState(null);
+  const [shopCount, setShopCount] = useState(null)
+  
+  // useEffect(()=>{
+  //   setShopItems(()=>{
+  //     return JSON.parse(localStorage.getItem("cart"))
+  //   })
+  // },[shopCount])
+
   return (
     <div className="App">
       {/* <Helmet>
@@ -30,10 +41,10 @@ function App() {
       </Helmet> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout shopItems={shopItems} setShopItems={setShopItems} />}>
             <Route index element={<HomepageSw />}></Route>
-            <Route path="prod" element={<ProdDream theme="pink"/>}></Route>
-            <Route path="prod-summer" element={<ProdSummer theme="yellow"/>}></Route>
+            <Route path="prod" element={<ProdDream theme="pink" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
+            <Route path="prod-summer" element={<ProdSummer theme="yellow" shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
@@ -42,7 +53,7 @@ function App() {
             <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
-            <Route path="shopping" element={<Shopping />}></Route>
+            <Route path="shopping" element={<Shopping shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>
             <Route path="shopping2nd" element={<Shopping2nd />}></Route>
             <Route path="shopping3rd" element={<Shopping3rd />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
