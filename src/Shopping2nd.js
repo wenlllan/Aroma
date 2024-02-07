@@ -1,12 +1,39 @@
-import React,{ useState, useEffect } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Shopping2nd = () => {
-  // 表單驗證
+  const [userName, setUserName] = useState("");
+  const [userTel, setUserTel] = useState("");
+  const [msg1, setMsg1] = useState("");
+  const [msg2, setMsg2] = useState("");
   const navigate = useNavigate();
-  function handleClick(e) {
-    navigate('/shopping3rd');
-};
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (userName.trim() === "") {
+      setMsg1(" *必須填寫「姓名」");
+    } else {
+      setMsg1("");
+    }
+    if (userTel.trim() === "") {
+      setMsg2(" *必須填寫「電話」");
+    } else {
+      setMsg2("");
+    }
+    if (userName.trim() !== "" && userTel.trim() !== "") {
+      navigate("/shopping3rd");
+    }
+  }
+  // 表單驗證
+  //   function handleClick(e) {
+  //     console.log(username);
+
+  //     // navigate('/shopping3rd');
+  // };
+  // const handleChangeName=(e)=> {
+  //   setUsername(e.target.value)
+  // }
 
   return (
     <body>
@@ -65,7 +92,13 @@ const Shopping2nd = () => {
                 </div>
               </div>
             </div>
-            <form action="" name="contact" id="contact_form" method="post">
+            <form
+              action=""
+              name="contact"
+              id="contact_form"
+              method="post"
+              onSubmit={handleSubmit}
+            >
               <div className="list-boxes">
                 <h3 className="title">選擇配送方式</h3>
                 <div className="form">
@@ -95,9 +128,13 @@ const Shopping2nd = () => {
                       title="請輸入姓名"
                       placeholder="請輸入姓名"
                       autoComplete="on"
-                      required
+                      // required
+                      value={userName}
+                      onChange={(e) => setUserName(e.target.value)}
                     />
+                    <span style={{ color: "red" }}>{msg1}</span>
                   </div>
+
                   <div className="sign">
                     <label for="tel">電話：</label>
                     <input
@@ -107,8 +144,11 @@ const Shopping2nd = () => {
                       title="請輸入連絡電話"
                       placeholder="請輸入號碼"
                       autoComplete="on"
-                      required
+                      // required
+                      value={userTel}
+                      onChange={(e) => setUserTel(e.target.value)}
                     />
+                    <span style={{ color: "red" }}>{msg2}</span>
                   </div>
                 </div>
                 <div className="notice-box">
@@ -163,19 +203,35 @@ const Shopping2nd = () => {
                 </div>
 
                 <div className="btn">
-                  <input type="submit" id="submit" value="確認結帳" onClick={handleClick}/>
-                  <Link to="/shopping3rd">
-                    <button type="button">
-                      下一步
-                      <figure className="right-arrow">
-                        <img src="./icon/right-arrows.svg" alt="" />
-                      </figure>
-                    </button>
-                  </Link>
-                  {/* 結帳 */}
-                </div>
+                  <input type="submit" id="submit" value="確認結帳" />
+                  <figure className="right-arrow">
+                    {/* <img src="./icon/right-arrows.svg" alt="" /> */}
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18.707 12.707-3 3a1 1 0 0 1-1.414-1.414L15.586 13H6a1 1 0 0 1 0-2h9.586l-1.293-1.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414z" style="fill:#f97c4b" data-name="Right"/></svg> */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 841.9 595.3"
+                    >
+                      <path
+                        class="st0"
+                        d="M593.8,316.1c-2.9,0-4.8,0-6.6,0c-127.2,0-254.5,0-381.7,0c-10,0-16.9-4.2-19.8-12.1
+	c-4.3-11.7,3.9-24.2,16.4-24.9c1.7-0.1,3.4,0,5.1,0c126.8,0,253.6,0,380.3,0c1.8,0,3.6,0,6.4,0c-2-2.1-3.3-3.5-4.7-4.9
+	c-19.8-19.8-39.7-39.5-59.5-59.3c-5.3-5.3-7-11.6-5-18.6c2-6.9,6.8-11.3,13.8-12.8c6.9-1.5,12.7,0.8,17.6,5.7
+	c18,17.9,36,35.8,54,53.7c13.6,13.6,27.3,27.1,40.9,40.7c8.5,8.5,8.6,19.3,0.1,27.8c-31.7,31.6-63.4,63.2-95.2,94.7
+	c-7.2,7.2-17.2,7.9-24.7,2.2c-7.3-5.6-9.5-15.7-5-23.6c1.3-2.2,3.1-4.2,4.9-6c19.6-19.6,39.2-39.1,58.9-58.6
+	C591.1,319.1,592,318,593.8,316.1z"
+                      />
+                    </svg>
+                    {/* svg路徑 */}
+                    
+                  </figure>
 
-                {/* {error && <div>{error}</div> } */}
+                  {/* <button type="button">
+                    下一步
+                    <figure className="right-arrow">
+                      <img src="./icon/right-arrows.svg" alt="" />
+                    </figure>
+                  </button> */}
+                </div>
               </div>
             </form>
           </div>

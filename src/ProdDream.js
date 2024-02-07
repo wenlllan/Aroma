@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { Link } from "react-router-dom"
-const ProdDream = ({theme}) => {
+const ProdDream = ({theme, shopItems, setShopItems, setShopCount,shopCount}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);
     const [isSending, setIsSending] = useState(false);
+
+    const productD1 = {
+        id: 1-1,//_id
+        src:"./images/prod-dream.png",
+        title:"尋香奇遊的夢幻花境",
+        price:1880,
+        ml:30,
+    }
+    const productD2 = {
+        id: 1-2,//_id
+        src:"./images/prod-dream.png",
+        title:"尋香奇遊的夢幻花境",
+        price:2880,
+        ml:50,
+    }
 
     const addToCart = () => {
         setIsSending(true);
@@ -17,6 +32,38 @@ const ProdDream = ({theme}) => {
             }, 500);
         }, 1000);
     };
+
+    const handleAdd = (obj)=>{
+        //localStorage: JSON.stringify()=>轉文字  /  JSON.parse()=>解析localStorage內容
+        let orderList = localStorage.getItem("cart");
+        if (orderList){
+            console.log(orderList)
+            console.log(JSON.parse(orderList));
+            let currentCart = JSON.parse(orderList)
+            currentCart.push(obj);
+            localStorage.setItem("cart", JSON.stringify(currentCart));  
+            
+        } else {
+            let arr = [];
+            arr.push(obj);
+            console.log(arr);
+            localStorage.setItem("cart", JSON.stringify(arr) )
+        }
+        setShopCount((prev)=>{
+            return prev + 1;
+        })
+        // setState() // setState((prevState)=>{ return prevState .....})
+
+        // 回呼函式callback function，"prev"
+        //setState(2)
+        //setState(3)
+    }
+
+    useEffect(()=>{
+        setShopItems(()=>{
+          return JSON.parse(localStorage.getItem("cart"))
+        })
+      },[shopCount])
 
     return (
         <body>
@@ -63,12 +110,12 @@ const ProdDream = ({theme}) => {
                             <div className="prod-info-contain-item">
                                 <div className="ml">30ml</div>
                                 <div className="price">NT$1,880</div>
-                                <button className="add">加入購物車</button>
+                                <button className="add" onClick={(e)=>{handleAdd(productD1); addToCart();}}>加入購物車</button>
                             </div>
                             <div className="prod-info-contain-item">
                                 <div className="ml">50ml</div>
                                 <div className="price">NT$2,880</div>
-                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={addToCart}>加入購物車<span className="cart-item"></span></button>
+                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={(e)=>{handleAdd(productD2); addToCart();}}>加入購物車<span className="cart-item"></span></button>
                             </div>
                         </div>
                     </div>

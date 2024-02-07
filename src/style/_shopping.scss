@@ -18,8 +18,8 @@ main {
     @extend %flex-center;
     flex-direction: column;
 
-    .big-box{
-      @include mobile{
+    .big-box {
+      @include mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,193 +28,197 @@ main {
       }
     }
 
-      .top-steps {
+    .top-steps {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: 8%;
+      padding-top: 6.5vw;
+
+      @include mobile {
+        justify-content: center;
+        margin: 0;
+        padding: 10vh 0 2vh 0;
+      }
+
+      .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vw;
+
+        p {
+          @include p;
+
+          @include mobile {
+            font-size: 0.75rem;
+          }
+        }
+
+        h3 {
+          width: 3rem;
+          height: 3rem;
+          align-items: center;
+          background-color: #d9d9d9;
+          border-radius: 50px;
+          @include h3;
+
+          @include mobile {
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.75rem;
+          }
+        }
+
+        #s1 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: $color-pink;
+          color: white;
+
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 3rem;
+            /* 直線空行 */
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-gray;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              /* 直線空行 */
+              width: 5rem;
+            }
+          }
+        }
+
+        #s2 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: $color-gray;
+
+          // 直線
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+
+            left: 3rem;
+            /* 直線空行 */
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-gray;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              /* 直線空行 */
+              width: 5rem;
+            }
+          }
+        }
+
+        #s3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: #d9d9d9;
+        }
+
+        p {
+          padding-top: 1vw;
+        }
+      }
+    }
+
+    .list-box {
+
+      @include mobile {
+        width: 70%;
+      }
+
+      .title {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        width: 100%;
-        margin-right: 8%;
-        padding-top: 6.5vw;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 600;
+        color: $color-deep;
+        padding: 2vw 0 2vw 0.5vw;
 
         @include mobile {
           justify-content: center;
-          margin: 0;
-          padding: 10vh 0 2vh 0;
-        }
-
-        .steps {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 2vw;
-
-          p {
-            @include p;
-
-            @include mobile {
-              font-size: 0.75rem;
-            }
-          }
-
-          h3 {
-            width: 3rem;
-            height: 3rem;
-            align-items: center;
-            background-color: #d9d9d9;
-            border-radius: 50px;
-            @include h3;
-
-            @include mobile {
-              width: 2rem;
-              height: 2rem;
-              font-size: 0.75rem;
-            }
-          }
-
-          #s1 {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: $color-pink;
-            color: white;
-
-            &::after {
-              z-index: -1;
-              content: "";
-              position: absolute;
-              left: 3rem;
-              /* 直線空行 */
-              width: 8.5rem;
-              height: 1.5px;
-              background-color: $color-gray;
-
-              @include pad {
-                width: 6rem;
-              }
-
-              @include mobile {
-                left: 2rem;
-                /* 直線空行 */
-                width: 5rem;
-              }
-            }
-          }
-
-          #s2 {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: $color-gray;
-
-            // 直線
-            &::after {
-              z-index: -1;
-              content: "";
-              position: absolute;
-
-              left: 3rem;
-              /* 直線空行 */
-              width: 8.5rem;
-              height: 1.5px;
-              background-color: $color-gray;
-
-              @include pad {
-                width: 6rem;
-              }
-
-              @include mobile {
-                left: 2rem;
-                /* 直線空行 */
-                width: 5rem;
-              }
-            }
-          }
-
-          #s3 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            background-color: #d9d9d9;
-          }
-
-          p {
-            padding-top: 1vw;
-          }
+          padding: 2vh 0;
         }
       }
 
-      .list-box {
-     
-        @include mobile{
-          width: 70%;
+      .list {
+        @extend %flex-center;
+        flex-direction: row;
+        border-top: 1px solid $color-pink;
+        border-bottom: 1px solid $color-pink;
+        padding: 0.8vw 4vw 0.8vw 9vw;
+
+        @include mobile {
+          padding: 1vh;
         }
 
-        .title {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          font-weight: 600;
-          color: $color-deep;
-          padding: 2vw 0 2vw 0.5vw;
+        p:nth-child(n + 2) {
+          @include mobile {
+            display: none;
+          }
+        }
+
+        p {
+          @include mobile {
+            font-size: 0.75rem;
+          }
+        }
+
+        .products {
+          width: 34%;
 
           @include mobile {
-            justify-content: center;
-            padding: 2vh 0;
+            width: 2rem;
           }
         }
 
-        .list {
-          @extend %flex-center;
-          flex-direction: row;
-          border-top: 1px solid $color-pink;
-          border-bottom: 1px solid $color-pink;
-          padding: 0.8vw 4vw 0.8vw 9vw;
+        .price {
+          width: 18%;
 
           @include mobile {
-            padding: 1vh;
-          }
-
-          p:nth-child(n + 2) {
-            @include mobile {
-              display: none;
-            }
-          }
-
-          p {
-            @include mobile {
-              font-size: 0.75rem;
-            }
-          }
-
-          .products {
-            width: 34%;
-
-            @include mobile {
-              width: 2rem;
-            }
-          }
-
-          .price {
-            width: 18%;
-
-            @include mobile {
-              width: 12%;
-            }
-          }
-
-          .qty {
-            width: 14%;
-          }
-
-          .total {
-            width: 16%;
+            width: 12%;
           }
         }
 
-        .list-item {
+        .qty {
+          width: 14%;
+        }
+
+        .total {
+          width: 16%;
+        }
+      }
+
+      .list-item {
+        @extend %flex-center;
+        flex-direction: column;
+
+        .list-item-div {
           @extend %flex-center;
           flex-direction: row;
           height: auto;
@@ -232,7 +236,7 @@ main {
             width: 10vw;
             height: 8vw;
             @extend %flex-center;
-            background-color: aliceblue;
+            background: linear-gradient(140deg, rgba(255, 255, 255, 0) 0%, #EEEEEE 90%);
 
             @include mobile {
               width: auto;
@@ -314,66 +318,68 @@ main {
             }
           }
         }
+      }
 
-        .total {
-          .t1 {
+      .total {
+        .t1 {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          margin-right: 3vw;
+          padding: 1vw 0;
+
+          @include mobile {
+            padding: 2vh 0;
+          }
+        }
+
+        .next {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 3vw;
+          padding: 8vw 0 12vw 0;
+
+          a {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            margin-right: 3vw;
-            padding: 1vw 0;
+            color: $color-white;
+            padding: 1vh 1vh;
+            height: auto;
+            width: 120px;
+            cursor: pointer;
+            border-radius: $radius-infinity;
+            border: none;
+            background-color: $color-pink;
+            justify-content: center;
+            align-items: center;
 
-            @include mobile{
-              padding: 2vh 0;
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+              .right-arrow {
+                transform: translateX(4px);
+              }
             }
           }
 
-          .next {
+          #submit {
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: $color-white;
+            font-family: "Noto Serif TC";
+          }
+
+          .right-arrow {
             display: flex;
-            justify-content: flex-end;
-            margin-right: 3vw;
-            padding: 8vw 0 12vw 0;
-            
-            a{
-              display: flex;
-              color: $color-white;
-              padding: 1vh 1vh;
-              height: auto;
-              width: 100px;
-              cursor: pointer;
-              border-radius: $radius-infinity;
-              border: none;
-              background-color: $color-pink;
-              justify-content: center;
-              align-items: center;
-
-              &:hover {
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-                .right-arrow{
-                  transform: translateX(4px);
-                }
-              }
-            }
-
-            #submit {
-              cursor: pointer;
-              border: none;
-              background: none;
-              color:$color-white;
-              font-family: "Noto Serif TC";
-            }
-            .right-arrow{
-              display: flex;
-              width: 20px;
-              height: 20px;
-              color:$color-white;
-              transition: all .35s;
-              transform: translateX(0);
-            }
+            width: 20px;
+            height: 20px;
+            color: $color-white;
+            transition: all .35s;
+            transform: translateX(0);
           }
         }
       }
-    
+    }
+
   }
 }
