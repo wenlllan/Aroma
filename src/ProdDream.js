@@ -7,18 +7,22 @@ const ProdDream = ({theme, shopItems, setShopItems, setShopCount,shopCount}) => 
     const [isSending, setIsSending] = useState(false);
 
     const productD1 = {
-        id: 1-1,//_id
+        id: '1-1',//_id
         src:"./images/prod-dream.png",
         title:"尋香奇遊的夢幻花境",
         price:1880,
         ml:30,
+        count: 0,
+        currentPrice:0,
     }
     const productD2 = {
-        id: 1-2,//_id
+        id: '1-2',//_id
         src:"./images/prod-dream.png",
         title:"尋香奇遊的夢幻花境",
         price:2880,
         ml:50,
+        count: 0,
+        currentPrice:0,
     }
 
     const addToCart = () => {
@@ -37,14 +41,26 @@ const ProdDream = ({theme, shopItems, setShopItems, setShopCount,shopCount}) => 
         //localStorage: JSON.stringify()=>轉文字  /  JSON.parse()=>解析localStorage內容
         let orderList = localStorage.getItem("cart");
         if (orderList){
-            console.log(orderList)
-            console.log(JSON.parse(orderList));
             let currentCart = JSON.parse(orderList)
-            currentCart.push(obj);
-            localStorage.setItem("cart", JSON.stringify(currentCart));  
-            
+            console.log(currentCart)
+            let plus = currentCart.findIndex((i)=>{
+                return i.id == obj.id;
+            })
+            if(plus != -1) {
+                currentCart[plus].count++;
+                currentCart[plus].currentPrice = currentCart[plus].count * currentCart[plus].price;
+                localStorage.setItem("cart",JSON.stringify(currentCart));
+            } else {
+                obj.count+=1;
+                obj.currentPrice = obj.price * obj.count
+                currentCart.push(obj);
+                localStorage.setItem("cart",JSON.stringify(currentCart));
+            }
+             
         } else {
             let arr = [];
+            obj.count+=1;
+            obj.currentPrice = obj.price * obj.count
             arr.push(obj);
             console.log(arr);
             localStorage.setItem("cart", JSON.stringify(arr) )
@@ -142,7 +158,7 @@ const ProdDream = ({theme, shopItems, setShopItems, setShopCount,shopCount}) => 
                             <button id="increase">＋</button>
                         </div>
                     </div>
-                    <button className="add-m">加入購物車</button>
+                    <button className="add-m" onClick={(e)=>{handleAdd(productD1); addToCart();}}>加入購物車</button>
                 </section>
             </section>
             <section className="dream-img">

@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
+ 
+ const [totalPrice,setTotalPrice] = useState(0)
+
   useEffect(() => {
     setShopItems(() => {
       return JSON.parse(localStorage.getItem("cart"));
@@ -11,6 +14,15 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
     // console.log(shopItems.price);
   }, [shopCount]);
 
+  useEffect(()=>{
+    let total=0;
+    if(shopItems){
+      shopItems.map((i)=>{
+        total += i.currentPrice
+      })
+    }
+    setTotalPrice(total)
+  },[shopItems])
   //  //即時取得localStorage購物車內容
   //  loadShoppingCart() {
   //   let totalPrice = JSON.parse(localStorage.getItem("orderTotal"));
@@ -52,18 +64,18 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
     <div>
       <body>
         <main>
-          <section id="shopping">
+          <section id="shopping2nd">
             <div className="big-box">
               <div className="top-steps">
-                <div className="steps">
+                <div className="steps1">
                   <h3 id="s1">1</h3>
                   <p>購物車</p>
                 </div>
-                <div className="steps">
+                <div className="steps1">
                   <h3 id="s2">2</h3>
                   <p>選擇配送與付款資訊</p>
                 </div>
-                <div className="steps">
+                <div className="steps1">
                   <h3 id="s3">3</h3>
                   <p>完成訂單</p>
                 </div>
@@ -72,6 +84,7 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                 <h3 className="title">購物訂單</h3>
                 <div className="list">
                   <p className="products">商品</p>
+                  <p className="ml">容量</p>
                   <p className="price">價格</p>
                   <p className="qty">數量</p>
                   <p className="total">商品金額</p>
@@ -88,15 +101,16 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                             </figure>
                           </div>
                           <div className="item">
-                            <p>{item.title}</p>
-                            <p>{item.ml}ml</p>
-                            <p>${item.price}</p>
-                            <div id="shopping-cart">
+                            <p className="products">{item.title}</p>
+                            <p className="ml">{item.ml}ml</p>
+                            <p className="price">${item.price}</p>
+                            <div id="shopping-cart"  className="qty">
                               <button id="decrease">-</button>
-                              <input type="text" id="quantity" value="1" />
+                              {/* <input type="text" id="quantity" value='${item.count}' /> */}
+                              <div id="quantity">{item.count}</div>
                               <button id="increase">+</button>
                             </div>
-                            <p>${item.price}</p>
+                            <p  className="total">${item.currentPrice}</p>
                             <figure className="garbage-can">
                               <img src="./images/garbage.svg" alt="垃圾桶" />
                             </figure>
@@ -127,9 +141,9 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                 <div className="total">
                   <div className="t1">
                     <h4>商品金額：</h4>
-                    <h4>$2800</h4>
+                    <h4>${totalPrice}</h4>
                   </div>
-                  <div className="next">
+                  <div className="next1">
                     <Link to="/shopping2nd">
                       <input type="submit" id="submit" value="下一步" />
                       <figure className="right-arrow">

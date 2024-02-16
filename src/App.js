@@ -54,8 +54,8 @@ function App() {
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>
-            <Route path="shopping2nd" element={<Shopping2nd />}></Route>
-            <Route path="shopping3rd" element={<Shopping3rd />}></Route>
+            <Route path="shopping2nd" element={<Shopping2nd shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
+            <Route path="shopping3rd" element={<Shopping3rd shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="newsArticle" element={<NewsArticle />}></Route>
             <Route path="shops" element={<Shops />}></Route>
             {/* <Route path="homepageSw" element={<HomepageSw />}></Route> */}
