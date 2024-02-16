@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
-const ProdSummer = ({theme,shopItems, setShopItems}) => {
+const ProdSoul = ({theme,shopItems, setShopItems}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);
@@ -33,12 +33,12 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                             </defs>
                         </svg>
                         <div className="gradients-container">
-                            <div className="g1 g1-yellow"></div>
-                            <div className="g2 g2-yellow"></div>
-                            <div className="g3 g3-yellow"></div>
-                            <div className="g4 g4-yellow"></div>
-                            <div className="g5 g5-yellow"></div>
-                            <div className="interactive interactive-yellow"></div>
+                            <div className="g1 g1-green"></div>
+                            <div className="g2 g2-green"></div>
+                            <div className="g3 g3-green"></div>
+                            <div className="g4 g4-green"></div>
+                            <div className="g5 g5-green"></div>
+                            <div className="interactive interactive-green"></div>
                         </div>
                     </div>
                 </div>
@@ -48,15 +48,15 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                         <Link to="/shopping"><figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure></Link>
                     </div>
                 </div>
-                <figure className="left-deco"><img src="./images/summer-flower.svg" alt="" /></figure>
+                <figure className="left-deco"><img src="./images/soul-flower.svg" alt="" /></figure>
                 <div className="prod-div">
-                    <figure className="main-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
+                    <figure className="main-prod-img"><img src="./images/prod-soulwood.png" alt="恬靜風情的夏日晴空" /></figure>
                     <div className="prod-info-div">
                         <div className="prod-info-title">
-                            <h3>恬靜風情的</h3>
-                            <h1>夏日晴空</h1>
-                            <p>Summer Serenity</p>
-                            <small>清新調Fresh | 前調白檸檬、中調鬱金香、後調鼠尾草</small>
+                            <h3>靈魂深處的</h3>
+                            <h1>幽林冒險</h1>
+                            <p>Soulwood Quest</p>
+                            <small>木質調Woody | 前調琥珀、中調香草、後調檀木</small>
                         </div>
                         <div className="prod-info-contain">
                             <div className="prod-info-contain-item">
@@ -73,9 +73,9 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                     </div>
                 </div>
                 <div className="prod-contain">
-                    <h4>夏日午後的微旅，沐浴陽光與輕風的溫柔，<br />
-                        一抹清新在陽光下輕盈綻放。</h4>
-                    <p>彷彿溫暖擁抱，讓你於每個盛夏時刻悅然心懷。
+                    <h4>追風探秘，冒險啟航<br />
+                    赴一場林間的神秘溫馨之旅──</h4>
+                    <p>穿梭林間的冷冽清風，追尋那一縷琥珀般的溫馨，感受著神秘的魅力。
                         </p>
                 </div>
                 <div className={`marquee-container theme-${theme}`}>
@@ -98,10 +98,10 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                 </section>
             </section>
             <section className="dream-img">
-                <figure className="circle"><img src="./images/prod-circle-summer.svg" alt="" /></figure>
+                <figure className="circle"><img src="./images/prod-circle-soul.svg" alt="" /></figure>
                 <figure className="arrow-down"><img src="./images/prod-arrow-down.svg" alt="" /></figure>
-                <figure className="small-dream"><img src="./images/prod-summer.png" alt="" /></figure>
-                <figure className="small-dream-bg"><img src="./images/main_bg3.jpg" alt="" /></figure>
+                <figure className="small-dream"><img src="./images/prod-soulwood.png" alt="" /></figure>
+                <figure className="small-dream-bg"><img src="./images/main_bg2.jpg" alt="" /></figure>
             </section>
             <section className={`prod-story-container theme-${theme}`}>
                 <div className="prod-story-title">
@@ -114,12 +114,12 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                 <div className="story-contain">
                     <div className="prod-story">
                         <div>
-                            <h4>在夏日的清晨輕風中</h4>
-                            <p>隨著晨曦的溫暖光芒輕拂過花園，你開啟了一天的美好。夏日的早晨，帶著白檸檬的清新氣息，輕輕撫過你的臉頰，喚醒內心對大自然之美的向往，引領你走入這片充滿生機的夏日花園。</p>
+                            <h4>穿越森林的冷冽清風</h4>
+                            <p>當黎明的微光穿透森林，你開始了一段探索未知的旅程，沿著一條幽深的小徑深入叢林之中。寒冷的清風輕撫過臉龐，帶來一陣陣涼爽的觸感，激發起你心中對冒險的渴望，渴求在這片神秘森林中探尋未知。</p>
                         </div>
                         <div>
                             <div className="img-border">
-                                <figure><img src="./images/prod-story-summer1.jpg" alt="" /></figure>
+                                <figure><img src="./images/prod-story-soul1.png" alt="" /></figure>
                             </div>
                         </div>
 
@@ -127,77 +127,77 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                     <div className="prod-story">
                         <div></div>
                         <div className="prod-story-right">
-                            <h4>在鬱金香的繽紛中徜徉</h4>
-                            <p>這座花園裡，繽紛的鬱金香在陽光下綻放，它們的豐富色彩和香氣引領你穿梭於花叢之間。你跟隨著這股花香，沉浸在色彩斑斕的世界中，感受夏日的活力和喜悅。</p>
+                            <h4>尋找琥珀般的溫暖</h4>
+                            <p>在這片靜謐的森林中，你被一縷溫暖的琥珀色光芒吸引。它來自於叢林深處，樹木散發的木香與芳草的清新相互交織。追隨這股暖意，帶著勇氣和好奇心，走向更深的森林，尋找著更多的秘密。</p>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div>
-                            <h4>鼠尾草與綠葉的清新融合</h4>
-                            <p>在這片花園中，你發現了一片覆蓋著鼠尾草和新鮮綠葉的角落。這裡的空氣中充滿了清新與生機，鼠尾草的淡雅香氣與綠葉的清新完美融合，創造出一種平靜而恬淡的氛圍。你在這個角落靜靜地享受著這個夏日早晨，與自然和諧共處。</p>
+                            <h4>檀木與香草的神秘交織</h4>
+                            <p>隨著探索的深入，你來到了一片神秘莊嚴的樹林，樹木高聳，如同天然的宮殿。空氣中彌漫著檀木和香草的混合香氣，為這片森林增添了一份神秘氛圍。靜靜地站立，閉上眼睛，讓自己沉浸在這個奇妙的時刻，感覺與大自然合而為一。</p>
                         </div>
                         <div>
-                            <figure className="right-photo3"><img src="./images/prod-story-summer2.svg" alt="" /></figure>
+                            <figure className="right-photo3"><img src="./images/prod-story-soul2.svg" alt="" /></figure>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div className="prod-story-4">
 
                             <figure className="left-photo4-2">
-                                <img src="./images/prod-story-summer3.jpg" alt="" />
+                                <img src="./images/prod-story-soul3.png" alt="" />
                             </figure>
                             <figure className="left-photo4">
                                 <img src="./images/prod-story-3-frame.svg" alt="" />
                             </figure>
                         </div>
                         <div className="prod-story-right">
-                            <h4>夏日花園的香氛</h4>
-                            <p>這款香水融合了白檸檬的活力、鬱金香的華麗與鼠尾草的自然氣息，成為一款完美的夏日香氛。它將夏日花園的精髓捕捉於每一滴香水之中。</p>
+                            <h4>冒險靈魂的香氛</h4>
+                            <p>噴上這瓶香水，你化身為勇敢的探險家，柔軟皮膚上綻放出如森林中秘密花朵般的香氣。這款香水融合了蓮花的清新與茉莉的優雅，賦予你自信與魅力，指引著未知的探險之旅。</p>
                         </div>
                     </div>
                     <div className="prod-story">
                         <div className="prod-story-left">
-                            <h4>你的夏日花園時光</h4>
-                            <p>讓這款香水成為你在夏日花園中的完美伴侶。每次噴灑，都仿佛重現花園裡的每一個美好瞬間，將你帶入一個充滿色彩和生命力的夢幻世界。這款香水不僅是一種香氛，它是你在夏日花園中度過的每一刻美好記憶的象徵。
+                            <h4>一段屬於你的冒險之旅</h4>
+                            <p>這不僅是一瓶香水，更是你開啟冒險旅程的序幕。每次噴上這款香水，都宣告著一段新的探險的開始，一個充滿未知與挑戰的旅途。讓香草、檀木、琥珀的香氣伴隨你，成為你冒險故事的旋律，編織一段屬於你的傳奇。
                             </p>
                         </div>
                         <div></div>
                     </div>
                 </div>
                 <div className="prod-story-last">
-                勇敢地去享受，去感受，這個世界充滿了夏日的美好與驚喜。<br/>
-                這款香水將成為你沉浸在自然美景中的伴侶，引領你進入一個充滿生機與活力的全新世界。
-                    <figure><img src="./images/prod-story-last-circle-yellow.svg" alt="" /></figure>
+                勇敢地去探索，去發現，這個世界滿是驚喜和可能。<br/>
+                這款香水，將成為你探索未知的伙伴，一個帶領你走向未知境界的新開始。
+                    <figure><img src="./images/prod-story-last-circle-green.svg" alt="" /></figure>
                 </div>
 
             </section>
             <section className={`prod-notes theme-${theme}`}>
                 <div className="prod-notes-title">
 
-                    <figure className="note-time"><img src="./images/prod-note-time-yellow.svg" alt="" /></figure>
+                    <figure className="note-time"><img src="./images/prod-note-time-green.svg" alt="" /></figure>
                     <h2>香調輪廓</h2>
 
                 </div>
                 <div className="prod-note-contain">
                     <div className="top">
                         <h2>香調</h2>
-                        <h3>清新調Fresh</h3>
+                        <h3>木質調Woody</h3>
                         <figure className="top-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                     </div>
                     <div className="bottom">
                         <div>
                             <h2>前調</h2>
-                            <h3>白檸檬</h3>
+                            <h3>琥珀</h3>
                         </div>
                         <figure className="bottom-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                         <div>
                             <h2>中調</h2>
-                            <h3>鬱金香</h3>
+                            <h3>香草</h3>
                         </div>
                         <figure className="bottom-line"><img src="./images/prod-note-line-v.svg" alt="" /></figure>
                         <div>
                             <h2>後調</h2>
-                            <h3>鼠尾草</h3>
+                            <h3>檀木</h3>
                         </div>
                     </div>
                 </div>
@@ -206,26 +206,26 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                 <div className={`prod-material-contain theme-${theme}`}>
                     <div className="material-info-div">
                         <div className="material-name">
-                            <h4>白檸檬</h4>
-                            <p>lemon</p>
+                            <h4>琥珀</h4>
+                            <p>Amber</p>
                         </div>
                         <div className="material-info">
-                            <p><span>香氣特性｜</span>白檸檬散發著清新、明亮、柑橘的香氣。白檸檬具有激動人心的酸爽，帶來活力四射的感覺。</p>
+                            <p><span>香氣特性｜</span>琥珀散發著深邃、溫暖、甜美的香氣，有時帶有木質、香辛料和淡淡的花香。</p>
                         </div>
                         <div className="material-info">
-                            <p><span>象徵意義｜</span>白檸檬通常與清新、活力、喜悅相聯繫。其明亮的香氣被視為提升情緒的元素，為人帶來快樂的感受。</p>
+                            <p><span>象徵意義｜</span>琥珀被視為一種神秘、豐富和具有治癒力的材料，其古老的起源和深沉的香氣使其在香水世界中倍受喜愛。</p>
                         </div>
                     </div>
                     <div className="material-info-div">
                         <div className="material-name">
-                            <h4>鬱金香</h4>
-                            <p>Tulip</p>
+                            <h4>香草</h4>
+                            <p>Vanilla</p>
                         </div>
                         <div className="material-info">
-                            <p><span>香氣特性｜</span>鬱金香散發著清淡、溫暖、馥郁的香氣，具有濃郁的奶油和焦糖風味。</p>
+                            <p><span>香氣特性｜</span>香草散發著甜美、溫暖、馥郁的香氣，具有濃郁的奶油和焦糖風味。</p>
                         </div>
                         <div className="material-info">
-                            <p><span>象徵意義｜</span>鬱金香象徵著高貴與優雅，展現著永恆的美與熱情。鬱金香散發著深沉的情感，代表著愛情、熱情和優雅的魅力。</p>
+                            <p><span>象徵意義｜</span>香草被認為具有溫馨、親近和安撫的效果，其溫暖的香氣使人聯想到舒適和幸福。</p>
                         </div>
                     </div>
                     <div className="material-info-div">
@@ -316,4 +316,4 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
     )
 
 }
-export default ProdSummer;
+export default ProdSoul;
