@@ -4,6 +4,7 @@ import Layout from "./Layout"
 import Homepage from "./Homepage";
 import ProdDream from "./ProdDream";
 import ProdSummer from "./ProdSummer";
+import ProdSoul from "./ProdSoul";
 import Member from "./Member";
 import Register from "./Register";
 import SelectSample from "./SelectSample";
@@ -45,6 +46,7 @@ function App() {
             <Route index element={<HomepageSw />}></Route>
             <Route path="prod" element={<ProdDream theme="pink" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="prod-summer" element={<ProdSummer theme="yellow" shopItems={shopItems} setShopItems={setShopItems} />}></Route>
+            <Route path="prod-soul" element={<ProdSoul theme="green" shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>

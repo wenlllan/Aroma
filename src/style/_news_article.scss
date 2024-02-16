@@ -20,6 +20,31 @@ main {
     @extend %flex-center;
     flex-direction: column;
 
+    .back{
+      @include p;
+      margin-bottom: 2vw;
+      text-align: center;
+      display: flex;
+      color: $color-white;
+      padding: 1vh 1vh;
+      height: auto;
+      width: 120px;
+      cursor: pointer;
+      border-radius: calc(infinity * 1px);
+      border: none;
+      background-color: $color-pink;
+      justify-content: center;
+      align-items: center;
+
+      @include mobile{
+        margin-bottom: 6vh;
+      }
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+    }
+
     .title {
       font-weight: 600;
       color: $color-deep;
@@ -30,6 +55,7 @@ main {
     .list-box {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       .list-item {
         @extend %flex-center;

@@ -172,7 +172,7 @@ const Test = () => {
         <h2>商品列表</h2>
         <div className="prod-list">
           <div className="prod-list-items">
-            <Link to="/prod">
+            <Link to="/prod-soul">
               <div>
                 <img src="./images/prod-soulwood.png" alt="" />
               </div>
