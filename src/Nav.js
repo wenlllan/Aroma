@@ -94,7 +94,7 @@ const Nav = ({shopItems, setShopItems}) => {
                         <ul className={`hide-prod ${isActive ? 'active' : ''}`} ref={hideProdRef}>
                             <li><Link to="/prod" className="dream">夢幻花境</Link></li>
                             <li><Link to="/prod-summer" className="summer">夏日晴空</Link></li>
-                            <li><Link to="/prod" className="forest">幽林冒險</Link></li>
+                            <li><Link to="/prod-soul" className="forest">幽林冒險</Link></li>
                         </ul>
                     </li>
                     <li className="nav-list-item" ref={celebrityRecommendationRef}><Link to="/share" className="list-item">網紅推薦</Link></li>
