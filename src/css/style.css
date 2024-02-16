@@ -2345,6 +2345,11 @@ main #member #contact_form {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 576px) {
+  main #member #contact_form {
+    margin-top: 10vh;
+  }
+}
 main #member #contact_form .login1 {
   display: block;
 }
@@ -4514,6 +4519,7 @@ main #shopping3rd .big-box .list-box .list-item {
   height: auto;
   width: auto;
   margin: 1vw 0;
+  padding: 1vw 0;
   border-bottom: 1.5px groove #d9d9d9;
 }
 @media (max-width: 576px) {
@@ -5692,22 +5698,6 @@ body {
   position: relative;
 }
 
-.cursor {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  transition: all 0.35s, top 0s, left 0s;
-  mix-blend-mode: exclusion;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-.cursor:first-child {
-  background-color: #fff;
-  height: 30px;
-  width: 30px;
-}
-
 /* Swiper箭頭樣式 */
 .swiper-button-next,
 .swiper-button-prev {
@@ -5769,7 +5759,6 @@ body {
 }
 
 .swiper-slide {
-  cursor: none;
   position: relative;
   /*main*/
 }

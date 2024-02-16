@@ -10,24 +10,24 @@ body{
 }
 
 //cursor
-.cursor {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    // transform:scale(1);
-    border-radius: 50%;
-    transition: all 0.35s, top 0s, left 0s;
-    mix-blend-mode: exclusion;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+// .cursor {
+//     position: absolute;
+//     height: 30px;
+//     width: 30px;
+//     // transform:scale(1);
+//     border-radius: 50%;
+//     transition: all 0.35s, top 0s, left 0s;
+//     mix-blend-mode: exclusion;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
 
-    &:first-child {
-        background-color: #fff;
-        height: 30px;
-        width: 30px;
+//     &:first-child {
+//         background-color: #fff;
+//         height: 30px;
+//         width: 30px;
 
-    }
-  }
+//     }
+//   }
 
 /* Swiper箭頭樣式 */
 .swiper-button-next,
@@ -95,7 +95,7 @@ body{
 }
 
 .swiper-slide {
-    cursor: none;
+    // cursor: none;
     position: relative;
 
     .img {

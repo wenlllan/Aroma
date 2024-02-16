@@ -17,6 +17,7 @@ main {
     @extend %flex-center;
     flex-direction: column;
 
+    
     .title {
       font-weight: 600;
       color: $color-deep;
@@ -28,6 +29,10 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include mobile{
+        margin-top: 10vh;
+      }
 
       .login1{
         display: block;

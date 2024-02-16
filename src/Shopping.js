@@ -8,10 +8,8 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
     });
     console.log(shopCount);
     console.log(shopItems);
-    console.log(shopItems.price);
+    // console.log(shopItems.price);
   }, [shopCount]);
-
-
 
   //  //即時取得localStorage購物車內容
   //  loadShoppingCart() {
@@ -25,7 +23,7 @@ const Shopping = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
   //   }
   // }
 
-  //清除localStorage購物車內容
+  // 清除localStorage購物車內容
   // removeShoppingCartItem(_id) {
   //   let totalOrder = JSON.parse(localStorage.getItem("orderList"));
   //   let totalPrice = JSON.parse(localStorage.getItem("orderTotal"));

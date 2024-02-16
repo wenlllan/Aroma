@@ -217,6 +217,7 @@ main {
           height: auto;
           width: auto;
           margin: 1vw 0;
+          padding: 1vw 0;
           border-bottom: 1.5px groove $color-gray;
 
           @include mobile {

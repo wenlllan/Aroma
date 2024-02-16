@@ -23,27 +23,27 @@ import "swiper/css/autoplay";
 // import img1 from "./images/main_bg1.jpg";
 
 const Test = () => {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [delayedCursorPos, setDelayedCursorPos] = useState({ x: 0, y: 0 });
+  // const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  // const [delayedCursorPos, setDelayedCursorPos] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const newPos = { x: e.clientX, y: e.clientY };
-      setCursorPos(newPos);
-      setTimeout(() => setDelayedCursorPos(newPos), 120);
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (e) => {
+  //     const newPos = { x: e.clientX, y: e.clientY };
+  //     setCursorPos(newPos);
+  //     setTimeout(() => setDelayedCursorPos(newPos), 120);
+  //   };
 
-    document.addEventListener('mousemove', handleMouseMove);
+  //   document.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
   
   return (
     <body>
-        <div className="cursor"
-        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
+        {/* <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/> */}
       <Swiper
         // cssMode={true}
         navigation={true}
@@ -72,8 +72,8 @@ const Test = () => {
       >
         
         <SwiperSlide className="swiper-slide">
-        <div className="cursor"
-        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
+        {/* <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/> */}
           <div
             className="img"
             style={{
@@ -104,8 +104,8 @@ const Test = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-        <div className="cursor"
-        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
+        {/* <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/> */}
           <div
             className="img"
             style={{
@@ -136,8 +136,8 @@ const Test = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide">
-        <div className="cursor"
-        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/>
+        {/* <div className="cursor"
+        style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}/> */}
           <div
             className="img"
             style={{
