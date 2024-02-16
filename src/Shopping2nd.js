@@ -1,7 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Shopping2nd = () => {
+const Shopping2nd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
+  // 購物車渲染
+  const [totalPrice,setTotalPrice] = useState(0)
+
+  useEffect(() => {
+    setShopItems(() => {
+      return JSON.parse(localStorage.getItem("cart"));
+    });
+    console.log(shopCount);
+    console.log(shopItems);
+    // console.log(shopItems.price);
+  }, [shopCount]);
+
+  useEffect(()=>{
+    let total=0;
+    if(shopItems){
+      shopItems.map((i)=>{
+        total += i.currentPrice
+      })
+    }
+    setTotalPrice(total)
+  },[shopItems])
+
+
+  //必填資料
   const [userName, setUserName] = useState("");
   const [userTel, setUserTel] = useState("");
   const [msg1, setMsg1] = useState("");
@@ -58,12 +82,61 @@ const Shopping2nd = () => {
               <h3 className="title">購物訂單</h3>
               <div className="list">
                 <p className="products">商品</p>
+                <p className="ml">容量</p>
                 <p className="price">價格</p>
                 <p className="qty">數量</p>
                 <p className="total">商品金額</p>
               </div>
-
-              <article className="list-item">
+              <div className="list-item">
+                  {shopItems &&
+                    shopItems.map((item) => {
+                      return (
+                        <>
+                        <div className="list-item-div" >
+                          <div className="list-item-product">
+                            <figure className="product">
+                              <img src={item.src} />
+                            </figure>
+                          </div>
+                          <div className="item">
+                            <p className="products">{item.title}</p>
+                            <p className="ml">{item.ml}ml</p>
+                            <p className="price">${item.price}</p>
+                            <div id="shopping-cart"  className="qty">
+                              <button id="decrease">-</button>
+                              {/* <input type="text" id="quantity" value='${item.count}' /> */}
+                              <div id="quantity">{item.count}</div>
+                              <button id="increase">+</button>
+                            </div>
+                            <p  className="total">${item.currentPrice}</p>
+                            <figure className="garbage-can">
+                              <img src="./images/garbage.svg" alt="垃圾桶" />
+                            </figure>
+                          </div>
+                          </div>
+                        </>
+                      );
+                    })}
+                  {/* <div className="list-item-product">
+                  <figure className="product">
+                    <img src="./images/prod-soulwood.png" alt="" />
+                  </figure>
+                </div>
+                <div className="item">
+                  <p>靈魂深處的幽林冒險</p>
+                  <p>$2,880</p>
+                  <div id="shopping-cart">
+                    <button id="decrease">-</button>
+                    <input type="text" id="quantity" value="1" />
+                    <button id="increase">+</button>
+                  </div>
+                  <p>$2,880</p>
+                  <figure className="garbage-can">
+                    <img src="./images/garbage.svg" alt="垃圾桶" />
+                  </figure>
+                </div> */}
+                </div>
+              {/* <article className="list-item">
                 <div className="list-item-product">
                   <figure className="product">
                     <img src="./images/prod-soulwood.png" alt="" />
@@ -84,11 +157,11 @@ const Shopping2nd = () => {
                     </Link>
                   </p>
                 </div>
-              </article>
+              </article> */}
               <div className="total">
                 <div className="t1">
                   <h4>商品金額：</h4>
-                  <h4>$2,880</h4>
+                  <h4>${totalPrice}</h4>
                 </div>
               </div>
             </div>
@@ -132,7 +205,7 @@ const Shopping2nd = () => {
                       value={userName}
                       onChange={(e) => setUserName(e.target.value)}
                     />
-                    <span style={{ color: "red" }}>{msg1}</span>
+                    <span style={{ color: "#ff9b99" }}>{msg1}</span>
                   </div>
 
                   <div className="sign">
@@ -148,7 +221,7 @@ const Shopping2nd = () => {
                       value={userTel}
                       onChange={(e) => setUserTel(e.target.value)}
                     />
-                    <span style={{ color: "red" }}>{msg2}</span>
+                    <span style={{ color: "#ff9b99" }}>{msg2}</span>
                   </div>
                 </div>
                 <div className="notice-box">

@@ -19,12 +19,14 @@ main {
     flex-direction: column;
 
     .big-box {
+      width: 70%;
 
       @include mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
       }
     }
 
@@ -41,6 +43,108 @@ main {
         justify-content: center;
         margin: 0;
         padding: 10vh 0 2vh 0;
+      }
+
+      .steps1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vw;
+
+        p {
+          @include p;
+
+          @include mobile {
+            font-size: 0.75rem;
+          }
+        }
+
+        h3 {
+          width: 3rem;
+          height: 3rem;
+          align-items: center;
+          background-color: #d9d9d9;
+          border-radius: 50px;
+          @include h3;
+
+          @include mobile {
+            width: 2rem;
+            height: 2rem;
+            font-size: 0.75rem;
+          }
+        }
+
+        #s1 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: $color-pink;
+          color: white;
+
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 3rem;
+            /* 直線空行 */
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-gray;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              /* 直線空行 */
+              width: 5rem;
+            }
+          }
+        }
+
+        #s2 {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: $color-gray;
+
+          // 直線
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+
+            left: 3rem;
+            /* 直線空行 */
+            width: 8.5rem;
+            height: 1.5px;
+            background-color: $color-gray;
+
+            @include pad {
+              width: 6rem;
+            }
+
+            @include mobile {
+              left: 2rem;
+              /* 直線空行 */
+              width: 5rem;
+            }
+          }
+        }
+
+        #s3 {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          background-color: #d9d9d9;
+        }
+
+        p {
+          padding-top: 1vw;
+        }
       }
 
       .steps {
@@ -147,6 +251,7 @@ main {
     }
 
     .list-box {
+      width: 100%;
 
       @include mobile {
         width: 70%;
@@ -172,7 +277,7 @@ main {
         flex-direction: row;
         border-top: 1px solid $color-pink;
         border-bottom: 1px solid $color-pink;
-        padding: 0.8vw 4vw 0.8vw 9vw;
+        padding: 0.8vw 3vw 0.8vw 9vw;
 
         @include mobile {
           padding: 1vh;
@@ -191,6 +296,7 @@ main {
         }
 
         .products {
+          text-align: center;
           width: 34%;
 
           @include mobile {
@@ -198,7 +304,13 @@ main {
           }
         }
 
+        .ml {
+          text-align: center;
+          width: 18%;
+        }
+
         .price {
+          text-align: center;
           width: 18%;
 
           @include mobile {
@@ -207,37 +319,48 @@ main {
         }
 
         .qty {
+          display: flex;
+          text-align: center;
+          justify-content: center;
           width: 14%;
         }
 
         .total {
+          text-align: center;
           width: 16%;
         }
       }
 
+      .list-item-div {
+        display: flex;
+        padding: 1vw 0;
+        width: 100%;
+        border-bottom: 1.5px groove $color-gray;
+      }
+
       .list-item {
         @extend %flex-center;
-        flex-direction: row;
+        flex-direction: column;
         height: auto;
         width: auto;
-        padding: 1vw 0;
-        border-bottom: 1.5px groove $color-gray;
+        //padding: 1vw 0;
+        //border-bottom: 1.5px groove $color-gray;
 
         @include mobile {
           line-height: 2.5rem;
           flex-direction: column;
-          padding: 2vh;
+          padding: 0.5vh;
         }
 
         .list-item-product {
           width: 10vw;
           height: 8vw;
           @extend %flex-center;
-          background-color: aliceblue;
+          background: linear-gradient(140deg, rgba(255, 255, 255, 0) 0%, #EEEEEE 90%);
 
           @include mobile {
-            width: auto;
-            height: auto;
+            width: 16vh;
+            height: 20vh;
           }
 
           .product {
@@ -245,7 +368,7 @@ main {
             width: auto;
 
             @include mobile {
-              height: 20vh;
+              height: 12vh;
               padding: 0;
               margin: 2vh 0;
             }
@@ -255,18 +378,64 @@ main {
         .item {
           @extend %flex-center;
           flex-direction: row;
+          width: 100%;
 
           @include mobile {
             flex-direction: column;
             align-items: center;
           }
 
-          #shopping-cart {
-            display: flex;
-            align-items: center;
+          .products {
+            text-align: center;
+            width: 34%;
 
             @include mobile {
-              padding: 1vh 0;
+              width: 100%;
+            }
+          }
+
+          .ml {
+            text-align: center;
+            width: 18%;
+          }
+
+          .price {
+            text-align: center;
+            width: 18%;
+
+            @include mobile {
+              width:100%;
+            }
+          }
+
+          .qty {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 14%;
+
+            @include mobile {
+              width: 100%;
+              align-items: center;
+            }
+          }
+
+          .total {
+            text-align: center;
+            width: 16%;
+            
+            @include mobile {
+              width: 100%;
+            }
+          }
+
+
+          #shopping-cart {
+            // display: flex;
+            // align-items: center;
+
+            @include mobile {
+              // padding: 1vh 0;
             }
 
             #quantity {
@@ -287,11 +456,11 @@ main {
           }
 
           p {
-            padding: 0 3.5vw;
+            // padding: 0 3.5vw;
 
             @include mobile {
               font-size: 1rem;
-              padding: 1vh 0;
+              // padding: 1vh 0;
             }
 
             &:nth-child(2) {
@@ -304,7 +473,7 @@ main {
           .garbage-can {
 
             @include mobile {
-              width: 4vh;
+              width: 3vh;
               height: auto;
             }
           }
@@ -321,11 +490,57 @@ main {
           display: flex;
           flex-direction: row;
           justify-content: flex-end;
-          margin-right: 3vw;
-          padding: 1vw 0;
+          margin-right: 1vw;
+          padding: 1.5vw 0;
 
           @include mobile {
             padding: 2vh 0;
+          }
+        }
+
+        .next1 {
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 1vw;
+          padding: 8vw 0 12vw 0;
+
+          a {
+            display: flex;
+            color: $color-white;
+            padding: 1vh 1vh;
+            height: auto;
+            width: 120px;
+            cursor: pointer;
+            border-radius: $radius-infinity;
+            border: none;
+            background-color: $color-pink;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+              .right-arrow {
+                transform: translateX(4px);
+              }
+            }
+          }
+
+          #submit {
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: $color-white;
+            font-family: "Noto Serif TC";
+          }
+
+          .right-arrow {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            color: $color-white;
+            transition: all .35s;
+            transform: translateX(0);
           }
         }
 
@@ -509,7 +724,7 @@ main {
         height: auto;
         min-height: 140px;
 
-        
+
         .btn {
           @extend %flex-center;
           margin: 0.5rem;
@@ -535,13 +750,13 @@ main {
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             background-color: $color-pink;
 
-            a{
-              >button{
+            a {
+              >button {
                 color: $color-white;
                 transition: all .35s;
               }
             }
-            
+
             >input {
               color: $color-white;
               transition: all .35s;
@@ -549,6 +764,7 @@ main {
 
             .right-arrow {
               transform: translateX(4px);
+
               path {
                 fill: $color-white;
                 stroke: $color-white;
@@ -564,13 +780,14 @@ main {
             transition: all .35s;
             transform: translateX(0);
 
-            path{
-              width:100% ;
-              height:100%;
+            path {
+              width: 100%;
+              height: 100%;
             }
           }
         }
       }
+
     }
   }
 }

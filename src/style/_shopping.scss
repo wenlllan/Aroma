@@ -171,7 +171,7 @@ main {
         flex-direction: row;
         border-top: 1px solid $color-pink;
         border-bottom: 1px solid $color-pink;
-        padding: 0.8vw 4vw 0.8vw 9vw;
+        padding: 0.8vw 4vw 0.8vw 10vw;
 
         @include mobile {
           padding: 1vh;
@@ -190,6 +190,7 @@ main {
         }
 
         .products {
+          text-align: center;
           width: 34%;
 
           @include mobile {
@@ -197,7 +198,13 @@ main {
           }
         }
 
+        .ml {
+          text-align: center;
+          width: 18%;
+        }
+
         .price {
+          text-align: center;
           width: 18%;
 
           @include mobile {
@@ -206,10 +213,12 @@ main {
         }
 
         .qty {
+          text-align: center;
           width: 14%;
         }
 
         .total {
+          text-align: center;
           width: 16%;
         }
       }
@@ -264,9 +273,43 @@ main {
               align-items: center;
             }
 
-            #shopping-cart {
+            .products {
+              text-align: center;
+              width: 34%;
+    
+              @include mobile {
+                width: 2rem;
+              }
+            }
+    
+            .ml {
+              text-align: center;
+              width: 18%;
+            }
+    
+            .price {
+              text-align: center;
+              width: 18%;
+    
+              @include mobile {
+                width: 12%;
+              }
+            }
+    
+            .qty {
+              text-align: center;
+              width: 14%;
               display: flex;
-              align-items: center;
+            }
+    
+            .total {
+              text-align: center;
+              width: 16%;
+            }
+
+            #shopping-cart {
+              // display: flex;
+              // align-items: center;
 
               @include mobile {
                 padding: 1vh 0;
@@ -305,6 +348,8 @@ main {
             }
 
             .garbage-can {
+              width: 3vw;
+              min-width: 28px;
 
               @include mobile {
                 width: 4vh;
