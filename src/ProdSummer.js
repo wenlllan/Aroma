@@ -42,12 +42,12 @@ const ProdSummer = ({theme,shopItems, setShopItems}) => {
                         </div>
                     </div>
                 </div>
-                <div className={`shopping-cart theme-${theme}`}>
+                <Link to="/shopping"><div className={`shopping-cart theme-${theme}`}>
                     <div id="cart" className={isShaking ? ' cart' : ' cart shake'} data-totalitems={cartTotal}></div>
                     <div className="shopping-cart-div">
-                        <Link to="/shopping"><figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure></Link>
+                        <figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure>
                     </div>
-                </div>
+                </div></Link>
                 <figure className="left-deco"><img src="./images/summer-flower.svg" alt="" /></figure>
                 <div className="prod-div">
                     <figure className="main-prod-img"><img src="./images/prod-summer.png" alt="恬靜風情的夏日晴空" /></figure>
