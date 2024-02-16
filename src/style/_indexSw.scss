@@ -4,6 +4,31 @@
 @use "./color" as *;
 @use "./function" as *;
 
+
+body{
+    position: relative;
+}
+
+//cursor
+// .cursor {
+//     position: absolute;
+//     height: 30px;
+//     width: 30px;
+//     // transform:scale(1);
+//     border-radius: 50%;
+//     transition: all 0.35s, top 0s, left 0s;
+//     mix-blend-mode: exclusion;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
+
+//     &:first-child {
+//         background-color: #fff;
+//         height: 30px;
+//         width: 30px;
+
+//     }
+//   }
+
 /* Swiper箭頭樣式 */
 .swiper-button-next,
 .swiper-button-prev {
@@ -70,6 +95,7 @@
 }
 
 .swiper-slide {
+    // cursor: none;
     position: relative;
 
     .img {
@@ -300,11 +326,11 @@
             padding: 0;
 
             @include mac {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             @include pad {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             @include mobile {
@@ -409,6 +435,7 @@
         background-image: url(../../public/images/brand-info-img1.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        
 
         @include mac {
             width: 45vw;

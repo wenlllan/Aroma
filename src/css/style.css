@@ -148,7 +148,7 @@ img {
   }
   .hamburger-menu path {
     fill: none;
-    stroke: #ff9b99;
+    stroke: #000;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -214,7 +214,7 @@ nav {
   justify-content: center;
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.6px);
+  backdrop-filter: blur(11px);
   border: 1px solid rgba(255, 255, 255, 0.13);
   z-index: 999;
   padding: 0 8%;
@@ -225,6 +225,7 @@ nav {
   nav {
     width: 70%;
     height: 100%;
+    background: rgba(255, 255, 255, 0.65);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -2343,6 +2344,11 @@ main #member #contact_form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 576px) {
+  main #member #contact_form {
+    margin-top: 10vh;
+  }
 }
 main #member #contact_form .login1 {
   display: block;
@@ -4513,6 +4519,7 @@ main #shopping3rd .big-box .list-box .list-item {
   height: auto;
   width: auto;
   margin: 1vw 0;
+  padding: 1vw 0;
   border-bottom: 1.5px groove #d9d9d9;
 }
 @media (max-width: 576px) {
@@ -5687,6 +5694,10 @@ main #shops .shops-img {
   background: radial-gradient(circle at center, rgba(var(--color-interactive-green), 0.8) 0, rgba(var(--color-interactive-green), 0) 50%) no-repeat;
 }
 
+body {
+  position: relative;
+}
+
 /* Swiper箭頭樣式 */
 .swiper-button-next,
 .swiper-button-prev {
@@ -6073,12 +6084,12 @@ main #shops .shops-img {
 }
 @media (max-width: 1440px) {
   #select-sample .select-sample-eng p {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 1024px) {
   #select-sample .select-sample-eng p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 576px) {

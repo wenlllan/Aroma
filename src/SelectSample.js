@@ -22,7 +22,7 @@ const SelectSample = () => {
     };
 
     return (
-        <body className="scrollBox">
+        <body>
             <section id="select-bg">
                 <div className="select-div">
                     <div className="select-frame">

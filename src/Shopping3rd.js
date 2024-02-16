@@ -1,30 +1,30 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Shopping3rd = () => {
-    const [modalVisible, setModalVisible] = useState(false);
-  
-    const showDialog = () => {
-      setModalVisible(true);
-    };
-    const hideDialog = () => {
-      setModalVisible(false);
-    };
-  
-    const handleOkButtonClick = () => {
-      // 隱藏dialog和modal的邏輯
-      hideDialog();
-    };
-    
-    useEffect(() => {
-      // 在modalVisible改變時執行的效果
-      if (modalVisible) {
-        console.log("Modal is visible");
-      } else {
-        console.log("Modal is hidden");
-      }
-    }, [modalVisible]);
-    
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const showDialog = () => {
+    setModalVisible(true);
+  };
+  const hideDialog = () => {
+    setModalVisible(false);
+  };
+
+  const handleOkButtonClick = () => {
+    // 隱藏dialog和modal的邏輯
+    hideDialog();
+  };
+
+  useEffect(() => {
+    // 在modalVisible改變時執行的效果
+    if (modalVisible) {
+      console.log("Modal is visible");
+    } else {
+      console.log("Modal is hidden");
+    }
+  }, [modalVisible]);
+
   return (
       <body>
         <main>
@@ -117,11 +117,11 @@ const Shopping3rd = () => {
                       {/* <button className="showDialogBtn" onClick={showDialog}>
                             Show Dialog
                         </button> */}
-                    </div>
-                    {/* modal */}
+                  </div>
+                  {/* modal */}
 
-                    <div>
-                      {/* <div className="dialog">
+                  <div>
+                    {/* <div className="dialog">
                         <div className="content">
                           <div>訂單已完成</div>
                         </div>
@@ -134,14 +134,14 @@ const Shopping3rd = () => {
                           </div>
                         </div>
                       </div> */}
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </main>
-      </body>
+          </div>
+        </section>
+      </main>
+    </body>
   );
 };
 export default Shopping3rd;
