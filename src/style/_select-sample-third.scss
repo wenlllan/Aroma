@@ -7,16 +7,21 @@
 
 .theme-yellow {
     --main-color:#FFB117;
+
+    --secondary-color:#FFF1D3;
+
     --background-image:url('../../public/images/main_bg3.jpg');
   }
   
   .theme-pink {
     --main-color: #ff9b99;
+    --secondary-color:#FFE0DF;
     --background-image:url('../../public/images/main_bg1.jpg');
   }
   
   .theme-green {
-    --main-color: #93c74f; //#7FB33D
+    --main-color: #4fc789; //#7FB33D
+    --secondary-color:#afe4cb;
     --background-image:url('../../public/images/main_bg2.jpg');
   }
 
@@ -70,7 +75,7 @@
             content: '';
             width: 100%;
             height: 8px;
-            background-color:  var(--main-color);
+            background-color:  var(--secondary-color);
             margin-bottom: 5px;
             transform: translateY(-10px);
             z-index: -1;
