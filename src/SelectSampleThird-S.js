@@ -10,7 +10,6 @@ const SelectSapmleThird = ({ theme }) => {
                     <div className="selectThird-prod-title">
                         <h4>以下為您的專屬香味——</h4>
                         <h3>恬靜風情的夏日晴空</h3>
-                        <h1></h1>
                         <p>Summer Serenity</p>
                     </div>
                     <div className="select-contain">
