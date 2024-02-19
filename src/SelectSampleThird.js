@@ -34,7 +34,7 @@ const SelectSapmleThird = ({ theme }) => {
                         </div>
                     </div>
                     <div className="selectThird-btn">
-                        <Link to="/shopping">
+                        <Link to="/selectfinal">
                             <p>索取試用</p>
                         </Link>
                     </div>

@@ -41,7 +41,7 @@ const Shopping3rd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
     
     // 隱藏dialog和modal的邏輯
     hideDialog();
-    navigate('/member');
+    navigate('/memberlogin');
   };
 
   useEffect(() => {
@@ -173,8 +173,7 @@ const Shopping3rd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                     <h4>${totalPrice}</h4>
                   </ul>
                   <ul>
-                    <h4>運費：</h4>
-                    <h4>$60</h4>
+                    <h4>運費：$60</h4>
                   </ul>
                   <ul>
                     <h4>總金額：</h4>
