@@ -578,7 +578,11 @@ main #shops .list-box .list-item .sites, main #share .slider .slides1 .slide .p1
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
+.all-prod-list .prod-list, .all-prod-list .prod-list .prod-list-items a, #select-sample #select-sample-btn, #select-sample #select-sample-btn a, #selectThird, #selectThird .selectThird-btn, #selectThird .selectThird-btn a, main #shops, main #shops .list-box .list-item, main #news_article, main #news_article .list-box .list-item, main #news_article .list-box .pagenumber, main #shopping2nd, main #shopping2nd .list-box .list, main #shopping2nd .list-box .list-item, main #shopping2nd .list-box .list-item .list-item-product, main #shopping2nd .list-box .list-item .item, main #shopping2nd #contact_form .list-boxes .form, main #shopping2nd #contact_form .list-boxes .form .form-check, main #shopping2nd #contact_form .next-box .btn, main #share, main #share .list-box, main #share .form-box, main #register, main #register .sign #contact_form, main #news, main #news .list-box .list-item, main #news .list-box .paragraph .p3 a, main #news .list-box .pagenumber, main #memberlogin, main #memberlogin .all-box .big-box .list-box .list, main #memberlogin .all-box .big-box .list-box .list-item, main #memberlogin .all-box .big-box .list-box .list-item .list-item-product, main #memberlogin .all-box .big-box .list-box .list-item .item, main #member, .main-prod-dream .shopping-cart .cart, .prod-story-container .story-contain, .prod-story-container .story-contain .prod-story .img-border, .prod-story-container .story-contain .prod-story .prod-story-4, .prod-notes .prod-note-contain, .prod-notes .prod-note-contain .bottom, .prod-material, .prod-material .prod-material-contain, .prod-material .prod-material-contain .material-info-div, .prod-photo, .prod-photo .prod-photo-all, .prod-function, .prod-function .prod-function-div .prod-function-info, .prod-function .prod-function-div .prod-function-info .prod-function-img, .prod-find .find-CN, .prod-find .prod-find-btn, .prod-find .prod-find-btn a {
+=======
 .all-prod-list .prod-list, .all-prod-list .prod-list .prod-list-items a, #select-sample #select-sample-btn, #select-sample #select-sample-btn a, .selectThird, .selectThird .select-contain, .selectThird .select-contain .select-contain-jpg, .selectThird .selectThird-btn, .selectThird .selectThird-btn a, main #shops, main #shops .list-box .list-item, main #news_article, main #news_article .list-box .list-item, main #news_article .list-box .pagenumber, main #shopping2nd, main #shopping2nd .list-box .list, main #shopping2nd .list-box .list-item, main #shopping2nd .list-box .list-item .list-item-product, main #shopping2nd .list-box .list-item .item, main #shopping2nd #contact_form .list-boxes .form, main #shopping2nd #contact_form .list-boxes .form .form-check, main #shopping2nd #contact_form .next-box .btn, main .modal .dialog, main #share, main #share .list-box, main #share .form-box, main #register, main #register .sign #contact_form, main #news, main #news .list-box .list-item, main #news .list-box .paragraph .p3 a, main #news .list-box .pagenumber, main #member, .main-prod-dream .shopping-cart .cart, .prod-story-container .story-contain, .prod-story-container .story-contain .prod-story .img-border, .prod-story-container .story-contain .prod-story .prod-story-4, .prod-notes .prod-note-contain, .prod-notes .prod-note-contain .bottom, .prod-material, .prod-material .prod-material-contain, .prod-material .prod-material-contain .material-info-div, .prod-photo, .prod-photo .prod-photo-all, .prod-function, .prod-function .prod-function-div .prod-function-info, .prod-function .prod-function-div .prod-function-info .prod-function-img, .prod-find .find-CN, .prod-find .prod-find-btn, .prod-find .prod-find-btn a {
+>>>>>>> 74adb4f88b4a70b3103b6f8e83c317dccfa899db
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2444,6 +2448,399 @@ main #member #contact_form .login3 * a:hover {
 
 main {
   min-height: calc(100vh - 20vw);
+}
+main h3 {
+  font-size: 1.5rem;
+}
+@media (max-width: 1440px) {
+  main h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  main h3 {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  main h3 {
+    font-size: 1rem;
+  }
+}
+main p {
+  font-size: 1rem;
+}
+@media (max-width: 1440px) {
+  main p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1024px) {
+  main p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  main p {
+    font-size: 1rem;
+  }
+}
+main a {
+  color: black;
+}
+main #memberlogin {
+  min-height: 400px;
+  min-width: 80vw;
+  flex-direction: column;
+}
+main #memberlogin .title {
+  font-weight: 600;
+  color: #535353;
+  margin-bottom: 10px;
+  padding-top: 10vw;
+}
+@media (max-width: 576px) {
+  main #memberlogin .title {
+    justify-content: center;
+    margin: 0;
+    padding: 10vh 0 2vh 0;
+  }
+}
+main #memberlogin .all-box {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+}
+@media (max-width: 1024px) {
+  main #memberlogin .all-box {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  main #memberlogin .all-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+main #memberlogin .all-box .left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 14vw;
+  height: 28vw;
+  margin: 2vw 2vw;
+  padding: 6vw 2vw;
+  background-color: #FFEFEF;
+  border-radius: 16px;
+}
+main #memberlogin .all-box .left-box a:hover {
+  color: #ff9b99;
+}
+@media (max-width: 768px) {
+  main #memberlogin .all-box .left-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 4vh;
+    border-radius: 0;
+  }
+}
+main #memberlogin .all-box .big-box {
+  width: 70%;
+}
+@media (max-width: 768px) {
+  main #memberlogin .all-box .big-box {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box {
+    width: 70%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  color: #535353;
+  padding: 2vw 0 2vw 0.5vw;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .title {
+    justify-content: center;
+    padding: 2vh 0;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list {
+  flex-direction: row;
+  border-top: 1px solid #ff9b99;
+  border-bottom: 1px solid #ff9b99;
+  padding: 0.8vw 3vw 0.8vw 9vw;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list {
+    padding: 1vh;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list p:nth-child(n+2) {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list p {
+    font-size: 0.75rem;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list .products {
+  text-align: center;
+  width: 34%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list .products {
+    width: 2rem;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list .ml {
+  text-align: center;
+  width: 18%;
+}
+main #memberlogin .all-box .big-box .list-box .list .price {
+  text-align: center;
+  width: 18%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list .price {
+    width: 12%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list .qty {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 14%;
+}
+main #memberlogin .all-box .big-box .list-box .list .total {
+  text-align: center;
+  width: 16%;
+}
+main #memberlogin .all-box .big-box .list-box .list-item-div {
+  display: flex;
+  padding: 1vw 0;
+  width: 100%;
+  border-bottom: 1.5px groove #d9d9d9;
+}
+main #memberlogin .all-box .big-box .list-box .list-item {
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item {
+    line-height: 2.5rem;
+    flex-direction: column;
+    padding: 0.5vh;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .list-item-product {
+  width: 10vw;
+  height: 8vw;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0) 0%, #EEEEEE 90%);
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .list-item-product {
+    width: 16vh;
+    height: 20vh;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .list-item-product .product {
+  height: 8vw;
+  width: auto;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .list-item-product .product {
+    height: 12vh;
+    padding: 0;
+    margin: 2vh 0;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item {
+  flex-direction: row;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item .products {
+  text-align: center;
+  width: 34%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item .products {
+    width: 100%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item .ml {
+  text-align: center;
+  width: 18%;
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item .price {
+  text-align: center;
+  width: 18%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item .price {
+    width: 100%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item .qty {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 14%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item .qty {
+    width: 100%;
+    align-items: center;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item .total {
+  text-align: center;
+  width: 16%;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item .total {
+    width: 100%;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item #shopping-cart #quantity {
+  width: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border: #d9d9d9;
+  font-family: "Noto Serif TC";
+}
+main #memberlogin .all-box .big-box .list-box .list-item .item #shopping-cart button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: #d9d9d9;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item p:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item .garbage-can {
+    width: 3vh;
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item .item {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .total .t1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1vw;
+  padding: 1.5vw 0;
+}
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .total .t1 {
+    padding: 2vh 0;
+  }
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1vw;
+  padding: 8vw 0 12vw 0;
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 a {
+  display: flex;
+  color: #FFFFFF;
+  padding: 1vh 1vh;
+  height: auto;
+  width: 120px;
+  cursor: pointer;
+  border-radius: calc(infinity * 1px);
+  border: none;
+  background-color: #ff9b99;
+  justify-content: center;
+  align-items: center;
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 a:hover .right-arrow {
+  transform: translateX(4px);
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 #submit {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #FFFFFF;
+  font-family: "Noto Serif TC";
+}
+main #memberlogin .all-box .big-box .list-box .total .next1 .right-arrow {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  color: #FFFFFF;
+  transition: all 0.35s;
+  transform: translateX(0);
+}
+main #memberlogin .all-box .big-box .list-box .total .next #submit {
+  color: #FFFFFF;
+  padding: 1vh 1vh;
+  height: auto;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 16px;
+  border: none;
+  background-color: #ff9b99;
+}
+main #memberlogin .all-box .big-box .list-box .total .next #submit:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+main {
+  min-height: calc(100vh - 20vw);
   /*修*/
 }
 main h3 {
@@ -3348,6 +3745,7 @@ main p {
 }
 main #shopping2nd {
   min-height: 400px;
+  min-width: 80vw;
   flex-direction: column;
 }
 main #shopping2nd .big-box {
@@ -4283,6 +4681,8 @@ main #shopping2nd #contact_form .next-box .btn .right-arrow path {
   width: 100%;
   height: 100%;
 }
+<<<<<<< HEAD
+=======
 main .modal {
   position: absolute;
   z-index: 10;
@@ -4320,6 +4720,7 @@ main .modal .dialog .okBtn {
   color: #535353;
   cursor: pointer;
 }
+>>>>>>> 74adb4f88b4a70b3103b6f8e83c317dccfa899db
 
 main {
   min-height: calc(100vh - 20vw);

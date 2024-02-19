@@ -6,6 +6,7 @@ import ProdDream from "./ProdDream";
 import ProdSummer from "./ProdSummer";
 import ProdSoul from "./ProdSoul";
 import Member from "./Member";
+import Memberlogin from "./Memberlogin";
 import Register from "./Register";
 import SelectSample from "./SelectSample";
 import News from "./News";
@@ -49,6 +50,7 @@ function App() {
             <Route path="prod-summer" element={<ProdSummer theme="yellow" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="prod-soul" element={<ProdSoul theme="green" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="member" element={<Member />}></Route>
+            <Route path="memberlogin" element={<Memberlogin shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
             <Route path="selectsamplesec" element={<QSecond />}></Route>
