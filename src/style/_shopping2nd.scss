@@ -677,8 +677,8 @@ main {
           display: flex;
           flex-direction: row;
           justify-content: flex-end;
-          margin-right: 3vw;
-          // padding: 1vw 0;
+          // margin-right: 3vw;
+          padding: 1vh 0;
 
           &:nth-child(3) {
             margin-right: 0vw;
@@ -687,13 +687,6 @@ main {
           @include mobile{
             margin: 1vh 0;
           }
-        }
-        
-        
-
-
-        @include mobile{
-          padding: 2vh 0;
         }
       }
 

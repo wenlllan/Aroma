@@ -9,6 +9,7 @@ import Member from "./Member";
 import Memberlogin from "./Memberlogin";
 import Register from "./Register";
 import SelectSample from "./SelectSample";
+import SelectFinal from "./SelectFinal";
 import News from "./News";
 import Share from "./Share";
 import Shopping from "./Shopping";
@@ -53,6 +54,7 @@ function App() {
             <Route path="memberlogin" element={<Memberlogin shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
+            <Route path="selectfinal" element={<SelectFinal />}></Route>
             <Route path="selectsamplesec" element={<QSecond />}></Route>
             <Route path="selectsamplethird" element={<SelectSampleThird theme="pink"/>}></Route>
             <Route path="selectsamplethird-s" element={<SelectSampleThirdS theme="yellow" />}></Route>

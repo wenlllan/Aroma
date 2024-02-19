@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 const Member = () => {
       //必填資料
   const [userName, setUserName] = useState("");
-  const [userTel, setUserTel] = useState("");
+  const [userPass, setUserPass] = useState("");
   const [msg1, setMsg1] = useState("");
   const [msg2, setMsg2] = useState("");
   const navigate = useNavigate();
@@ -16,12 +16,12 @@ const Member = () => {
     } else {
       setMsg1("");
     }
-    if (userTel.trim() === "") {
+    if (userPass.trim() === "") {
       setMsg2(" *請填寫「密碼」");
     } else {
       setMsg2("");
     }
-    if (userName.trim() !== "" && userTel.trim() !== "") {
+    if (userName.trim() !== "" && userPass.trim() !== "") {
       navigate("/memberlogin");
     }
   }
@@ -59,8 +59,8 @@ const Member = () => {
                                 autoComplete="on"
                                 minlength="8"
                                 // required
-                                value={userTel}
-                      onChange={(e) => setUserTel(e.target.value)}
+                                value={userPass}
+                      onChange={(e) => setUserPass(e.target.value)}
                             />
                             <span style={{ color: "#ff9b99" }}>{msg2}</span>
                         </div>

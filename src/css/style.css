@@ -4456,7 +4456,7 @@ main #shopping2nd .list-box .final ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 3vw;
+  padding: 1vh 0;
 }
 main #shopping2nd .list-box .final ul:nth-child(3) {
   margin-right: 0vw;
@@ -4464,11 +4464,6 @@ main #shopping2nd .list-box .final ul:nth-child(3) {
 @media (max-width: 576px) {
   main #shopping2nd .list-box .final ul {
     margin: 1vh 0;
-  }
-}
-@media (max-width: 576px) {
-  main #shopping2nd .list-box .final {
-    padding: 2vh 0;
   }
 }
 main #shopping2nd .list-box .next3 {
