@@ -19,6 +19,7 @@ import QSecond from "./QSecond";
 import HomepageSw from "./HomepageSw";
 import SelectSampleThird from "./SelectSampleThird";
 import SelectSampleThirdS from "./SelectSampleThird-S";
+import SelectSampleThirdSoul from "./SelectSampleThird-soul";
 import BgGradient from "./BgGradient";
 
 // import { Helmet } from 'react-helmet';
@@ -45,14 +46,15 @@ function App() {
           <Route path="/" element={<Layout shopItems={shopItems} setShopItems={setShopItems} />}>
             <Route index element={<HomepageSw />}></Route>
             <Route path="prod" element={<ProdDream theme="pink" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
-            <Route path="prod-summer" element={<ProdSummer theme="yellow" shopItems={shopItems} setShopItems={setShopItems} />}></Route>
-            <Route path="prod-soul" element={<ProdSoul theme="green" shopItems={shopItems} setShopItems={setShopItems} />}></Route>
+            <Route path="prod-summer" element={<ProdSummer theme="yellow" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
+            <Route path="prod-soul" element={<ProdSoul theme="green" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
             <Route path="selectsamplesec" element={<QSecond />}></Route>
-            <Route path="selectsamplethird" element={<SelectSampleThird />}></Route>
-            <Route path="selectsamplethird-s" element={<SelectSampleThirdS />}></Route>
+            <Route path="selectsamplethird" element={<SelectSampleThird theme="pink"/>}></Route>
+            <Route path="selectsamplethird-s" element={<SelectSampleThirdS theme="yellow" />}></Route>
+            <Route path="selectsamplethird-soul" element={<SelectSampleThirdSoul theme="green" />}></Route>
             <Route path="news" element={<News />}></Route>
             <Route path="share" element={<Share />}></Route>
             <Route path="shopping" element={<Shopping shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>

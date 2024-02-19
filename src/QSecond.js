@@ -43,7 +43,7 @@ const SelectSapmleSec = () => {
                     case '神秘':
                     case '冒險':
                                 console.log('Soulwood Quest');
-                                navigate('/selectsamplethird');
+                                navigate('/selectsamplethird-soul');
                                 break;
                     default:
                         console.log(`Sorry, we are out of ${finalResault1}.`);
@@ -69,7 +69,7 @@ const SelectSapmleSec = () => {
                     case '神秘':
                     case '冒險':
                                 console.log('Soulwood Quest');
-                                navigate('/selectsamplethird');
+                                navigate('/selectsamplethird-soul');
                                 break;
                     default:
                         console.log(`Sorry, we are out of ${finalResault2}.`);
@@ -95,7 +95,7 @@ const SelectSapmleSec = () => {
                     case '神秘':
                     case '冒險':
                                 console.log('Soulwood Quest');
-                                navigate('/selectsamplethird');
+                                navigate('/selectsamplethird-soul');
                                 break;
                     default:
                         console.log(`Sorry, we are out of ${finalResault3}.`);
@@ -105,7 +105,7 @@ const SelectSapmleSec = () => {
                 console.log(`Sorry, we are out of ${final}.`);
         }
 
-        navigate('/selectsampleThird');
+        //navigate('/selectsampleThird');
 
     };
 
@@ -132,7 +132,7 @@ const SelectSapmleSec = () => {
                                     {listItems}
                                 </ul>
                             </div>
-                            <figure className="select-num1"><img src="./images/select-num2.svg" alt="" /></figure>
+                            <figure className="select-num1 num2"><img src="./images/select-num2.svg" alt="" /></figure>
                             <div className="que q-sec">
                                 <p>您喜歡哪種風格呢？</p>
                             </div>
