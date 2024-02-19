@@ -10,7 +10,6 @@ const SelectSapmleThird = ({ theme }) => {
                     <div className="selectThird-prod-title">
                         <h4>以下為您的專屬香味——</h4>
                         <h3>靈魂深處的幽林冒險</h3>
-                        <h1></h1>
                         <p>Soulwood Quest</p>
                     </div>
                     <div className="select-contain">
