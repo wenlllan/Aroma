@@ -1,10 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
-const ProdSoul = ({theme,shopItems, setShopItems}) => {
+const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);
     const [isSending, setIsSending] = useState(false);
+    const [isSendingTop, setIsSendingTop] = useState(false);
+
+    const productD1 = {
+        id: '3-1',//_id
+        src:"./images/prod30ml-soulwood.png",
+        title:"靈魂深處的幽林冒險",
+        price:1880,
+        ml:30,
+        count: 0,
+        currentPrice:0,
+    }
+    const productD2 = {
+        id: '3-2',//_id
+        src:"./images/prod-soulwood.png",
+        title:"靈魂深處的幽林冒險",
+        price:2880,
+        ml:50,
+        count: 0,
+        currentPrice:0,
+    }
+
+    const addToCartTop = () => {
+        setIsSendingTop(true);
+        setTimeout(() => {
+            setIsSendingTop(false);
+            setCartTotal(cartTotal + 1);
+            setIsShaking(true);
+            setTimeout(() => {
+                setIsShaking(false);
+            }, 500);
+        }, 1000);
+    };
 
     const addToCart = () => {
         setIsSending(true);
@@ -16,6 +48,67 @@ const ProdSoul = ({theme,shopItems, setShopItems}) => {
                 setIsShaking(false);
             }, 500);
         }, 1000);
+    };
+
+    const handleAdd = (obj)=>{
+        //localStorage: JSON.stringify()=>轉文字  /  JSON.parse()=>解析localStorage內容
+        let orderList = localStorage.getItem("cart");
+        if (orderList){
+            let currentCart = JSON.parse(orderList)
+            console.log(currentCart)
+            let plus = currentCart.findIndex((i)=>{
+                return i.id == obj.id;
+            })
+            if(plus != -1) {
+                currentCart[plus].count++;
+                currentCart[plus].currentPrice = currentCart[plus].count * currentCart[plus].price;
+                localStorage.setItem("cart",JSON.stringify(currentCart));
+            } else {
+                obj.count+=1;
+                obj.currentPrice = obj.price * obj.count
+                currentCart.push(obj);
+                localStorage.setItem("cart",JSON.stringify(currentCart));
+            }
+             
+        } else {
+            let arr = [];
+            obj.count+=1;
+            obj.currentPrice = obj.price * obj.count
+            arr.push(obj);
+            console.log(arr);
+            localStorage.setItem("cart", JSON.stringify(arr) )
+        }
+        setShopCount((prev)=>{
+            return prev + 1;
+        })
+        // setState() // setState((prevState)=>{ return prevState .....})
+
+        // 回呼函式callback function，"prev"
+        //setState(2)
+        //setState(3)
+    }
+
+    useEffect(()=>{
+        setShopItems(()=>{
+          return JSON.parse(localStorage.getItem("cart"))
+        })
+      },[shopCount])
+
+    //changPic
+    const [mainImageSrc, setMainImageSrc] = useState('./images/prod-soulwood.png');
+    const [isFading, setIsFading] = useState(false);
+
+    const changePic = (picNo) => {
+        setIsFading(true);
+
+        setTimeout(() => {
+            if (picNo === 1) {
+                setMainImageSrc('./images/prod-soulwood.png');
+            } else if (picNo === 2) {
+                setMainImageSrc('./images/prod30ml-soulwood.png');
+            }
+            setIsFading(false);
+        }, 500);
     };
 
     return (
@@ -50,7 +143,7 @@ const ProdSoul = ({theme,shopItems, setShopItems}) => {
                 </div></Link>
                 <figure className="left-deco"><img src="./images/soul-flower.svg" alt="" /></figure>
                 <div className="prod-div">
-                    <figure className="main-prod-img"><img src="./images/prod-soulwood.png" alt="恬靜風情的夏日晴空" /></figure>
+                    <figure id="photo" className={`fade-image main-prod-img ${isFading ? 'fade-out' : ''}`}><img src={mainImageSrc} alt="恬靜風情的夏日晴空" /></figure>
                     <div className="prod-info-div">
                         <div className="prod-info-title">
                             <h3>靈魂深處的</h3>
@@ -60,14 +153,14 @@ const ProdSoul = ({theme,shopItems, setShopItems}) => {
                         </div>
                         <div className="prod-info-contain">
                             <div className="prod-info-contain-item">
-                                <div className="ml">30ml</div>
+                                <div className="ml" onMouseOver={() => changePic(2)}>30ml</div>
                                 <div className="price">NT$1,880</div>
-                                <button className={`add theme-${theme}`}>加入購物車</button>
+                                <button className={isSendingTop ? 'add' : 'add sendtocart-t'} onClick={(e) => { handleAdd(productD1); addToCartTop(); }}>加入購物車<span className="cart-item-t"></span></button>
                             </div>
                             <div className="prod-info-contain-item">
-                                <div className="ml">50ml</div>
+                                <div className="ml" onMouseOver={() => changePic(1)}>50ml</div>
                                 <div className="price">NT$2,880</div>
-                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={addToCart}>加入購物車<span className={`cart-item theme-${theme}`}></span></button>
+                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={(e)=>{handleAdd(productD2); addToCart();}}>加入購物車<span className="cart-item"></span></button>
                             </div>
                         </div>
                     </div>
@@ -244,11 +337,11 @@ const ProdSoul = ({theme,shopItems, setShopItems}) => {
             </section>
             <section className={`prod-photo theme-${theme}`}>
                 <div className="prod-photo-all">
-                    <figure className="p1"><img src="./images/prod-photo-summer1.jpg" alt="" /></figure>
-                    <figure className="p2"><img src="./images/prod-photo-summer2.svg" alt="" /></figure>
+                    <figure className="p1"><img src="./images/prod-photo-soul1.png" alt="" /></figure>
+                    <figure className="p2"><img src="./images/prod-photo-soul2.png" alt="" /></figure>
                     <div className="prod-photo-small">
-                        <figure><img src="./images/prod-photo-summer3.svg" alt="" /></figure>
-                        <figure><img src="./images/prod-photo-summer4.png" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-soul3.png" alt="" /></figure>
+                        <figure><img src="./images/prod-photo-soul4.png" alt="" /></figure>
                     </div>
                 </div>
                 <p>warm, natural and comfortable</p>
