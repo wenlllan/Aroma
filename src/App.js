@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from "react";
 import "../src/css/style.css";
 import Layout from "./Layout"
-import Homepage from "./Homepage";
 import ProdDream from "./ProdDream";
 import ProdSummer from "./ProdSummer";
 import ProdSoul from "./ProdSoul";
