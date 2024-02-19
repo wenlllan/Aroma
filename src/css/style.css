@@ -5490,23 +5490,16 @@ main #shops .shops-img {
   --main-color:#FFB117;
   --light-color:#FFFEF1;
   --middle-color:#FFE6B6;
-  --secondary-color:#FFF1D3;
   --background-image:url("../../public/images/main_bg3.jpg");
 }
 
 .theme-pink {
   --main-color: #ff9b99;
-  --light-color:#FFEFEF;
-  --middle-color:#FFB6B5;
-  --secondary-color:#FFE0DF;
   --background-image:url("../../public/images/main_bg1.jpg");
 }
 
 .theme-green {
   --main-color: #93c74f;
-  --light-color:#f0ffea;
-  --middle-color:#CDECDD;
-  --secondary-color:#afe4cb;
   --background-image:url("../../public/images/main_bg2.jpg");
 }
 
