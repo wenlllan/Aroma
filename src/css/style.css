@@ -297,8 +297,10 @@ nav .nav-list .nav-list-item .list-item {
   color: #535353;
   transition: all 0.35s;
   padding: 0 0 0.2vw 0;
+  border-bottom: 2px solid transparent;
 }
 nav .nav-list .nav-list-item .list-item:hover {
+  border-bottom: 2px solid #FFB117;
   color: #000;
 }
 nav .nav-list .nav-list-item .list-item img {
@@ -357,12 +359,15 @@ nav .nav-list .nav-list-item .hide-prod {
 }
 @media (max-width: 768px) {
   nav .nav-list .nav-list-item .hide-prod {
-    width: 90px;
+    width: 84px;
   }
 }
 @media (max-width: 576px) {
   nav .nav-list .nav-list-item .hide-prod {
     display: block;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
     max-height: 0;
     overflow: hidden;
     background: transparent;
@@ -2374,6 +2379,12 @@ main p {
 }
 main #member {
   flex-direction: column;
+  height: 75vh;
+}
+@media (max-width: 576px) {
+  main #member {
+    height: 100vh;
+  }
 }
 main #member .title {
   font-weight: 600;
@@ -2385,6 +2396,7 @@ main #member #contact_form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5vw;
 }
 @media (max-width: 576px) {
   main #member #contact_form {
@@ -2408,6 +2420,9 @@ main #member #contact_form .login1 input {
   margin: 10px;
   border: 0;
   border-bottom: 1px solid #535353;
+}
+main #member #contact_form .login1 span {
+  font-size: 0.8rem;
 }
 main #member #contact_form .login2 {
   display: flex;
@@ -2646,6 +2661,11 @@ main #memberlogin .all-box .big-box .list-box .list-item-div {
   width: 100%;
   border-bottom: 1.5px groove #d9d9d9;
 }
+@media (max-width: 576px) {
+  main #memberlogin .all-box .big-box .list-box .list-item-div {
+    padding: 2vh 0;
+  }
+}
 main #memberlogin .all-box .big-box .list-box .list-item {
   flex-direction: column;
   height: auto;
@@ -2771,15 +2791,18 @@ main #memberlogin .all-box .big-box .list-box .list-item .item #shopping-cart bu
 }
 main #memberlogin .all-box .big-box .list-box .total .t1 {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-right: 1vw;
   padding: 1.5vw 0;
 }
 @media (max-width: 576px) {
   main #memberlogin .all-box .big-box .list-box .total .t1 {
-    padding: 2vh 0;
+    margin: 2vh 0;
   }
+}
+main #memberlogin .all-box .big-box .list-box .total .t1 h4 {
+  padding: 1vh 0;
 }
 main #memberlogin .all-box .big-box .list-box .total .next1 {
   display: flex;
@@ -4233,6 +4256,11 @@ main #shopping2nd .list-box .list-item-div {
   width: 100%;
   border-bottom: 1.5px groove #d9d9d9;
 }
+@media (max-width: 576px) {
+  main #shopping2nd .list-box .list-item-div {
+    padding: 2vh 0;
+  }
+}
 main #shopping2nd .list-box .list-item {
   flex-direction: column;
   height: auto;
@@ -4421,6 +4449,9 @@ main #shopping2nd .list-box .total .next #submit {
 main #shopping2nd .list-box .total .next #submit:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+main #shopping2nd .list-box .final .t1 {
+  flex-direction: column;
+}
 main #shopping2nd .list-box .final ul {
   display: flex;
   flex-direction: row;
@@ -4429,6 +4460,11 @@ main #shopping2nd .list-box .final ul {
 }
 main #shopping2nd .list-box .final ul:nth-child(3) {
   margin-right: 0vw;
+}
+@media (max-width: 576px) {
+  main #shopping2nd .list-box .final ul {
+    margin: 1vh 0;
+  }
 }
 @media (max-width: 576px) {
   main #shopping2nd .list-box .final {
@@ -4442,6 +4478,7 @@ main #shopping2nd .list-box .next3 {
   align-items: center;
   padding: 1vw 0;
   height: auto;
+  min-height: 140px;
 }
 main #shopping2nd .list-box .next3 button,
 main #shopping2nd .list-box .next3 #submit {
@@ -4534,6 +4571,9 @@ main #shopping2nd #contact_form .list-boxes .form-sign .sign input {
   main #shopping2nd #contact_form .list-boxes .form-sign .sign input {
     width: 80%;
   }
+}
+main #shopping2nd #contact_form .list-boxes .form-sign .sign span {
+  font-size: 0.8rem;
 }
 main #shopping2nd #contact_form .list-boxes .notice-box {
   padding: 1.5vw 0 1.5vw 0.5vw;
