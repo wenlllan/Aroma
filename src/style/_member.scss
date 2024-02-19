@@ -16,7 +16,11 @@ main {
   #member {
     @extend %flex-center;
     flex-direction: column;
+    height: 75vh;
 
+    @include mobile {
+    height: 100vh;
+    }
     
     .title {
       font-weight: 600;
@@ -29,6 +33,7 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 5vw;
 
       @include mobile{
         margin-top: 10vh;
@@ -52,6 +57,9 @@ main {
           margin: 10px;
           border: 0;
           border-bottom: 1px solid $color-deep;
+        }
+        span{
+          font-size: 0.8rem;
         }
       }
 
