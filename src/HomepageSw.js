@@ -68,7 +68,7 @@ const Test = () => {
           Autoplay,
           EffectFade,
         ]}
-        style={{ height: "100dvh" }}
+        // style={{ height: "100dvh" }}
       >
         
         <SwiperSlide className="swiper-slide">
