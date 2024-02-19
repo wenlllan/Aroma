@@ -438,6 +438,10 @@ main {
         padding: 1vw 0;
         width: 100%;
         border-bottom: 1.5px groove $color-gray;
+
+        @include mobile{
+          padding: 2vh 0;
+        }
       }
 
       .list-item {
@@ -666,6 +670,9 @@ main {
 
 
       .final{
+        .t1{
+          flex-direction: column;
+        }
         ul {
           display: flex;
           flex-direction: row;
@@ -675,6 +682,10 @@ main {
 
           &:nth-child(3) {
             margin-right: 0vw;
+          }
+
+          @include mobile{
+            margin: 1vh 0;
           }
         }
         
@@ -693,7 +704,7 @@ main {
         align-items: center;
         padding: 1vw 0;
         height: auto;
-        // min-height: 140px;
+        min-height: 140px;
         
 
         button,
@@ -774,6 +785,9 @@ main {
               @include mobile {
                 width: 80%;
               }
+            }
+            span{
+              font-size: 0.8rem;
             }
           }
         }

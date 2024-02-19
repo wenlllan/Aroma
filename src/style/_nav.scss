@@ -227,10 +227,10 @@ nav {
                 color: $color-deep;
                 transition: all 0.35s;
                 padding: 0 0 0.2vw 0;
-                //border-bottom: 2px solid transparent;
+                border-bottom: 2px solid transparent;
 
                 &:hover {
-                    //border-bottom: 2px solid #FFB117;
+                    border-bottom: 2px solid #FFB117;
                     color: #000;
                     
                 }
@@ -305,12 +305,15 @@ nav {
                 }
 
                 @include miniPad {
-                    width: 90px;
+                    width: 84px;
                 }
 
                 @include mobile {
                     display: block;
                     //left: 10%;
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                    text-align: center;
                     max-height: 0;
                     overflow: hidden;
                     background: transparent;

@@ -79,9 +79,10 @@ const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                     })}
                 </div>
                 <div className="total">
+                
                   <div className="t1">
-                    <h4>商品金額：</h4>
-                    <h4>${totalPrice}</h4>
+                    <h4>運費：$60</h4>
+                    <h4>商品金額：${totalPrice+60}</h4>
                   </div>
                   <div className="next1"></div>
                 </div>
