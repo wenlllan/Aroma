@@ -600,7 +600,7 @@
     .arrow-down {
         position: absolute;
         height: 20vh;
-        width: auto;
+        width: 2.9vw;
         left: 5%;
         transition: all .35s;
         transform: translateY(0);
@@ -610,11 +610,15 @@
         }
 
         @include pad {
-            height: 15vh;
+            height: 10vh;
+            width: 2.9vh;
             left: -7%;
         }
 
         @include miniPad {
+            height: 8vh;
+            width: 2vh;
+
             left: -10%;
         }
 
@@ -631,6 +635,12 @@
         width: 27vw;
         min-width: 270px;
         min-height: 270px;
+
+        @include pad{
+            top: 2vw;
+            right: 9vw;
+
+        }
 
 
         @include miniPad {
@@ -827,6 +837,11 @@
                     position: absolute;
                     height: 27vw;
                     width: auto;
+
+                    @include miniPad{
+                        width:22vw;
+                        max-height: 207px;
+                    }
 
                     @include mobile {
                         width: 100%;
@@ -1045,8 +1060,8 @@
         }
 
         @include miniPad {
-            width: 90vh;
-            height: 90vh;
+            width: 96vw;
+            height: 96vw;
         }
 
         @include mobile {
@@ -1103,6 +1118,10 @@
                     /* 设置距左侧的位置为容器宽度的50% */
                     transform: translate(-50%, -70%);
                     z-index: 0;
+
+                    @include miniPad {
+                        font-size: 2.5rem;
+                    }
                 }
             }
 
@@ -1307,9 +1326,16 @@
                 }
 
                 figure {
+                    width: auto;
                     height: 10vw;
 
+                    @include miniPad{
+                        max-width: 66px;
+                        max-height: 77px;
+                    }
+
                     @include mobile {
+                        width: 10vh;
                         height: 10vh;
                     }
                 }
