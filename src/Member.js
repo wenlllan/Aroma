@@ -80,7 +80,7 @@ const Member = () => {
             </div>
             <div className="login3">
               <p>
-                <Link to="/register" id="forgot">
+                <Link to="/memberForget" id="forgot">
                   忘記密碼？
                 </Link>
               </p>

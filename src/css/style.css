@@ -2506,6 +2506,14 @@ main #member #contact_form {
     margin-top: 10vh;
   }
 }
+main #member #contact_form .sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #member #contact_form .sign span {
+  padding-top: 10px;
+}
 main #member #contact_form .login1 {
   display: block;
 }
@@ -2526,6 +2534,21 @@ main #member #contact_form .login1 input {
 }
 main #member #contact_form .login1 span {
   font-size: 0.8rem;
+}
+main #member #contact_form .notice-box {
+  padding: 1.5vw 0 1.5vw 0.5vw;
+  text-align: center;
+  line-height: 1.2rem;
+}
+main #member #contact_form .notice-box p {
+  color: #535353;
+  font-size: 0.7rem;
+}
+@media (max-width: 576px) {
+  main #member #contact_form .notice-box p {
+    line-height: 120%;
+    margin: 0 0 2vh 0;
+  }
 }
 main #member #contact_form .login2 {
   display: flex;
@@ -3169,6 +3192,11 @@ main #register .sign #contact_form {
   height: 50vh;
   flex-direction: column;
 }
+@media (max-width: 1440px) {
+  main #register .sign #contact_form {
+    height: 55vh;
+  }
+}
 main #register .sign #contact_form label {
   font-size: 0.8rem;
   color: #535353;
@@ -3203,13 +3231,26 @@ main #register .sign #contact_form .sign2 {
 main #register .sign #contact_form .sign2 #username {
   margin-right: 5vw;
 }
-main #register .sign .sign3 {
+main #register .sign #contact_form .notice-box {
+  padding: 1.5vw 0 1.5vw 0.5vw;
+}
+main #register .sign #contact_form .notice-box p {
+  color: #535353;
+  font-size: 0.8rem;
+}
+@media (max-width: 576px) {
+  main #register .sign #contact_form .notice-box p {
+    line-height: 120%;
+    margin: 0 0 2vh 0;
+  }
+}
+main #register .sign #contact_form .sign3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2vw 0;
 }
-main #register .sign .sign3 #submit {
+main #register .sign #contact_form .sign3 #submit {
   color: #FFFFFF;
   padding: 1vh 1vh;
   height: auto;
@@ -3219,7 +3260,7 @@ main #register .sign .sign3 #submit {
   border: none;
   background-color: #ff9b99;
 }
-main #register .sign .sign3 #submit:hover {
+main #register .sign #contact_form .sign3 #submit:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -4793,15 +4834,38 @@ main .modal .dialog {
   line-height: 1.7em;
   bottom: 0;
 }
+@media (max-width: 1024px) {
+  main .modal .dialog {
+    width: 200px;
+    bottom: 30vh;
+  }
+}
 @media (max-width: 576px) {
   main .modal .dialog {
-    width: 150px;
+    width: 180px;
+    bottom: 45vh;
   }
 }
 main .modal .dialog .content {
   color: #535353;
   text-align: center;
   font-size: 20px;
+  font-size: 1.25rem;
+}
+@media (max-width: 1440px) {
+  main .modal .dialog .content {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  main .modal .dialog .content {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  main .modal .dialog .content {
+    font-size: 1rem;
+  }
 }
 main .modal .dialog .okBtn {
   display: inline-block;

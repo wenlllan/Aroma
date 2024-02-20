@@ -975,14 +975,23 @@ main {
       line-height: 1.7em;
       bottom: 0;
 
+      @include pad{
+        width: 200px;
+        bottom: 30vh;
+      }
+
       @include mobile {
-        width: 150px;
+        width: 180px;
+        bottom: 45vh;
       }
 
       .content {
         color: $color-deep;
         text-align: center;
         font-size: 20px;
+
+        @include h4;
+        
         }
       .okBtn {
           display: inline-block;
