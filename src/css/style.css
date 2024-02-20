@@ -5287,6 +5287,7 @@ main #shops .shops-img {
   #select-bg .select-div .select-frame {
     width: 45vw;
     height: 45vw;
+    margin: 25vh auto;
   }
 }
 @media (max-width: 768px) {
@@ -5632,6 +5633,7 @@ main #shops .shops-img {
   min-height: calc(100vh - 20vw);
   background-size: cover;
   background-image: var(--background-image);
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
   flex-direction: column;
@@ -5961,6 +5963,7 @@ main #shops .shops-img {
 }
 @media (max-width: 1024px) {
   .selectThird .selectThird-btn a {
+    margin: 3vw 0 5vw 0;
     font-size: 0.875rem;
     /*14px*/
   }
@@ -5981,8 +5984,8 @@ main #shops .shops-img {
 }
 @media (max-width: 1024px) {
   .selectThird .sample-div {
-    top: 21vw;
-    right: 23vw;
+    top: 45vw;
+    right: 21vw;
   }
 }
 @media (max-width: 768px) {
