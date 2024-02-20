@@ -2574,9 +2574,10 @@ main #memberlogin .title {
 main #memberlogin .all-box {
   display: flex;
   justify-content: flex-start;
-  width: 70%;
+  width: 75%;
+  margin-bottom: 8vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   main #memberlogin .all-box {
     width: 85%;
   }
@@ -2596,9 +2597,8 @@ main #memberlogin .all-box .left-box {
   justify-content: space-between;
   align-items: center;
   width: 14vw;
-  height: 28vw;
   margin: 2vw 2vw;
-  padding: 6vw 2vw;
+  padding: 12vw 2vw;
   background-color: #FFEFEF;
   border-radius: 16px;
 }
@@ -2617,6 +2617,7 @@ main #memberlogin .all-box .left-box a:hover {
 }
 main #memberlogin .all-box .big-box {
   width: 70%;
+  margin: 2vw 0;
 }
 @media (max-width: 768px) {
   main #memberlogin .all-box .big-box {
@@ -2641,20 +2642,28 @@ main #memberlogin .all-box .big-box .list-box {
     width: 70%;
   }
 }
-main #memberlogin .all-box .big-box .list-box .title {
+main #memberlogin .all-box .big-box .list-box .list-box-title {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  font-weight: 600;
   color: #535353;
-  padding: 2vw 0 2vw 0.5vw;
+  padding: 2vw 0;
 }
 @media (max-width: 576px) {
-  main #memberlogin .all-box .big-box .list-box .title {
+  main #memberlogin .all-box .big-box .list-box .list-box-title {
     justify-content: center;
     padding: 2vh 0;
   }
+}
+main #memberlogin .all-box .big-box .list-box .list-box-title h4 {
+  font-weight: 600;
+  padding: 0.3rem 0;
+  letter-spacing: 2px;
+}
+main #memberlogin .all-box .big-box .list-box .list-p {
+  padding: 0.3rem 0;
+  margin: 0 0 0.5vw;
+  letter-spacing: 1px;
 }
 main #memberlogin .all-box .big-box .list-box .list {
   flex-direction: row;
@@ -2847,8 +2856,7 @@ main #memberlogin .all-box .big-box .list-box .total .t1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 1vw;
-  padding: 1.5vw 0;
+  padding: 1.5vw 1vw 0 0;
 }
 @media (max-width: 576px) {
   main #memberlogin .all-box .big-box .list-box .total .t1 {
@@ -2857,59 +2865,6 @@ main #memberlogin .all-box .big-box .list-box .total .t1 {
 }
 main #memberlogin .all-box .big-box .list-box .total .t1 h4 {
   padding: 1vh 0;
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 1vw;
-  padding: 8vw 0 12vw 0;
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 a {
-  display: flex;
-  color: #FFFFFF;
-  padding: 1vh 1vh;
-  height: auto;
-  width: 120px;
-  cursor: pointer;
-  border-radius: calc(infinity * 1px);
-  border: none;
-  background-color: #ff9b99;
-  justify-content: center;
-  align-items: center;
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 a:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 a:hover .right-arrow {
-  transform: translateX(4px);
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 #submit {
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #FFFFFF;
-  font-family: "Noto Serif TC";
-}
-main #memberlogin .all-box .big-box .list-box .total .next1 .right-arrow {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  color: #FFFFFF;
-  transition: all 0.35s;
-  transform: translateX(0);
-}
-main #memberlogin .all-box .big-box .list-box .total .next #submit {
-  color: #FFFFFF;
-  padding: 1vh 1vh;
-  height: auto;
-  width: 100px;
-  cursor: pointer;
-  border-radius: 16px;
-  border: none;
-  background-color: #ff9b99;
-}
-main #memberlogin .all-box .big-box .list-box .total .next #submit:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 main {

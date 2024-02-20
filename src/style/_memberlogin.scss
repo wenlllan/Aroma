@@ -39,9 +39,10 @@ main {
       .all-box{
         display: flex;
         justify-content: flex-start;        
-        width: 70%;
+        width: 75%;
+        margin-bottom:  8vw;
 
-        @include pad{
+        @include mac{
           width: 85%;
         }
 
@@ -59,9 +60,8 @@ main {
           justify-content: space-between;
           align-items: center;
           width: 14vw;
-          height: 28vw;
           margin: 2vw 2vw;
-          padding: 6vw 2vw;
+          padding: 12vw 2vw;
           
           background-color: $color-lightpink;
           border-radius: 16px;
@@ -82,6 +82,7 @@ main {
   
         .big-box {
           width: 70%;
+          margin: 2vw 0;
 
           @include miniPad{
             width: 80%;
@@ -102,21 +103,31 @@ main {
               width: 70%;
             }
     
-            .title {
+            .list-box-title {
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               justify-content: flex-start;
-              align-items: center;
-              font-weight: 600;
               color: $color-deep;
-              padding: 2vw 0 2vw 0.5vw;
+              padding: 2vw 0;
     
               @include mobile {
                 justify-content: center;
                 padding: 2vh 0;
               }
+
+              h4{
+                font-weight: 600;
+                padding: 0.3rem 0;
+                letter-spacing: 2px;
+              }
+
+            
             }
-    
+            .list-p{
+              padding: 0.3rem 0;
+              margin: 0 0 .5vw;
+              letter-spacing: 1px;
+            }
             .list {
               @extend %flex-center;
               flex-direction: row;
@@ -339,8 +350,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                margin-right: 1vw;
-                padding: 1.5vw 0;
+                padding: 1.5vw 1vw 0 0;
     
                 @include mobile {
                   margin: 2vh 0;
@@ -351,68 +361,6 @@ main {
                 }
               }
     
-              .next1 {
-                display: flex;
-                justify-content: flex-end;
-                margin-right: 1vw;
-                padding: 8vw 0 12vw 0;
-    
-                a {
-                  display: flex;
-                  color: $color-white;
-                  padding: 1vh 1vh;
-                  height: auto;
-                  width: 120px;
-                  cursor: pointer;
-                  border-radius: $radius-infinity;
-                  border: none;
-                  background-color: $color-pink;
-                  justify-content: center;
-                  align-items: center;
-    
-                  &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    
-                    .right-arrow {
-                      transform: translateX(4px);
-                    }
-                  }
-                }
-    
-                #submit {
-                  cursor: pointer;
-                  border: none;
-                  background: none;
-                  color: $color-white;
-                  font-family: "Noto Serif TC";
-                }
-    
-                .right-arrow {
-                  display: flex;
-                  width: 20px;
-                  height: 20px;
-                  color: $color-white;
-                  transition: all .35s;
-                  transform: translateX(0);
-                }
-              }
-    
-              .next {
-                #submit {
-                  color: $color-white;
-                  padding: 1vh 1vh;
-                  height: auto;
-                  width: 100px;
-                  cursor: pointer;
-                  border-radius: 16px;
-                  border: none;
-                  background-color: $color-pink;
-    
-                  &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-                  }
-                }
-              }
             }
           }
         }

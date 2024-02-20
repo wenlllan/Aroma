@@ -631,8 +631,8 @@ const Share = () => {
                     </label>
                   </div>
                 </div>
-                <textarea name="memo" id="memo" rows="5" className="form-control">
-                  歡迎留言，分享您的使用心得。
+                <textarea name="memo" id="memo" rows="5" className="form-control"
+                placeholder="歡迎留言，分享您的使用心得。">
                 </textarea>
               </div>
               <input
