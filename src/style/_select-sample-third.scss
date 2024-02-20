@@ -217,7 +217,7 @@
 
             .contain-top{
                 width: 65%;
-                margin-bottom: 1vw ;
+                margin-bottom: 2vw ;
 
                 @include pad{
                     width: 80%;
@@ -238,7 +238,24 @@
             h3{
                 @include h3;
                 font-weight: 700;
-                margin-bottom: 1vw ;
+                margin-bottom: .7vw ;
+
+                @include mobile{
+                    text-align: center;
+                    margin-bottom: 3vh;
+                }
+            }
+
+            h4{
+                @include h4;
+                color:var(--main-color);
+                letter-spacing: 1px;
+                margin-bottom: .7vw ;
+
+                @include mobile{
+                    text-align: center;
+                    margin-bottom: 3vh;
+                }
             }
 
             p{
@@ -283,7 +300,7 @@
 
             @include mac {
                 font-size: .9rem;
-                margin: 2vw 0 5vw 0;
+                margin: 1vw 0 5vw 0;
             }
 
             @include pad {
