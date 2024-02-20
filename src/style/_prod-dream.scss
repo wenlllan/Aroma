@@ -247,8 +247,8 @@
                 .ml {
                     cursor: pointer;
 
-                    &:hover{
-                        color:var(--main-color) ;
+                    &:hover {
+                        color: var(--main-color);
                     }
                 }
 
@@ -505,7 +505,7 @@
             .price {
                 width: 20%;
 
-               input {
+                input {
                     width: 100%;
                     display: block;
                     border: none;
@@ -513,7 +513,7 @@
                     letter-spacing: 1px;
                     @include p;
                     font-family: 'Noto Serif TC', serif;
-                    color:#000;
+                    color: #000;
                 }
             }
 
@@ -576,14 +576,22 @@
 
     .circle {
         position: absolute;
-        height: auto;
-        width: 9.3vw;
+        height: 10vw;
+        width: 10vw;
         animation: 30s linear 1s infinite running circle-rotation;
         top: -13%;
         left: 9%;
 
         @include pad {
             width: 12vw;
+            height: 12vw;
+            top: -12%;
+            left: -8%;
+        }
+
+        @include miniPad{
+            width: 15vw;
+            height: 15vw;
             top: -12%;
             left: -8%;
         }
@@ -621,20 +629,25 @@
         right: 9vw;
         height: 27vw;
         width: 27vw;
+        min-width: 270px;
+        min-height: 270px;
 
 
         @include miniPad {
-            height: 35vw;
-            width: 35vw;
+            top: 2vw;
+            right: 9vw;
+            min-height: 150px;
+            min-width: 150px;
         }
     }
 
     .small-dream-bg {
-        height: 65vh;
-        width: auto;
+        height: auto;
+        width: 80%;
+        ;
 
         @include miniPad {
-            height: 38vh;
+            height: 85%;
         }
     }
 }

@@ -1298,8 +1298,8 @@ main #news .list-box .paragraph .p2 p {
 }
 .dream-img .circle {
   position: absolute;
-  height: auto;
-  width: 9.3vw;
+  height: 10vw;
+  width: 10vw;
   animation: 30s linear 1s infinite running circle-rotation;
   top: -13%;
   left: 9%;
@@ -1307,6 +1307,15 @@ main #news .list-box .paragraph .p2 p {
 @media (max-width: 1024px) {
   .dream-img .circle {
     width: 12vw;
+    height: 12vw;
+    top: -12%;
+    left: -8%;
+  }
+}
+@media (max-width: 768px) {
+  .dream-img .circle {
+    width: 15vw;
+    height: 15vw;
     top: -12%;
     left: -8%;
   }
@@ -1344,20 +1353,24 @@ main #news .list-box .paragraph .p2 p {
   right: 9vw;
   height: 27vw;
   width: 27vw;
+  min-width: 270px;
+  min-height: 270px;
 }
 @media (max-width: 768px) {
   .dream-img .small-dream {
-    height: 35vw;
-    width: 35vw;
+    top: 2vw;
+    right: 9vw;
+    min-height: 150px;
+    min-width: 150px;
   }
 }
 .dream-img .small-dream-bg {
-  height: 65vh;
-  width: auto;
+  height: auto;
+  width: 80%;
 }
 @media (max-width: 768px) {
   .dream-img .small-dream-bg {
-    height: 38vh;
+    height: 85%;
   }
 }
 
