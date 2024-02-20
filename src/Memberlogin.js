@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
   const [username, setUserName] = useState("");
@@ -30,13 +30,13 @@ const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
       <main>
         <section id="memberlogin">
         <h3 className="title">會員專區</h3>
-        <div  className="all-box">
+        <div className="all-box">
         <div className="left-box">
                 <Link to>會員專區</Link>
                 <Link to>訂單查詢</Link>
                 <Link to>我的收藏</Link>
                 <Link to>購物說明</Link>
-              </div>
+          </div>
         <div className="big-box">
               <div className="list-box">
                 <div  className="list-box-title">
