@@ -429,6 +429,42 @@ nav .nav-list-item-icons ul {
   flex-direction: row;
   align-items: center;
 }
+nav .nav-list-item-icons ul .shoppingBag {
+  position: relative;
+}
+nav .nav-list-item-icons ul .shop-count {
+  position: absolute;
+  top: 0.6vw;
+  right: 0.4vw;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 10px;
+  z-index: 100;
+  background-color: #ff9b99;
+  font-size: 0.5rem;
+  text-align: center;
+  line-height: 0.6vw;
+  color: white;
+}
+@media (max-width: 1440px) {
+  nav .nav-list-item-icons ul .shop-count {
+    height: 0.9vw;
+    width: 0.9vw;
+    line-height: 0.9vw;
+  }
+}
+@media (max-width: 1024px) {
+  nav .nav-list-item-icons ul .shop-count {
+    height: 1vw;
+    width: 1vw;
+    line-height: 1vw;
+  }
+}
+@media (max-width: 576px) {
+  nav .nav-list-item-icons ul .shop-count {
+    display: none;
+  }
+}
 nav .nav-list-item-icons ul a {
   height: 1.1vw;
   width: auto;

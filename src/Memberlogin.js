@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
   const [username, setUserName] = useState("");
-  
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(()=>{
     setUserName(JSON.parse(localStorage.getItem("username")));
