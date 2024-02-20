@@ -65,7 +65,7 @@ const SelectFinal = () => {
           <div className="modal">
             <div className="dialog">
               <div className="content">
-                <div>試用索取完成</div>
+                <div>索取完成</div>
               </div>
               <div className="okBtn" onClick={handleOkButtonClick}>
                 <img
