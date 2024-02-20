@@ -20,14 +20,14 @@ const SelectSapmleThird = ({ theme }) => {
                                 <figure><img src="./images/select-sample-third-star-dream.svg" alt="" /></figure>
                             </div>
                             <div className="contain-top">
-                                <h3>專屬幸運色:</h3>
-                                <p>霧玫瑰色 Mistyrose
+                                <h3>專屬幸運色</h3><h4>——霧玫瑰色 Mistyrose——</h4>
+                                <p>
                                     粉紅色象徵著愛與溫暖，是一種極具積極氛圍的色彩。
                                     對於喜歡花香調的你而言，粉紅色的幸運色代表著愉悅與溫暖。</p>
                             </div>
                             <div className="contain-bottom">
-                                <h3>專屬香調:</h3>
-                                <p>花香調
+                                <h3>專屬香調</h3><h4>——花香調——</h4>
+                                <p>
                                     選擇花香調的你，顯示你對環境的敏感度極高。在不同的場景中，你的心境也隨之變化。
                                     當生活中的壓力逼近時，或許改變一下環境能夠帶來心情的轉變，享受生活中的美好與溫暖。</p>
                             </div>
