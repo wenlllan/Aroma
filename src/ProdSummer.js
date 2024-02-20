@@ -102,12 +102,44 @@ const ProdSummer = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => 
         setIsFading(true);
 
         setTimeout(() => {
-            if (picNo === 1) {
+            if (picNo == 1) {
                 setMainImageSrc('./images/prod-summer.png');
-            } else if (picNo === 2) {
+            } else if (picNo == 2) {
                 setMainImageSrc('./images/prod30ml-summer.png');
             }
             setIsFading(false);
+        }, 500);
+    };
+
+    //select (mobile)
+    const database = {
+        '30ml': { 'price': '$1,880' },
+        //'50ml': { 'price': '$2,880' },
+    };
+
+    const [selectedMl, setSelectedMl] = useState('');
+    const [price, setPrice] = useState('');
+
+    const handleMlChange = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedMl(selectedValue);
+
+        if (database[selectedValue]) {
+            const priceValue = database[selectedValue]['price'];
+            setPrice(priceValue);
+        } else {
+            setPrice('');
+        }
+        changePicNo(selectedValue);
+    };
+
+    const changePicNo = (mlValue) => {
+        setIsFading(true);
+        // const newImageSrc = mlValue == '30ml' ? './images/prod30ml-dream.png' : './images/prod-dream.png';
+        // setMainImageSrc(newImageSrc);
+        setTimeout(() => {
+            const newImageSrc = mlValue == '30ml' ? './images/prod30ml-summer.png' : './images/prod-summer.png';
+            setMainImageSrc(newImageSrc); setIsFading(false);
         }, 500);
     };
 
@@ -179,8 +211,17 @@ const ProdSummer = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => 
                 </div>
                 <section className="prod-info-contain-m">
                     <div className="select-prod-m">
-                        <div className="ml">50ml</div>
-                        <div className="price">NT$2,880</div>
+                        {/* <div className="ml">50ml</div>
+                        <div className="price">NT$2,880</div> */}
+                         <div className="ml">
+                            <select name="ml" id="ml_box" value={selectedMl} onChange={handleMlChange}>
+                                <option value="">50ml</option>
+                                {Object.keys(database).map(ml => (
+                                    <option key={ml} value={ml}>{ml}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="price"><input type="text" id="price_box" placeholder="$2,880" value={price} readOnly style={{ color: '#000' }} /></div>
                         <div id="shopping-cart">
                             <button id="decrease">－</button>
                             <input type="text" id="quantity" value="1" />
