@@ -2964,7 +2964,7 @@ main #news .list-box .list-item {
 @media (max-width: 576px) {
   main #news .list-box .list-item {
     flex-direction: column;
-    margin: 1vw 0;
+    margin: 3vh 0 0;
   }
 }
 main #news .list-box .list-item figure {
@@ -2976,7 +2976,8 @@ main #news .list-box .list-item figure {
 @media (max-width: 576px) {
   main #news .list-box .list-item figure {
     min-height: 200px;
-    min-width: 60%;
+    min-width: 70%;
+    height: 100%;
   }
 }
 main #news .list-box .list-item figure img {
@@ -2994,7 +2995,7 @@ main #news .list-box .paragraph {
 @media (max-width: 576px) {
   main #news .list-box .paragraph {
     margin-left: 0;
-    width: 60%;
+    width: 70%;
     padding: 2vh 0;
     height: auto;
   }
@@ -4911,6 +4912,7 @@ main #news_article .list-box .list-item figure {
   main #news_article .list-box .list-item figure {
     min-height: 200px;
     min-width: 60%;
+    height: 100%;
   }
 }
 main #news_article .list-box .list-item figure img {
