@@ -1621,6 +1621,7 @@ main #news .list-box .paragraph .p2 p {
   .prod-story-container .story-contain .prod-story .prod-story-4 .left-photo4 {
     width: 100%;
     height: 45vh;
+    max-height: 45vh;
   }
 }
 .prod-story-container .story-contain .prod-story .prod-story-4 .left-photo4-2 {
@@ -6018,8 +6019,8 @@ main #shops .shops-img {
 }
 @media (max-width: 768px) {
   .selectThird .sample-div {
-    top: 27vw;
-    right: 22vw;
+    top: 43vw;
+    right: 19vw;
   }
 }
 @media (max-width: 576px) {
