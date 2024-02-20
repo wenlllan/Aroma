@@ -44,7 +44,7 @@ function App() {
       </Helmet> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout shopItems={shopItems} setShopItems={setShopItems} />}>
+          <Route path="/" element={<Layout shopItems={shopItems} setShopItems={setShopItems} shopCount={shopCount}/>}>
             <Route index element={<HomepageSw />}></Route>
             <Route path="prod" element={<ProdDream theme="pink" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="prod-summer" element={<ProdSummer theme="yellow" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
