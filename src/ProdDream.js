@@ -170,7 +170,7 @@ const ProdDream = ({ theme, shopItems, setShopItems, setShopCount, shopCount }) 
                 </div>
                 <Link to="/shopping"><div className={`shopping-cart theme-${theme}`}>
                     {/* <span className="cart-item"></span> */}
-                    <div id="cart" className={isShaking ? ' cart pink-theme' : ' cart shake pink-theme'} data-totalitems={cartTotal}></div>
+                    {/* <div id="cart" className={isShaking ? ' cart pink-theme' : ' cart shake pink-theme'} data-totalitems={cartTotal}></div> */}
                     <div className="shopping-cart-div">
                         <figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure>
                     </div>
