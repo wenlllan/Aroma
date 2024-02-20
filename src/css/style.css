@@ -2609,7 +2609,7 @@ main #memberlogin .title {
 }
 main #memberlogin .all-box {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 75%;
   margin-bottom: 8vw;
 }
@@ -2633,6 +2633,7 @@ main #memberlogin .all-box .left-box {
   justify-content: space-between;
   align-items: center;
   width: 14vw;
+  max-height: 35vw;
   margin: 2vw 2vw;
   padding: 12vw 2vw;
   background-color: #FFEFEF;
@@ -2652,7 +2653,7 @@ main #memberlogin .all-box .left-box a:hover {
   }
 }
 main #memberlogin .all-box .big-box {
-  width: 70%;
+  width: 60vw;
   margin: 2vw 0;
 }
 @media (max-width: 768px) {
@@ -4776,6 +4777,7 @@ main .modal .dialog {
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   line-height: 1.7em;
+  bottom: 0;
 }
 @media (max-width: 576px) {
   main .modal .dialog {
@@ -5054,11 +5056,13 @@ main #shops .submit {
   font-family: "Noto Serif TC";
   outline: none;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 5px;
   font-size: 14px;
-  margin: 1px;
   cursor: pointer;
+  background-color: rgb(232, 232, 232);
+}
+main #shops .submit:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 main #shops .list-box {
   display: flex;

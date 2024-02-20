@@ -1,10 +1,54 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Share = () => {
+  const navigate = useNavigate();
+  // 送出彈出視窗
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const showDialog = () => {
+    setModalVisible(true);
+  };
+  const hideDialog = () => {
+    setModalVisible(false);
+  };
+
+  const handleOkButtonClick = () => {
+    
+    // 隱藏dialog和modal的邏輯
+    hideDialog();
+    navigate('/');
+  };
+
+  useEffect(() => {
+    // 在modalVisible改變時執行的效果
+    if (modalVisible) {
+      console.log("Modal is visible");
+    } else {
+      console.log("Modal is hidden");
+    }
+  }, [modalVisible]);
+
   return (
     <div>
       <body>
         <main>
+        {modalVisible && (
+          <div className="modal">
+            <div className="dialog">
+              <div className="content">
+                <div>已送出！</div>
+                <div>感謝支持</div>
+              </div>
+              <div className="okBtn" onClick={handleOkButtonClick}>
+                <img
+                  src="./icon/icon _check small_.svg"
+                  alt="check"
+                />
+              </div>
+            </div>
+          </div>
+        )}
           <section id="share">
             <h3 className="title">好評推薦</h3>
             <div className="list-box">
@@ -636,10 +680,10 @@ const Share = () => {
                 </textarea>
               </div>
               <input
-                onclick="alert('已送出，感謝您的分享！');"
                 type="submit"
                 id="submit"
                 value="送出"
+                onClick={showDialog}
               />
             </div>
           </section>

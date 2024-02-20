@@ -16,9 +16,9 @@ const Shops = () => {
                 id="search_form"
                 placeholder="輸入地點："
               />
-              <button className="submit" name="search_form" id="search_form">
+              <Link to='/shops' className="submit" name="search_form" id="search_form">
                 查詢
-              </button>
+              </Link>
             </form>
           </div>
           <hr />
