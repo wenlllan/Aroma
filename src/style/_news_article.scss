@@ -78,6 +78,7 @@ main {
           @include mobile {
             min-height: 200px;
             min-width: 60%;
+            height: 100%;
           }
 
           img {
