@@ -1,8 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
+  const [username, setUserName] = useState("");
+  
   const [totalPrice, setTotalPrice] = useState(0);
-
+  useEffect(()=>{
+    setUserName(JSON.parse(localStorage.getItem("username")));
+  },[])
   useEffect(() => {
     setShopItems(() => {
       return JSON.parse(localStorage.getItem("cart"));
@@ -36,7 +40,12 @@ const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
               </div>
         <div className="big-box">
               <div className="list-box">
-                <h4 className="title">歷史訂單</h4>
+                <div  className="list-box-title">
+                <h4>{username}您好！</h4>
+                <h4>歷史訂單</h4>
+                
+                </div>
+                <p className="list-p">訂單編號#2023120900001</p>
                 <div className="list">
                   <p className="products">商品</p>
                   <p className="ml">容量</p>
@@ -79,12 +88,10 @@ const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                     })}
                 </div>
                 <div className="total">
-                
                   <div className="t1">
                     <h4>運費：$60</h4>
                     <h4>商品金額：${totalPrice+60}</h4>
                   </div>
-                  <div className="next1"></div>
                 </div>
               </div>
             </div>
