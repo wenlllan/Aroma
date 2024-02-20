@@ -21,14 +21,15 @@ const SelectSapmleThird = ({ theme }) => {
                                 <figure><img src="./images/select-sample-third-star-soul.svg" alt="" /></figure>
                             </div>
                             <div className="contain-top">
-                                <h3>專屬幸運色:</h3>
-                                <p>薄荷奶油色 Mintcream
+                                <h3>專屬幸運色</h3><h4>——薄荷奶油色 Mintcream——</h4>
+                                <p>
                                 湖水綠色是一種令人感到平靜和清新的色彩，代表著大自然的和諧與平衡。
                                 對於喜歡木質調的你而言，湖水綠色的幸運色將帶來平靜與清新的感覺。。</p>
                             </div>
                             <div className="contain-bottom">
-                                <h3>專屬香調:</h3>
-                                <p>木質香調
+                                <h3>專屬香調</h3>
+                                <h4>——木質香調——</h4>
+                                <p>
                                 對於喜歡木質香調的你，最好的壓力釋放方式就是購物！
                                 不需過度奢侈，但適時地給自己一些小獎勵，能夠治癒你的心靈，同時激發生活的動力。</p>
                             </div>
