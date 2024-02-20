@@ -4,7 +4,8 @@ const Memberlogin = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
   const [username, setUserName] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(()=>{
-    setUserName(JSON.parse(localStorage.getItem("username")));
+    // setUserName(JSON.parse(localStorage.getItem("username")));
+    setUserName(localStorage.getItem("username"));
   },[])
   useEffect(() => {
     setShopItems(() => {
