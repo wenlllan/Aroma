@@ -6,6 +6,7 @@ import ProdSummer from "./ProdSummer";
 import ProdSoul from "./ProdSoul";
 import Member from "./Member";
 import Memberlogin from "./Memberlogin";
+import MemberForget from "./MemberForget";
 import Register from "./Register";
 import SelectSample from "./SelectSample";
 import SelectFinal from "./SelectFinal";
@@ -51,6 +52,7 @@ function App() {
             <Route path="prod-soul" element={<ProdSoul theme="green" shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems} />}></Route>
             <Route path="member" element={<Member />}></Route>
             <Route path="memberlogin" element={<Memberlogin shopCount={shopCount} setShopCount={setShopCount} shopItems={shopItems} setShopItems={setShopItems}/>}></Route>
+            <Route path="memberForget" element={<MemberForget/>}></Route>            
             <Route path="register" element={<Register />}></Route>
             <Route path="selectsample" element={<SelectSample />}></Route>
             <Route path="selectfinal" element={<SelectFinal />}></Route>

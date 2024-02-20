@@ -101,7 +101,6 @@ const SelectFinal = () => {
                 />
                 <span style={{ color: "#ff9b99" }}>{msg1}</span>
               </div>
-
               <div className="sign">
                 <label for="tel">電話：</label>
                 <input
@@ -133,10 +132,16 @@ const SelectFinal = () => {
                 <span style={{ color: "#ff9b99" }}>{msg3}</span>
               </div>
             </div>
+            <div className="notice-box">
+                <p>
+                  此表單僅供示意，無蒐集資料之功能，
+                  <br/>
+                  不會將資料提供給第三人、或移作其他目的使用。
+                </p>
+              </div>
             <div className="login2">
             <input type="submit" id="submit" value="送出" />
             </div>
-            
           </form>
         </section>
       </main>

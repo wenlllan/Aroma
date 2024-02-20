@@ -642,7 +642,7 @@ const Share = () => {
                 </div>
                 <div className="select-box">
                   <div className="form">
-                    <label for="regularSelect">購買品項：</label>
+                    <label for="regularSelect">品項：</label>
                     <select id="regularSelect" name="regularSelect">
                       <option value="1">靈魂深處的幽林冒險</option>
                       <option value="2">尋香奇遊的夢幻花境</option>

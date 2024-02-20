@@ -34,6 +34,10 @@ main {
         @extend %flex-center;
         flex-direction: column; 
 
+        @include mac {
+          height: 55vh;
+        }
+
         label {
           font-size: 0.8rem;
           color: $color-deep;
@@ -71,29 +75,43 @@ main {
             margin-right: 5vw;
           }
         }
-      }
+        .notice-box {
+          padding: 1.5vw 0 1.5vw 0.5vw;
 
-      .sign3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 2vw 0;
+          p {
+            color: $color-deep;
+            font-size: 0.8rem;
 
-        #submit {
-          color: $color-white;
-          padding: 1vh 1vh;
-          height: auto;
-          width: 150px;
-          cursor: pointer;
-          border-radius: 16px;
-          border: none;
-          background-color: $color-pink;
-
-          &:hover {
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            @include mobile {
+              line-height: 120%;
+              margin: 0 0 2vh 0;
+            }
+          }
+        }
+        .sign3 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 2vw 0;
+  
+          #submit {
+            color: $color-white;
+            padding: 1vh 1vh;
+            height: auto;
+            width: 150px;
+            cursor: pointer;
+            border-radius: 16px;
+            border: none;
+            background-color: $color-pink;
+  
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            }
           }
         }
       }
+
+      
     }
   }
 }

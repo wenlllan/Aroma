@@ -39,6 +39,16 @@ main {
         margin-top: 10vh;
       }
 
+      .sign{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+          padding-top: 10px;
+        }
+      }
+
       .login1{
         display: block;
 
@@ -63,7 +73,21 @@ main {
         }
       }
 
-      
+      .notice-box {
+        padding: 1.5vw 0 1.5vw 0.5vw;
+        text-align: center;
+    line-height: 1.2rem;
+
+        p {
+          color: $color-deep;
+          font-size: 0.7rem;
+
+          @include mobile {
+            line-height: 120%;
+            margin: 0 0 2vh 0;
+          }
+        }
+      }
 
       .login2 {
         display: flex;
