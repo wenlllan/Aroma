@@ -168,7 +168,7 @@ const ProdSummer = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => 
                     </div>
                 </div>
                 <Link to="/shopping"><div className={`shopping-cart theme-${theme}`}>
-                    <div id="cart" className={isShaking ? ' cart' : ' cart shake'} data-totalitems={cartTotal}></div>
+                    {/* <div id="cart" className={isShaking ? ' cart' : ' cart shake'} data-totalitems={cartTotal}></div> */}
                     <div className="shopping-cart-div">
                         <figure><img src="./icon/icon-shopping-cart.svg" alt="" /></figure>
                     </div>
