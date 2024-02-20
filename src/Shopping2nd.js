@@ -28,8 +28,11 @@ const Shopping2nd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
   //必填資料
   const [userName, setUserName] = useState("");
   const [userTel, setUserTel] = useState("");
+  const [userAdd, setUserAdd] = useState("");
   const [msg1, setMsg1] = useState("");
   const [msg2, setMsg2] = useState("");
+  const [msg3, setMsg3] = useState("");
+
   const navigate = useNavigate();
 
   function handleSubmit(e) {
@@ -45,7 +48,12 @@ const Shopping2nd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
     } else {
       setMsg2("");
     }
-    if (userName.trim() !== "" && userTel.trim() !== "") {
+    if (userAdd.trim() === "") {
+      setMsg3(" *必須填寫「地址」");
+    } else {
+      setMsg3("");
+    }
+    if (userName.trim() !== "" && userTel.trim() !== "" && userAdd.trim() !== "") {
       navigate("/shopping3rd");
     }
   }
@@ -207,7 +215,6 @@ const Shopping2nd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                     />
                     <span style={{ color: "#ff9b99" }}>{msg1}</span>
                   </div>
-
                   <div className="sign">
                     <label for="tel">電話：</label>
                     <input
@@ -223,6 +230,21 @@ const Shopping2nd = ({ shopItems, setShopItems, setShopCount, shopCount }) => {
                     />
                     <span style={{ color: "#ff9b99" }}>{msg2}</span>
                   </div>
+                  <div className="sign">
+                <label for="add">地址：</label>
+                <input
+                  type="add"
+                  name="add"
+                  id="add"
+                  title="請輸入地址"
+                  placeholder="請輸入地址"
+                  autoComplete="on"
+                  // required
+                  value={userAdd}
+                  onChange={(e) => setUserAdd(e.target.value)}
+                />
+                <span style={{ color: "#ff9b99" }}>{msg3}</span>
+              </div>
                 </div>
                 <div className="notice-box">
                   <p>
