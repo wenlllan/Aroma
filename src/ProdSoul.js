@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
-const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
+const ProdSoul = ({ theme, shopItems, setShopItems, setShopCount, shopCount }) => {
 
     const [cartTotal, setCartTotal] = useState(0);
     const [isShaking, setIsShaking] = useState(false);
@@ -9,21 +9,21 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
 
     const productD1 = {
         id: '3-1',//_id
-        src:"./images/prod30ml-soulwood.png",
-        title:"靈魂深處的幽林冒險",
-        price:1880,
-        ml:30,
+        src: "./images/prod30ml-soulwood.png",
+        title: "靈魂深處的幽林冒險",
+        price: 1880,
+        ml: 30,
         count: 0,
-        currentPrice:0,
+        currentPrice: 0,
     }
     const productD2 = {
         id: '3-2',//_id
-        src:"./images/prod-soulwood.png",
-        title:"靈魂深處的幽林冒險",
-        price:2880,
-        ml:50,
+        src: "./images/prod-soulwood.png",
+        title: "靈魂深處的幽林冒險",
+        price: 2880,
+        ml: 50,
         count: 0,
-        currentPrice:0,
+        currentPrice: 0,
     }
 
     const addToCartTop = () => {
@@ -50,35 +50,35 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
         }, 1000);
     };
 
-    const handleAdd = (obj)=>{
+    const handleAdd = (obj) => {
         //localStorage: JSON.stringify()=>轉文字  /  JSON.parse()=>解析localStorage內容
         let orderList = localStorage.getItem("cart");
-        if (orderList){
+        if (orderList) {
             let currentCart = JSON.parse(orderList)
             console.log(currentCart)
-            let plus = currentCart.findIndex((i)=>{
+            let plus = currentCart.findIndex((i) => {
                 return i.id == obj.id;
             })
-            if(plus != -1) {
+            if (plus != -1) {
                 currentCart[plus].count++;
                 currentCart[plus].currentPrice = currentCart[plus].count * currentCart[plus].price;
-                localStorage.setItem("cart",JSON.stringify(currentCart));
+                localStorage.setItem("cart", JSON.stringify(currentCart));
             } else {
-                obj.count+=1;
+                obj.count += 1;
                 obj.currentPrice = obj.price * obj.count
                 currentCart.push(obj);
-                localStorage.setItem("cart",JSON.stringify(currentCart));
+                localStorage.setItem("cart", JSON.stringify(currentCart));
             }
-             
+
         } else {
             let arr = [];
-            obj.count+=1;
+            obj.count += 1;
             obj.currentPrice = obj.price * obj.count
             arr.push(obj);
             console.log(arr);
-            localStorage.setItem("cart", JSON.stringify(arr) )
+            localStorage.setItem("cart", JSON.stringify(arr))
         }
-        setShopCount((prev)=>{
+        setShopCount((prev) => {
             return prev + 1;
         })
         // setState() // setState((prevState)=>{ return prevState .....})
@@ -88,11 +88,11 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
         //setState(3)
     }
 
-    useEffect(()=>{
-        setShopItems(()=>{
-          return JSON.parse(localStorage.getItem("cart"))
+    useEffect(() => {
+        setShopItems(() => {
+            return JSON.parse(localStorage.getItem("cart"))
         })
-      },[shopCount])
+    }, [shopCount])
 
     //changPic
     const [mainImageSrc, setMainImageSrc] = useState('./images/prod-soulwood.png');
@@ -102,12 +102,44 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
         setIsFading(true);
 
         setTimeout(() => {
-            if (picNo === 1) {
+            if (picNo == 1) {
                 setMainImageSrc('./images/prod-soulwood.png');
-            } else if (picNo === 2) {
+            } else if (picNo == 2) {
                 setMainImageSrc('./images/prod30ml-soulwood.png');
             }
             setIsFading(false);
+        }, 500);
+    };
+
+    //select (mobile)
+    const database = {
+        '30ml': { 'price': '$1,880' },
+        //'50ml': { 'price': '$2,880' },
+    };
+
+    const [selectedMl, setSelectedMl] = useState('');
+    const [price, setPrice] = useState('');
+
+    const handleMlChange = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedMl(selectedValue);
+
+        if (database[selectedValue]) {
+            const priceValue = database[selectedValue]['price'];
+            setPrice(priceValue);
+        } else {
+            setPrice('');
+        }
+        changePicNo(selectedValue);
+    };
+
+    const changePicNo = (mlValue) => {
+        setIsFading(true);
+        // const newImageSrc = mlValue == '30ml' ? './images/prod30ml-dream.png' : './images/prod-dream.png';
+        // setMainImageSrc(newImageSrc);
+        setTimeout(() => {
+            const newImageSrc = mlValue == '30ml' ? './images/prod30ml-soulwood.png' : './images/prod-soulwood.png';
+            setMainImageSrc(newImageSrc); setIsFading(false);
         }, 500);
     };
 
@@ -160,27 +192,36 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
                             <div className="prod-info-contain-item">
                                 <div className="ml" onMouseOver={() => changePic(1)}>50ml</div>
                                 <div className="price">NT$2,880</div>
-                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={(e)=>{handleAdd(productD2); addToCart();}}>加入購物車<span className="cart-item"></span></button>
+                                <button id="addtocart" className={isSending ? 'add' : 'add sendtocart'} onClick={(e) => { handleAdd(productD2); addToCart(); }}>加入購物車<span className="cart-item"></span></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="prod-contain">
                     <h4>追風探秘，冒險啟航<br />
-                    赴一場林間的神秘溫馨之旅──</h4>
+                        赴一場林間的神秘溫馨之旅──</h4>
                     <p>穿梭林間的冷冽清風，追尋那一縷琥珀般的溫馨，感受著神秘的魅力。
-                        </p>
+                    </p>
                 </div>
                 <div className={`marquee-container theme-${theme}`}>
                     <div className={`marquee-content theme-${theme}`}>
-                        Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods 
+                        Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods
                         Chasing the Wind, Unveiling Mysteries - Embark on a Warm and Mysterious Journey Through the Woods
                     </div>
                 </div>
                 <section className="prod-info-contain-m">
                     <div className="select-prod-m">
-                        <div className="ml">50ml</div>
-                        <div className="price">NT$2,880</div>
+                        {/* <div className="ml">50ml</div>
+                        <div className="price">NT$2,880</div> */}
+                        <div className="ml">
+                            <select name="ml" id="ml_box" value={selectedMl} onChange={handleMlChange}>
+                                <option value="">50ml</option>
+                                {Object.keys(database).map(ml => (
+                                    <option key={ml} value={ml}>{ml}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="price"><input type="text" id="price_box" placeholder="$2,880" value={price} readOnly style={{ color: '#000' }} /></div>
                         <div id="shopping-cart">
                             <button id="decrease">－</button>
                             <input type="text" id="quantity" value="1" />
@@ -258,8 +299,8 @@ const ProdSoul = ({theme,shopItems, setShopItems, setShopCount,shopCount}) => {
                     </div>
                 </div>
                 <div className="prod-story-last">
-                勇敢地去探索，去發現，這個世界滿是驚喜和可能。<br/>
-                這款香水，將成為你探索未知的伙伴，一個帶領你走向未知境界的新開始。
+                    勇敢地去探索，去發現，這個世界滿是驚喜和可能。<br />
+                    這款香水，將成為你探索未知的伙伴，一個帶領你走向未知境界的新開始。
                     <figure><img src="./images/prod-story-last-circle-green.svg" alt="" /></figure>
                 </div>
 
