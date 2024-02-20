@@ -6,25 +6,26 @@
 
 
 .theme-yellow {
-    --main-color:#FFB117;
-    --light-color:#FFFEF1;;
-    --middle-color:#FFE6B6;
-    --secondary-color:#FFF1D3;
-  }
-  
-  .theme-pink {
+    --main-color: #FFB117;
+    --light-color: #FFFEF1;
+    ;
+    --middle-color: #FFE6B6;
+    --secondary-color: #FFF1D3;
+}
+
+.theme-pink {
     --main-color: #ff9b99;
-    --light-color:#FFEFEF;
-    --middle-color:#FFB6B5;
-    --secondary-color:#FFE0DF;
-  }
-  
-  .theme-green {
+    --light-color: #FFEFEF;
+    --middle-color: #FFB6B5;
+    --secondary-color: #FFE0DF;
+}
+
+.theme-green {
     --main-color: #4fc789; //#7FB33D #93c74f
-    --light-color:#f0ffea;
-    --middle-color:#CDECDD;
-    --secondary-color:#afe4cb;
-  }
+    --light-color: #f0ffea;
+    --middle-color: #CDECDD;
+    --secondary-color: #afe4cb;
+}
 
 .main-prod-dream {
     display: flex;
@@ -60,6 +61,7 @@
         }
 
         .cart {
+
             position: absolute;
             top: 20px;
             right: 20px;
@@ -159,11 +161,11 @@
         .fade-image {
             transition: opacity 0.35s ease-in-out;
             opacity: 1;
-          }
-          
+        }
+
         .fade-image.fade-out {
             opacity: 0;
-          }
+        }
 
         .prod-info-div {
             width: auto;
@@ -242,8 +244,12 @@
 
             .prod-info-contain-item {
 
-                .ml{
-                    cursor:pointer;
+                .ml {
+                    cursor: pointer;
+
+                    &:hover{
+                        color:var(--main-color) ;
+                    }
                 }
 
                 @include mobile {
@@ -486,10 +492,29 @@
             .ml {
                 width: 10%;
                 cursor: pointer;
+
+                select {
+                    display: block;
+                    border: none;
+                    text-align: center;
+                    @include p;
+                    font-family: 'Noto Serif TC', serif;
+                }
             }
 
             .price {
                 width: 20%;
+
+               input {
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    @include p;
+                    font-family: 'Noto Serif TC', serif;
+                    color:#000;
+                }
             }
 
             #shopping-cart {
@@ -585,7 +610,7 @@
             left: -10%;
         }
 
-        &:hover{
+        &:hover {
             transform: translateY(5px);
         }
     }
@@ -996,7 +1021,7 @@
         border-radius: 50%;
         background-color: var(--light-color);
 
-        @include mac{
+        @include mac {
             width: 80vw;
             height: 80vw;
         }
