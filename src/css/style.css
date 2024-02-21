@@ -2596,6 +2596,7 @@ main #member #contact_form .login2 #submit {
   border-radius: calc(infinity * 1px);
   border: none;
   background-color: #ff9b99;
+  font-family: "Noto Serif TC";
   cursor: pointer;
 }
 main #member #contact_form .login2 #submit:hover {
