@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.5fd46fbc.css",
+    "main.js": "/my-app/static/js/main.95b6c2b8.js",
+    "static/media/bg-share.png": "/my-app/static/media/bg-share.80f079b6cd0e8de804b2.png",
+    "static/media/brand-info-img1.jpg": "/my-app/static/media/brand-info-img1.b5a59698e41649a491f6.jpg",
+    "static/media/brand-info-show.jpg": "/my-app/static/media/brand-info-show.696ed6bb1fc28c031631.jpg",
+    "static/media/select-bg2.png": "/my-app/static/media/select-bg2.33f286d31ffc72d58c23.png",
+    "static/media/brand-info-concept-.jpg": "/my-app/static/media/brand-info-concept-.dfbe7be5444c21a97d1c.jpg",
+    "static/media/main_bg1.jpg": "/my-app/static/media/main_bg1.dcec72e6de528a05db35.jpg",
+    "static/media/select-sample-bg1.svg": "/my-app/static/media/select-sample-bg1.1e5329832ec972490a0a.svg",
+    "static/media/main_bg3.jpg": "/my-app/static/media/main_bg3.6b40958347d3bc6c643f.jpg",
+    "static/media/main_bg2.jpg": "/my-app/static/media/main_bg2.edf27477155b750a75d6.jpg",
+    "static/media/icon-star.svg": "/my-app/static/media/icon-star.58e88d644f96099a0588.svg",
+    "index.html": "/my-app/index.html",
+    "main.5fd46fbc.css.map": "/my-app/static/css/main.5fd46fbc.css.map",
+    "main.95b6c2b8.js.map": "/my-app/static/js/main.95b6c2b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fd46fbc.css",
+    "static/js/main.95b6c2b8.js"
+  ]
+}
