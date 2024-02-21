@@ -2233,6 +2233,7 @@ main #news .list-box .paragraph .p2 p {
 .prod-function .prod-function-div .prod-function-info .prod-function-img figure {
   width: auto;
   height: 10vw;
+  max-width: 118px;
 }
 @media (max-width: 768px) {
   .prod-function .prod-function-div .prod-function-info .prod-function-img figure {
@@ -2244,6 +2245,8 @@ main #news .list-box .paragraph .p2 p {
   .prod-function .prod-function-div .prod-function-info .prod-function-img figure {
     width: 10vh;
     height: 10vh;
+    max-width: 66px;
+    max-height: 77px;
   }
 }
 .prod-function .prod-function-div .prod-function-info .prod-function-content {

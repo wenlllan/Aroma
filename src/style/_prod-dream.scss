@@ -1329,6 +1329,7 @@
                 figure {
                     width: auto;
                     height: 10vw;
+                    max-width: 118px;
 
                     @include miniPad{
                         max-width: 66px;
@@ -1338,6 +1339,8 @@
                     @include mobile {
                         width: 10vh;
                         height: 10vh;
+                        max-width: 66px;
+                        max-height: 77px;
                     }
                 }
 
